@@ -39,3 +39,7 @@ We hebben de patient en data ontvangen en hierbij ging ik meteen het in galaxy o
 ###  Quality control
 
 Om te controleren of de data uberhaupt goed is van kwaliteit heb ik het bestandje in galaxy gerunned op Falco. Inplaats van FASTqc, Falco geeft dezelfde grafieken terug als FASTqc. De reden dat ik Falco gebruik is omdat dat werd aangeraden door galaxy zelf.
+
+De eerste fail die ik kreeg was bij de per base sequence content, dit houdt in dat het verschil bij A en T of G en C verhouding groter is dan 20%. Dit heb ik van de documentatie van FASTqc gehaald (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/4%20Per%20Base%20Sequence%20Content.html).
+
+Daarna kreeg ik een warning
