@@ -45,8 +45,11 @@ De eerste fail die ik kreeg was bij de per base sequence content, dit houdt in d
 Daarna kreeg ik een warning bij de GC sequence content, deze warning verschijnt als er de afwijking meer dan 15% is vergeleken de "normale" verdeling. Hieronder een afbeelding van de grafiek: ![Per Sequence GC Content](../logboeken/afbeeldingen/GCperseq_Falco1.png)
 
 ## 15-9-2025
-In het weekend wou ik dit eigenlijk al afmaken maar ik had geen wifi, dus ik ga vandaag verder met het quality control stukje. 
 
-Ik maak me eigenlijk niet zo zorgen ome het GC sequence content, dat ziet er opzich wel prima uit. De theoretische data komt van een "random library", dit hoeft dus niets te zeggen waarom het een "warning"geeft. 
+In het weekend wou ik dit eigenlijk al afmaken maar ik had geen wifi, dus ik ga vandaag verder met het quality control stukje.
 
-De rest van de warnings zien er eigenlijk ook prima uit dus ik ga nu eerst proberen om de data iets in te korten dit ga ik doen met cutadapt, hierbij gebruik ik een workflow. Eerst upload ik de data > daarna gebruik ik cutadapt> en weer Falco. Hieronder is mijn eerste "test" te zien in een afbeelding.![Cutadapt test 1](../logboeken/afbeeldingen/Workflowcutadapt1.png)
+Ik maak me eigenlijk niet zo zorgen ome het GC sequence content, dat ziet er opzich wel prima uit. De theoretische data komt van een "random library", dit hoeft dus niets te zeggen waarom het een "warning"geeft.
+
+De rest van de warnings zien er eigenlijk ook prima uit dus ik ga nu eerst proberen om de data iets in te korten dit ga ik doen met cutadapt, hierbij gebruik ik een workflow. Eerst upload ik de data \> daarna gebruik ik cutadapt\> en weer Falco. Hieronder is mijn eerste "test" te zien in een afbeelding.![Cutadapt test 1](../logboeken/afbeeldingen/Workflowcutadapt1.png)
+
+Dit werkte niet en kreeg een HTML error dus ik denk dat ik iets fout heb gedaan. Ik ga nu proberen om FASTQC te runnen en kijken of ik nog steeds hetzelfde probleem ontvant. 
