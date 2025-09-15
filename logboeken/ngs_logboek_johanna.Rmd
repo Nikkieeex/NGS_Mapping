@@ -53,3 +53,5 @@ Ik maak me eigenlijk niet zo zorgen ome het GC sequence content, dat ziet er opz
 De rest van de warnings zien er eigenlijk ook prima uit dus ik ga nu eerst proberen om de data iets in te korten dit ga ik doen met cutadapt, hierbij gebruik ik een workflow. Eerst upload ik de data \> daarna gebruik ik cutadapt\> en weer Falco. Hieronder is mijn eerste "test" te zien in een afbeelding.![Cutadapt test 1](../logboeken/afbeeldingen/Workflowcutadapt1.png)
 
 Dit werkte niet en kreeg een HTML error dus ik denk dat ik iets fout heb gedaan. Ik ga nu proberen om FASTQC te runnen en kijken of ik nog steeds hetzelfde probleem ontvant. 
+
+Ik was weer te snel bezig en het bleek dat ik de hele verkeerde tool gebruikte... OOps Oke nu ga ik Trimmanotics gebruiken. Trimmanotics geeft 4 files, hier ga ik allemaal falco op gebruiken. 
