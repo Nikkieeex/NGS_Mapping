@@ -49,4 +49,4 @@ In het weekend wou ik dit eigenlijk al afmaken maar ik had geen wifi, dus ik ga 
 
 Ik maak me eigenlijk niet zo zorgen ome het GC sequence content, dat ziet er opzich wel prima uit. De theoretische data komt van een "random library", dit hoeft dus niets te zeggen waarom het een "warning"geeft. 
 
-De rest van de warnings zien er eigenlijk ook prima uit dus ik ga nu eerst proberen om de data iets in te korten dit ga ik doen met cutadapt, hierbij gebruik ik een workflow. Eerst upload ik de data > daarna gebruik ik cutadapt> en weer Falco. Hieronder is mijn eerste "test" te zien in een afbeelding.
+De rest van de warnings zien er eigenlijk ook prima uit dus ik ga nu eerst proberen om de data iets in te korten dit ga ik doen met cutadapt, hierbij gebruik ik een workflow. Eerst upload ik de data > daarna gebruik ik cutadapt> en weer Falco. Hieronder is mijn eerste "test" te zien in een afbeelding.![Cutadapt test 1](../logboeken/afbeeldingen/Workflowcutadapt1.png)
