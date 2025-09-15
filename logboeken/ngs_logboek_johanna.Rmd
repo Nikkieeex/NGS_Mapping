@@ -44,4 +44,7 @@ De eerste fail die ik kreeg was bij de per base sequence content, dit houdt in d
 
 Daarna kreeg ik een warning bij de GC sequence content, deze warning verschijnt als er de afwijking meer dan 15% is vergeleken de "normale" verdeling. Hieronder een afbeelding van de grafiek: ![Per Sequence GC Content](../logboeken/afbeeldingen/GCperseq_Falco1.png)
 
+## 15-9-2025
+In het weekend wou ik dit eigenlijk al afmaken maar ik had geen wifi, dus ik ga vandaag verder met het quality control stukje. 
 
+Ik maak me eigenlijk niet zo zorgen ome het GC sequence content, dat ziet er opzich wel prima uit. De theoretische data komt van 
