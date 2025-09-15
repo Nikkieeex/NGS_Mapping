@@ -47,4 +47,6 @@ Daarna kreeg ik een warning bij de GC sequence content, deze warning verschijnt 
 ## 15-9-2025
 In het weekend wou ik dit eigenlijk al afmaken maar ik had geen wifi, dus ik ga vandaag verder met het quality control stukje. 
 
-Ik maak me eigenlijk niet zo zorgen ome het GC sequence content, dat ziet er opzich wel prima uit. De theoretische data komt van 
+Ik maak me eigenlijk niet zo zorgen ome het GC sequence content, dat ziet er opzich wel prima uit. De theoretische data komt van een "random library", dit hoeft dus niets te zeggen waarom het een "warning"geeft. 
+
+De rest van de warnings zien er eigenlijk ook prima uit dus ik ga nu eerst proberen om de data iets in te korten met 5 basen, als dat niet werkt ga ik naar 10 en daarna 15.
