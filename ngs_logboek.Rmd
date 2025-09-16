@@ -8,6 +8,7 @@ date: "2025-09-12"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
 ## FASTQC
 
 Deze test doen we op de ruwe data. Later gaan we deze opnieuw doen om te kijken wat voor invloed de andere testen hebben gehad.
@@ -30,6 +31,7 @@ De grafiek van Sequence Duplication Levels laat zien dat de meeste reads maar é
 
 
 Beschreven met behulp van https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help 
+
 
 
 ## Map with BWA
