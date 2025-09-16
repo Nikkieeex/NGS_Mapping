@@ -27,3 +27,36 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+## FASTQC
+
+Deze test doen we op de ruwe data. Later gaan we deze opnieuw doen om te kijken wat voor invloed de andere testen hebben gehad.
+Uit de report kwam dan 1 test is gefaald en twee testen een warning hebben
+
+![PerBaseSequenceContent](/homes/nfbovenga/NGS_Mapping/Images/PerBaseSequenceContent.png)
+Per base sequence content faalde omdat:
+De grafiek faalt omdat de baseverdeling niet stabiel en parallel loopt. Vooral bij de eerste en laatste basen wijken A, T, G en C sterk van elkaar af. Dit komt meestal door library-bias (bijvoorbeeld bij RNA-Seq of tagmentatie), soms door adapters of contaminatie. Bij RNA-Seq is dit normaal en geen groot probleem, bij DNA-Seq kan het wijzen op adapters of andere bias
+
+
+![SequenceLegthDistribution](/homes/nfbovenga/NGS_Mapping/Images/SequenceLegthDistribution.png)
+Sequence Length Distribution kreeg een warning omdat:
+De grafiek laat zien dat bijna al de reads dezelfde lengte hebben (rond de 150 bp). FastQC geeft toch een waarschuwing omdat er kleine variaties zijn, maar dit is normaal bij Illumina-data. Voor deze analyse zou er dus geen probleem moeten zijn. 
+
+
+![SequenceDuplicationLevels](/homes/nfbovenga/NGS_Mapping/Images/SequenceDuplicationLevels.png)
+
+Sequence Duplication Levels kreeg een warning omdat:
+De grafiek van Sequence Duplication Levels laat zien dat de meeste reads maar één keer voorkomen (links hoog) en dat het aantal duplicaten snel afneemt naarmate de duplicatiegraad stijgt. Er is dus een aflopende curve: veel unieke reads, steeds minder reads die 2, 3 of meer keer voorkomen. Bovenin staat dat na deduplicatie nog 62,16% van de reads overblijft, wat betekent dat ongeveer 38% duplicaten zijn. Daarom geeft FastQC een waarschuwing. Voor RNA-Seq is dit patroon normaal, omdat sterk tot expressie komende genen vaker worden gesequenced.
+
+
+Beschreven met behulp van https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help 
+
+test test
+
+## Map with BWA
+
+## Mark duplicates
+
+
+
