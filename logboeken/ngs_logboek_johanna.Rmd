@@ -52,11 +52,15 @@ Ik maak me eigenlijk niet zo zorgen ome het GC sequence content, dat ziet er opz
 
 De rest van de warnings zien er eigenlijk ook prima uit dus ik ga nu eerst proberen om de data iets in te korten dit ga ik doen met cutadapt, hierbij gebruik ik een workflow. Eerst upload ik de data \> daarna gebruik ik cutadapt\> en weer Falco. Hieronder is mijn eerste "test" te zien in een afbeelding.![Cutadapt test 1](../logboeken/afbeeldingen/Workflowcutadapt1.png)
 
-Dit werkte niet en kreeg een HTML error dus ik denk dat ik iets fout heb gedaan. Ik ga nu proberen om FASTQC te runnen en kijken of ik nog steeds hetzelfde probleem ontvant. 
+Dit werkte niet en kreeg een HTML error dus ik denk dat ik iets fout heb gedaan. Ik ga nu proberen om FASTQC te runnen en kijken of ik nog steeds hetzelfde probleem ontvant.
 
-Ik was weer te snel bezig en het bleek dat ik de hele verkeerde tool gebruikte... OOps Oke nu ga ik Trimmanotics gebruiken. Trimmanotics geeft 4 files, hier ga ik allemaal falco op gebruiken. 
+Ik was weer te snel bezig en het bleek dat ik de hele verkeerde tool gebruikte... OOps Oke nu ga ik Trimmanotics gebruiken. Trimmanotics geeft 4 files, hier ga ik allemaal falco op gebruiken.
 
 ## 17-9-2025
-Ik kwam erachter dat ik galaxy anders kon gebruiken en de paired data in een collection kon zetten. Dit heb ik gedaan en weer door falco gehaald. Hier kwam hetzelfde eigenlijk uit dus begon ik met opnieuw trimmen als een pair. Hierbij ging ik de eerste 10 basen eraf halen.  
 
-Ik had het de eerste keer fout gedaan, ik had bij de instellingen ingesteld dat als het minder dan 9 sequenties was dat het dan verwijderd word. Dit is natuurlijk super weinig en komt eigenlijk niet voor dus de data bleek hetzelfde. Hierna heb ik ronald gevraagd hoe het moest en heb ik het wel goed gedaan.  
+Ik kwam erachter dat ik galaxy anders kon gebruiken en de paired data in een collection kon zetten. Dit heb ik gedaan en weer door falco gehaald. Hier kwam hetzelfde eigenlijk uit dus begon ik met opnieuw trimmen als een pair. Hierbij ging ik de eerste 10 basen eraf halen.
+
+Ik had het de eerste keer fout gedaan, ik had bij de instellingen ingesteld dat als het minder dan 9 sequenties was dat het dan verwijderd word. Dit is natuurlijk super weinig en komt eigenlijk niet voor dus de data bleek hetzelfde. Hierna heb ik ronald gevraagd hoe het moest en heb ik het wel goed gedaan. Hier kwam na het door falco runnen wel een beter resultaat uit: zie afbeelding:![Falco na het trimmen van 10 eerste paren](../logboeken/afbeeldingen/Falco_na_trim.png)
+
+Dit is echt veel beter dan het vorige resultaat maar nog steed seen fail zie afbeelding hieronder voor voor het trimmen:![Falco voor het trimmen van 10 eerste paren](../logboeken/afbeeldingen/Falco_voor.png)
+
