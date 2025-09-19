@@ -64,3 +64,5 @@ Ik had het de eerste keer fout gedaan, ik had bij de instellingen ingesteld dat 
 
 Dit is echt veel beter dan het vorige resultaat maar nog steed seen fail zie afbeelding hieronder voor voor het trimmen:![Falco voor het trimmen van 10 eerste paren](../logboeken/afbeeldingen/Falco_voor.png)
 
+## 19-9-2025
+Vandaag ga ik verder met week 2 van de uitleg en instructies. Hierbij ga ik de tool map with BWA gebruiken, dit duurt ongeveer 20 min. 
