@@ -65,4 +65,5 @@ Ik had het de eerste keer fout gedaan, ik had bij de instellingen ingesteld dat 
 Dit is echt veel beter dan het vorige resultaat maar nog steed seen fail zie afbeelding hieronder voor voor het trimmen:![Falco voor het trimmen van 10 eerste paren](../logboeken/afbeeldingen/Falco_voor.png)
 
 ## 19-9-2025
-Vandaag ga ik verder met week 2 van de uitleg en instructies. Hierbij ga ik de tool map with BWA gebruiken, dit duurt ongeveer 20 min. 
+
+Vandaag ga ik verder met week 2 van de uitleg en instructies. Hierbij ga ik de tool map with BWA gebruiken, dit duurt ongeveer 20 min. Dit gaf een error omdat ik blijkbaar het verkeerde referentiegenoom heb gebruikt, ik dacht dat het slim was om met een bij te vergelijken (ik had het niet gezien). Gelukkig kwam ik erachter dat ik een HUMAAN genoom moest gebruiken als referentie dus hierna volgde poging 2....
