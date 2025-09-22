@@ -74,4 +74,10 @@ De settings zet ik als een screenshot hieronder: ![Settings BWA](../logboeken/af
 
 Na dat de galaxy server weer down was is het met de juiste settings gelukt. De volgende stap is kijken naar duplicaties van de mapped reads. Dit ga ik doen met de tool MarkDuplicates. Als input voeg ik de map met BWA-MEM output toe, hierbij als setting: "assume input file is already sorted" op nee. Dit zorgt ervoor dat de tool niet gaat vooordelen dat de data al is gesorteerd. De tool markeerd eigenlijk de duplicates, omdat het gemarkeerd is negeren de andere tools deze "flag" de data word ook niet verwijderd. Hieronder een screenshot van de settings van de MarkDuplicates tool:![MarkDuplicates settings](../logboeken/afbeeldingen/Markduplicates_settings.png)
 
-Deze stap is gelukt dus nu kijken naar de data dit doe ik als volgt. Dit ga ik doen met de mapping output van de stap hiervoor (marked duplicates). Als eerst ging ik de data downloaden naar mijn laptop zelf. 
+Deze stap is gelukt dus nu kijken naar de data dit doe ik als volgt. Dit ga ik doen met de mapping output van de stap hiervoor (marked duplicates). Als eerst ging ik de data downloaden naar mijn laptop zelf.
+
+Na het downloaden van de bestanden heb ik deze geupload in de IGV tool, dit is een visualisatie tool. Hierin kan je de data wat je gemapped hebt een beetje visualizeren. Ik heb als referentie genoom precies hetzelfde genoom gebruikt als wat ik bij galaxy gebruikt heb (hg38). Het eerste wat mij opviel was een mutatie van LMNA, dit is een genetische afwijking die kan zorgen voor cardiomyopathie.
+
+Deze mutatie heb ik gevonden omdat ik tijdens het bekijken van de data een lijn zag, als je hier inzoomed zie je ook meteen dat er allemaal T'jes niet op de juiste plek zaten. Hieronder een screen van de visualisatie en waar ik naar keek:![IGV visualisatie](../logboeken/afbeeldingen/IGV.png)
+
+De grijze gebieden zijn hetzelfde als het referentie gebied, de percentages zijn bijna 50/50 dit wil zeggen dat het heterozygoot is. Als het homozygoot zou zijn zou je het minder goed verdeeld hebben.(<https://erdemhospital.com/nl/blog/what-are-homozygous-and-heterozygous-traits/>) Zie afbeelding hieronder: ![IGV visualisatie](../logboeken/afbeeldingen/IGV2.png)
