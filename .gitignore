@@ -1,0 +1,8 @@
+Data/**/*.fastq
+Data/**/*.fastq.gz
+Data/**/*.bam
+Data/**/*.bai
+Data/**/*.sam
+Data/**/*.cram
+Data/**/*.vcf
+Data/**/*.vcf.gz
