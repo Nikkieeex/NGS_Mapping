@@ -41,6 +41,26 @@ De curve laat zien dat de meerderheid van de reads uniek is (links hoog), en dat
 Beschreven met behulp van https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help 
 
 
+## Trimmen (Trimmomatic)
+
+Instellingen:
+ILLUMINACLIP: standaard Illumina adapters (met adapterbestand geselecteerd)
+LEADING: 20
+TRAILING: 20
+SLIDINGWINDOW: 4:20
+MINLEN: 70
+Input: Paired-end FASTQ (R1 en R2)
+Output: Paired-end trimmed FASTQ’s en bijbehorende unpaired bestanden
+
+
+
+## MultiQC
+
+Ik heb nog een keer FASTQC uitgevoerd na het trimmen. Ik zag nogsteeds 1 fail en 2 warnings. MultiQC heb ik daarna uitgevoerd om de verschillen te zien. In de afbeelding hieronder zie je de status. 
+
+![MultiQC](/homes/nfbovenga/NGS_Mapping/Images/MultiQC1.png)
+
+
 ## Mapping with reference genonome
 
 
