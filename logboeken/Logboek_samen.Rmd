@@ -1,0 +1,10 @@
+---
+title: "Logboek_samen"
+output: html_document
+---
+
+## 29-9-2025
+Vandaag gaan we bezig met week 3 van de les stof en de eerste opdracht hierin is dat we de BED-data gaan lezen.
+```{r}
+BED-file
+```
