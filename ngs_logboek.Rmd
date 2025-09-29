@@ -9,34 +9,66 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+Sample4_0394321_L001_R1_001.fastq, 646,109 KB
+Sample4_0394321_L001_R2_001.fastq, 646,117 KB
+
+op galaxy de data sets in een collection gezet
+
+
 ## FASTQC
 
 Deze test doen we op de ruwe data. Later gaan we deze opnieuw doen om te kijken wat voor invloed de andere testen hebben gehad.
 Uit de report kwam dan 1 test is gefaald en twee testen een warning hebben
 
+HTML-rapport:
+
 ![PerBaseSequenceContent](/homes/nfbovenga/NGS_Mapping/Images/PerBaseSequenceContent.png)
 Per base sequence content faalde omdat:
-De grafiek faalt omdat de baseverdeling niet stabiel en parallel loopt. Vooral bij de eerste en laatste basen wijken A, T, G en C sterk van elkaar af. Dit komt meestal door library-bias (bijvoorbeeld bij RNA-Seq of tagmentatie), soms door adapters of contaminatie. Bij RNA-Seq is dit normaal en geen groot probleem, bij DNA-Seq kan het wijzen op adapters of andere bias
+De basensamenstelling is niet stabiel en de lijnen voor A, T, G en C lopen niet parallel. Vooral bij de eerste ~10 basen en de laatste basen is er sterke afwijking tussen de nucleotiden. Dit kan komen door library-prep bias (bijvoorbeeld tagmentatie of primerbias), of door adapters/contaminatie. Bij RNA-Seq wordt dit vaak gezien en is het minder problematisch, bij DNA-Seq kan het duiden op adapters of bias die nog weggefilterd moet worden.
 
 
 ![SequenceLegthDistribution](/homes/nfbovenga/NGS_Mapping/Images/SequenceLegthDistribution.png)
 Sequence Length Distribution kreeg een warning omdat:
-De grafiek laat zien dat bijna al de reads dezelfde lengte hebben (rond de 150 bp). FastQC geeft toch een waarschuwing omdat er kleine variaties zijn, maar dit is normaal bij Illumina-data. Voor deze analyse zou er dus geen probleem moeten zijn. 
+De grafiek laat zien dat bijna alle reads dezelfde lengte hebben (~150 bp). Dit is normaal voor Illumina paired-end sequencing (NextSeq/MiSeq), waar reads een vaste lengte hebben. De kleine variatie aan het einde zorgt voor een waarschuwing, maar dit is geen probleem voor downstream analyse.
 
 
 ![SequenceDuplicationLevels](/homes/nfbovenga/NGS_Mapping/Images/SequenceDuplicationLevels.png)
 
 Sequence Duplication Levels kreeg een warning omdat:
-De grafiek van Sequence Duplication Levels laat zien dat de meeste reads maar één keer voorkomen (links hoog) en dat het aantal duplicaten snel afneemt naarmate de duplicatiegraad stijgt. Er is dus een aflopende curve: veel unieke reads, steeds minder reads die 2, 3 of meer keer voorkomen. Bovenin staat dat na deduplicatie nog 62,16% van de reads overblijft, wat betekent dat ongeveer 38% duplicaten zijn. Daarom geeft FastQC een waarschuwing. Voor RNA-Seq is dit patroon normaal, omdat sterk tot expressie komende genen vaker worden gesequenced.
+De curve laat zien dat de meerderheid van de reads uniek is (links hoog), en dat het aantal duplicaten snel afneemt. Toch blijft na deduplicatie maar ~60% unieke reads over (dus ~40% duplicaten). Dit verklaart de waarschuwing. Voor RNA-Seq-data is dit normaal, omdat sterk tot expressie komende genen vaker worden gesequenced en zo duplicaten veroorzaken. Voor DNA-Seq kan het wijzen op PCR-duplicatie of coverage bias.
+
+Beschreven met behulp van https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help
 
 
-Beschreven met behulp van https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help 
+## Trimmen (Trimmomatic)
+
+Instellingen:
+ILLUMINACLIP: standaard Illumina adapters (met adapterbestand geselecteerd)
+LEADING: 20
+TRAILING: 20
+SLIDINGWINDOW: 4:20
+MINLEN: 70
+Input: Paired-end FASTQ (R1 en R2)
+Output: Paired-end trimmed FASTQ’s en bijbehorende unpaired bestanden
 
 
+## MultiQC
+
+Ik heb nog een keer FASTQC uitgevoerd na het trimmen. Ik zag nogsteeds 1 fail en 2 warnings. MultiQC heb ik daarna uitgevoerd om de verschillen te zien. In de afbeelding hieronder in figuur 1 zie je de status.
+
+![figuur_1](/homes/nfbovenga/NGS_Mapping/Images/MultiQC1.png)
+![figuur_2](/homes/nfbovenga/NGS_Mapping/Images/PerSequenceQualityScores.png)
+
+Per Sequence Quality Scores (figuur 2):
+De meeste reads hebben een hoge gemiddelde kwaliteitsscore (>30), wat wijst op betrouwbare data. Er is nauwelijks een piek in de lage kwaliteitszones (<20), dus er zijn geen grote problemen met slechte reads. Dit bevestigt dat de dataset na trimming over het algemeen van goede kwaliteit is.
+Nu kan mapping beginnen!
+
+
+## Mapping with reference genonome
+
+Let op het zelfde genoom gebruiken
+HG38
 
 ## Map with BWA
 
 ## Mark duplicates
-
-
-
