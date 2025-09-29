@@ -5,6 +5,28 @@ output: html_document
 
 ## 29-9-2025
 Vandaag gaan we bezig met week 3 van de les stof en de eerste opdracht hierin is dat we de BED-data gaan lezen.
+
+Gebruikte libraries:
 ```{r}
-BED-file
+## Only needed when the package is missing
+if (!require("BiocManager"))
+    install.packages("BiocManager")
+
+BiocManager::install("GenomicRanges")
 ```
+
+```{r}
+# This package contains the 'IRanges', 'GRanges' and 'GRangesList' classes we will use
+library(GenomicRanges)
+```
+
+
+```{r}
+BED_file <-read.table("/commons/Themas/Thema05/2025/MedulloblastomaPanel/medulloblastoma_gene_panel_V3_ucsc.bed")
+BED_file
+```
+Omdat de columns geen namen hebben word dit autotmatisch v1 v2, dit moeten we veranderen:
+```{r}
+colnames()
+```
+
