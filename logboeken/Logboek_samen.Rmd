@@ -27,6 +27,7 @@ BED_file
 ```
 Omdat de columns geen namen hebben word dit autotmatisch v1 v2, dit moeten we veranderen:
 ```{r}
-colnames()
+colnames(BED_file) <- c("chromosome", "begin", "end gene")
+BED_file
 ```
 
