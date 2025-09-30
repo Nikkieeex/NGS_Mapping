@@ -4,34 +4,53 @@ output: html_document
 ---
 
 ## 29-9-2025
+
 Vandaag gaan we bezig met week 3 van de les stof en de eerste opdracht hierin is dat we de BED-data gaan lezen.
 
 Gebruikte libraries:
 
-
-
+*Opdracht 1:*
 
 ```{r}
 BED_file <-read.table("/commons/Themas/Thema05/2025/CardioPanel/CAR_0394321__en-20_target_v2_hg38.bed")
 head(BED_file)
 ```
+
 Omdat de columns geen namen hebben word dit autotmatisch v1 v2, dit moeten we veranderen:
+
 ```{r}
 names(BED_file)<- c("chromosome", "begin", "end","gene")
 head(BED_file)
 ```
-##30-9-2025
-Vandaag ga ik verder met wat ik gisteren gestart was, ik volg gewoon de stappen van week 3 nog.
 
-Het printen van de exons nummers per chromosoom, in elke rij zit 1 exon dus ik moet eigenlijk gewoon de hele tabel printen? 
+##30-9-2025 Vandaag ga ik verder met wat ik gisteren gestart was, ik volg gewoon de stappen van week 3 nog.
+
+Het printen van de exons nummers per chromosoom, in elke rij zit 1 exon dus ik moet eigenlijk gewoon de hele tabel printen?
+
 ```{r}
 exons <- table(BED_file$chromosome)
 exons
 ```
+
 Hier is te zien hoeveel exonen er per chromosoom zijn deze kan je plotten:
+
 ```{r}
 barplot(exons,
         ylab = "Exonen nummers",
         las = 2)
+```
+
+*opdracht 2:*
+
+Het visualiseren van de nummers van genen per chromosoom, hiervoor moeten we een subset creeeren met elke unieke chromosoom-genen combinatie. Hiervoor kunnen we de table functie weer gebruiken.
+```{r}
+# selecteren van de chromosoom en gene columns
+chrom_gene <- BED_file[, c("chromosome", "gene")]
+
+# het verwijderen van duplicates 
+unique_genes <- unique(chrom_gene)
+
+# tellen van genen per chromosoom
+table(unique_genes$chromosome)
 ```
 
