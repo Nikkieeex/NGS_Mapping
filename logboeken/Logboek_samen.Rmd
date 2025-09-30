@@ -137,4 +137,10 @@ my_list["SOD2"]
 dit werkt dus mooi:D.
 
 _opdracht 4_
+In deze opdracht moeten we nog een visualisatie maken gebaseerd op de BED-data maar nu gebruiken we de GRange object.
 
+```{r}
+psen2_ranges <- ranges(BED_file[['PSEN2']])
+paste("Length of the 'PSEN2' gene:", sum(width(psen2_ranges)), "\n")
+```
+Hier kom ik ff niet verder en ga hier morgen denk ik verder aan werken.
