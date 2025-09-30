@@ -7,7 +7,6 @@ output: html_document
 
 Vandaag gaan we bezig met week 3 van de les stof en de eerste opdracht hierin is dat we de BED-data gaan lezen.
 
-Gebruikte libraries:
 
 *Opdracht 1:*
 
@@ -23,7 +22,8 @@ names(BED_file)<- c("chromosome", "begin", "end","gene")
 head(BED_file)
 ```
 
-##30-9-2025 Vandaag ga ik verder met wat ik gisteren gestart was, ik volg gewoon de stappen van week 3 nog.
+##30-9-2025 
+Vandaag ga ik verder met wat ik gisteren gestart was, ik volg gewoon de stappen van week 3 nog.
 
 Het printen van de exons nummers per chromosoom, in elke rij zit 1 exon dus ik moet eigenlijk gewoon de hele tabel printen?
 
@@ -51,6 +51,54 @@ chrom_gene <- BED_file[, c("chromosome", "gene")]
 unique_genes <- unique(chrom_gene)
 
 # tellen van genen per chromosoom
-table(unique_genes$chromosome)
+gene_counts <- table(unique_genes$chromosome)
+
+# Plotten van het resultaat
+barplot(gene_counts,
+        ylab = "Aantal unieke genen per chromosoom",
+        las = 2)  # Draait de x-as labels verticaal voor betere leesbaarheid
 ```
+
+_opdracht 3:_
+
+libraries wat we gaan gebruiken:
+```{r}
+## Only needed when the package is missing
+if (!require("BiocManager"))
+    install.packages("BiocManager")
+
+BiocManager::install("GenomicRanges")
+```
+```{r}
+# This package contains the 'IRanges', 'GRanges' and 'GRangesList' classes we will use
+library(GenomicRanges)
+```
+
+```{r}
+# print alle rijen waar alle genomen SOD2 zijn
+sod2 <- BED_file[BED_file$gene == "SOD2", ]
+```
+
+```{r}
+# wijs de hele kolom toe aan IRanges argumenten
+ranges <- IRanges(start = sod2$begin,
+                  end = sod2$end,
+                  names = sod2$gene)
+ranges
+```
+IRanges word gebruikt om een soort van lijst te maken zodat R precies weet waar elk stukje begint, eindigt en hoe die heet. Dit is makkelijk om makkelijk te zien of er stukjes overlappen, of om te zoeken naar bepaalde regios. 
+
+```{r}
+# het berekenen van de lengte van een gene
+cat("Lengte van SOD2:", sum( width( ranges) ), "bp")
+```
+
+Hier zie je eigenlijk hetzelfde als dat met de IRanges maar er missen enkele gegevens, daarom gaan we het IRanges omzetten naar GRanges, dit doen we om eigenlijk extra biologische data toe te voegen.
+```{r}
+granges <- GRanges(seqnames = sod2$chromosome,
+                   ranges = ranges)
+granges
+```
+Wat kunnen we nu eigenlijk met de granges? Met alleen de BED-data niet zo heel veel, maar we gaan de Pileup data ook in een vergelijkbare GRanges object plaatsen, hiermee kunnen we met onze data interessante vragen stellen met de pileup functie. Bijvoorbeeld specifiek iets vragen over exonen en de rest negeren. 
+
 
