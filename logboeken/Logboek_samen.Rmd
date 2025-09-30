@@ -101,4 +101,40 @@ granges
 ```
 Wat kunnen we nu eigenlijk met de granges? Met alleen de BED-data niet zo heel veel, maar we gaan de Pileup data ook in een vergelijkbare GRanges object plaatsen, hiermee kunnen we met onze data interessante vragen stellen met de pileup functie. Bijvoorbeeld specifiek iets vragen over exonen en de rest negeren. 
 
+Voor dat we dat kunnen doen moeten we eerst de BED-data in het goede formaat zetten. 
+
+De eerste stap hierbij een lege lijst creeeren:
+```{r}
+my_list <- list()
+```
+
+De tweede stap is om te itereren over alle genen in het BED-bestand:
+```{r}
+# split het BED-bestand op gene
+gene_group <- split(BED_file, BED_file$gene)
+
+# Itereer over elke gene
+for (gene_name in names(gene_group)) {
+  gene_data <- gene_group[[gene_name]]
+  # Maak een GRanges object
+  gr <- GRanges(seqnames = gene_data$chromosome,
+                ranges = IRanges(start = gene_data$begin, end = gene_data$end),
+                gene = gene_name)
+  
+  # Voeg toe aan de lijst
+  my_list[[gene_name]] <- gr
+}
+
+# Zet de lijst om naar een GRangesList
+my_list <- GRangesList(my_list)
+
+my_list
+```
+```{r}
+my_list["SOD2"]
+```
+
+dit werkt dus mooi:D.
+
+_opdracht 4_
 
