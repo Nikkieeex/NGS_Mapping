@@ -66,9 +66,56 @@ Nu kan mapping beginnen!
 
 ## Mapping with reference genonome
 
-Let op het zelfde genoom gebruiken
-HG38
+Standaard mens genoom gebruikt (h38)
 
-## Map with BWA
 
-## Mark duplicates
+## Sortsam tool
+
+Instellingen:
+Input is vorige SAM/BAM file
+Sort order: coordinate
+Validation stringency: LENIENT
+
+
+## MarkDuplicates
+
+Instellinegn:
+Input: gesorteerde BAM van vorige stap
+f true do not write duplicates to the output file instead of writing them with appropriate flags set, Yes
+Assume the input file is already sorted, Yes
+The scoring strategy op SUM_OF_BASE_QUALITIES
+The maximum offset: 100
+Select validation stringency: Lenient
+
+
+## Variant Calling
+
+Goed opletten met reference genoom kiezen, want hij staat standaard op h19.
+
+Instellingen:
+Input: MarkDuplicates output (BAM)
+Using reference genome: h38
+Limit variant calling to a set of regions: Do not limit
+Read coverage: Use defaults 
+Choose parameter selection level: Simple diploid calling
+Type of main output to produce: VCF (default)
+
+## VCFilter
+
+instellingen:
+Input: VCF bestand
+Specify filtering value: DP> 20
+Filter entire records, not just alleles: No
+Tag VCF records as positively filtered: No
+Tag VCF records as negatively filtered: No
+Append the existing filter tag: No
+Apply tag-pass on a per-allele basis: No
+Invert the filter: No
+Use logical OR instead of AND to combine filters: No
+
+
+## Annotatie met SnpEff
+
+Input: gefilterde VCF van vorige stap 
+
+Bij genoom dowload on demand gekozen en GRCh38.86 ingevult 

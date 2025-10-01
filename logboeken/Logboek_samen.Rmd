@@ -22,7 +22,7 @@ names(BED_file)<- c("chromosome", "begin", "end","gene")
 head(BED_file)
 ```
 
-##30-9-2025 
+## 30-9-2025 
 Vandaag ga ik verder met wat ik gisteren gestart was, ik volg gewoon de stappen van week 3 nog.
 
 Het printen van de exons nummers per chromosoom, in elke rij zit 1 exon dus ik moet eigenlijk gewoon de hele tabel printen?
@@ -144,3 +144,150 @@ psen2_ranges <- ranges(BED_file[['PSEN2']])
 paste("Length of the 'PSEN2' gene:", sum(width(psen2_ranges)), "\n")
 ```
 Hier kom ik ff niet verder en ga hier morgen denk ik verder aan werken.
+
+## 01-10-2025
+
+
+Vandaag ga ik verder met **opdracht 4 t/m 7**
+
+
+_opdracht 4_ 
+
+Genlengten (exonen) en visualisatie
+
+Per gen de totale lengte in bp (som van exonlengten) berekenen en een overzichtsplot maken
+
+```{r}
+# Lengte van een specifiek gen (voorbeeld PSEN2) en som van exonbreedtes
+psen2_ranges <- ranges(my_list[["PSEN2"]])
+paste("Lengte van 'PSEN2' (exonen):", sum(width(psen2_ranges)), "bp")
+
+# Alle genlengten (som van exonen per gen)
+gene_lengths <- sapply(my_list, function(gr) sum(width(gr)))
+gene_lengths <- sort(gene_lengths, decreasing = TRUE)
+
+# Basale barplot, lange genen kunnen de schaal domineren
+barplot(gene_lengths,
+        las = 2,
+        ylab = "Genlengte (som exonen, bp)",
+        main = "Exon-gebaseerde genlengten (panel)")
+```
+
+Je ziet dat sommige genen veel langer zijn, waardoor de rest moeilijk te vergelijken is. Als TTN er niet tussen stond kon je beter verschillen zien. 
+
+
+_opdracht 5_ 
+
+BAM-bestand laden en pileup voor één gen en Rsamtools gebruiken
+En bam en bai files nog op logische plek zetten
+
+```{r}
+if (!requireNamespace("Rsamtools", quietly = TRUE)) BiocManager::install("Rsamtools")
+library(Rsamtools)
+
+# JOHANNA PAS DIT PAD NOG AAN
+bam_path <- "C:/Users/nicol/Documents/NGS_en_Genetics/MarkDuplicates on collection 28_BAM/bestand.bam"
+bai_path <- "C:/Users/nicol/Documents/NGS_en_Genetics/MarkDuplicates on collection 28_BAM/bestand.bam.bai"
+
+# Controle
+bam_file <- BamFile(bam_path, index = bai_path)
+
+# Test op 1 gen voorbeeld SOD2
+test_gene <- "SOD2"
+test_ranges <- my_list[[test_gene]]
+
+# Pileup zonder onderscheid naar strand naar totale dekking per base
+pu_params <- PileupParam(distinguish_nucleotides = FALSE,
+                         distinguish_strands    = FALSE)
+
+test_pileup <- pileup(file = bam_file,
+                      scanBamParam = ScanBamParam(which = test_ranges),
+                      pileupParam  = pu_params)
+
+head(test_pileup)
+```
+beschrijf dit nog evne
+
+
+_opdracht 6_
+
+Pileup verwerken voor alle genen en in een lijst opslaan voor latere aggregatie
+
+```{r}
+coverage_list <- list()
+
+for (g in names(my_list)) {
+  gr <- my_list[[g]]
+  pu <- pileup(file = bam_file,
+               scanBamParam = ScanBamParam(which = gr),
+               pileupParam  = pu_params)
+  if (nrow(pu) > 0) {
+    pu$gene <- g
+  } else {
+    # lege df met juiste kolommen
+    pu <- data.frame(seqnames = character(),
+                     pos      = integer(),
+                     count    = integer(),
+                     gene     = character())
+  }
+  coverage_list[[g]] <- pu
+}
+
+# Snelle sanity-check op een gen dat zeker in de panel zit
+head(coverage_list[[test_gene]])
+```
+
+coverage_list bevat nu per gen een data.frame met minimaal kolommen pos, count, gene. Lege data.frames duiden op 0 reads in de targetregio.
+
+
+_opdracht 7_
+
+Coverage berekenen en rapporteren
+
+per gen rapporteren:
+aantal basen
+gemiddelde dekking
+aantal posities met lange dekking en percentage
+
+
+```{r}
+options(stringsAsFactors = FALSE)
+
+gene_metrics <- data.frame(
+  gene            = names(my_list),
+  length_bp       = as.integer(sapply(my_list, function(gr) sum(width(gr)))),
+  total_coverage  = numeric(length(my_list)),
+  avg_coverage    = numeric(length(my_list)),
+  low_cover_bases = integer(length(my_list)),
+  low_cover_pct   = numeric(length(my_list))
+)
+
+for (g in names(my_list)) {
+  gene_len <- sum(width(my_list[[g]]))
+  df <- coverage_list[[g]]
+
+  if (nrow(df) > 0) {
+    # df$count is totale dekking per base (strand/nucleotide al samengenomen)
+    total_cov <- sum(df$count)
+    high_cov_positions <- sum(df$count >= 30)
+  } else {
+    total_cov <- 0
+    high_cov_positions <- 0
+  }
+
+  low_cov_positions <- gene_len - high_cov_positions
+  avg_cov <- if (gene_len > 0) total_cov / gene_len else 0
+
+  gene_metrics[gene_metrics$gene == g, "total_coverage"]  <- total_cov
+  gene_metrics[gene_metrics$gene == g, "avg_coverage"]    <- avg_cov
+  gene_metrics[gene_metrics$gene == g, "low_cover_bases"] <- low_cov_positions
+  gene_metrics[gene_metrics$gene == g, "low_cover_pct"]   <- (low_cov_positions / gene_len) * 100
+}
+
+# Sorteren op % lage dekking aflopend
+gene_metrics <- gene_metrics[order(-gene_metrics$low_cover_pct, gene_metrics$gene), ]
+
+```
+
+
+
