@@ -8,7 +8,7 @@ output: html_document
 Vandaag gaan we bezig met week 3 van de les stof en de eerste opdracht hierin is dat we de BED-data gaan lezen.
 
 
-*Opdracht 1:*
+_Opdracht 1:_
 
 ```{r}
 BED_file <-read.table("/commons/Themas/Thema05/2025/CardioPanel/CAR_0394321__en-20_target_v2_hg38.bed")
@@ -40,7 +40,7 @@ barplot(exons,
         las = 2)
 ```
 
-*opdracht 2:*
+_opdracht 2:_
 
 Het visualiseren van de nummers van genen per chromosoom, hiervoor moeten we een subset creeeren met elke unieke chromosoom-genen combinatie. Hiervoor kunnen we de table functie weer gebruiken.
 ```{r}
@@ -290,4 +290,16 @@ gene_metrics <- gene_metrics[order(-gene_metrics$low_cover_pct, gene_metrics$gen
 ```
 
 
+## 02-10-2025
+
+Vandaag ga  ik bezig met VCF in galaxy en daarna hier inlezen
+
+```{r}
+vcf <- read.delim(
+  "C:/Users/nicol/Downloads/Sample4_0394321_L001__001.vcf",
+  skip = 17,
+  header = TRUE,
+  stringsAsFactors = FALSE
+)
+```
 
