@@ -319,9 +319,32 @@ splitten van de kolom met strsplit functie, de output van deze functie is een li
 ```{r}
 bed_splitted <- strsplit(variant_data$INFO,";")
 
-head(bed_splitted, n = 5)
 bed_matrix <- do.call(rbind, bed_splitted)
 head(bed_matrix, n = 20)
 
 ```
+De eerste stap om nu te nemen is om het AF te verwijderen van de 2e rij. Daarna wil je het numeric maken, na het numeric maken wil je als een gescheiden variabel bewaren. 
+```{r}
+AF_clean <- gsub("^AF=", "", bed_matrix[, 2]) # verwijderd AF van de rij
+AF_numeric <- as.numeric(AF_clean) # maakt de kolom numeric
+no_AF <- AF_numeric # sla op als eigen variabel
+```
 
+De volgende stap is weer een GRanges maken waarbij de start en eind parameters een pos kolom krijgen. 
+```{r}
+nrow(bed_matrix)         # moet 1306 zijn
+length(variant_data$X.CHROM)       # moet 1306 zijn
+length(variant_data$POS) # moet 1306 zijn
+```
+
+```{r}
+gr2 <- GRanges(
+  seqnames = variant_data$X.CHROM,
+  ranges = IRanges(start = variant_data$POS, end = variant_data$POS),
+  strand = "*"
+)
+
+mcols(gr2) <- DataFrame(frequency = AF_numeric)
+
+print(gr2)
+```
