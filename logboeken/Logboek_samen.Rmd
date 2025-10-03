@@ -348,3 +348,57 @@ mcols(gr2) <- DataFrame(frequency = AF_numeric)
 
 print(gr2)
 ```
+De volgende stap is om alle varianten te krijgen van een exon. Dit moet met de findOverlap functie:
+https://www.rdocumentation.org/packages/GenomicAlignments/versions/1.8.4/topics/findOverlaps-methods
+
+```{r}
+exons_gr <- GRanges(
+  seqnames = BED_file$chromosome,
+  ranges = IRanges(start = BED_file$begin, end = BED_file$end),
+  strand = "*",
+  gene = BED_file$gene
+)
+```
+
+
+```{r}
+# hits is een object (container) 
+hits <- findOverlaps( query = gr2, subject = exons_gr)
+hits_df <- DataFrame(hits)
+
+```
+
+```{r}
+hits
+hits_df
+```
+Je zou twee kolommen moeten krijgen waarvan 1 queryHits en de andere subjectHits, dit klopt. De volgende stap is het filteren op die 30%, dit kunnen we doen met het creeeren van nog een subset. 
+
+```{r}
+# de hits wie we willen houden omdat ze binnen het exon vallen
+variants_in_exons <- gr2[hits_df$queryHits]
+
+# freq voor frequency
+freqs <- gr2$frequency
+
+# filter voor 30%
+freq_filter <- which(freqs >= 0.30)
+
+# combineren van de filters
+final_rows <- intersect(hits_df$queryHits, freq_filter)
+```
+Het vcf bestand overschrijven:
+```{r}
+vcf_lines <- readLines("../data/voor_filtering.vcf")
+
+header <- vcf_lines[1:17]
+body <- vcf_lines[18:length(vcf_lines)]
+
+vcf_filtered <- c(header, body[final_rows])
+
+writeLines(vcf_filtered, "../data/na_filtering.vcf")
+```
+
+Dit is als het goed is opgeslagen nu dus de volgende stap is dit bestand uploaden in galaxy. 
+
+_opdracht 9_
