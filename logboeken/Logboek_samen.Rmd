@@ -376,7 +376,7 @@ Je zou twee kolommen moeten krijgen waarvan 1 queryHits en de andere subjectHits
 
 ```{r}
 # de hits wie we willen houden omdat ze binnen het exon vallen
-variants_in_exons <- gr2[hits_df$queryHits]
+
 
 # freq voor frequency
 freqs <- gr2$frequency
@@ -386,15 +386,17 @@ freq_filter <- which(freqs >= 0.30)
 
 # combineren van de filters
 final_rows <- intersect(hits_df$queryHits, freq_filter)
+variants_in_exons <- gr2[final_rows]
+final_rows
 ```
 Het vcf bestand overschrijven:
 ```{r}
 vcf_lines <- readLines("../data/voor_filtering.vcf")
 
-header <- vcf_lines[1:17]
+header <- vcf_lines[1:18]
 body <- vcf_lines[18:length(vcf_lines)]
 
-vcf_filtered <- c(header, body[final_rows])
+vcf_filtered <- c(header, body[final_rows+18])
 
 writeLines(vcf_filtered, "../data/na_filtering.vcf")
 ```
@@ -402,3 +404,39 @@ writeLines(vcf_filtered, "../data/na_filtering.vcf")
 Dit is als het goed is opgeslagen nu dus de volgende stap is dit bestand uploaden in galaxy. 
 
 _opdracht 9_
+Voor deze opdracht 2 simpele visualizaties:
+
+de visualisatie van de allelen frequency for alle overgebleven varianten:
+```{r}
+hist(variants_in_exons$frequency, breaks = 20,
+     col = "skyblue", main = "Allele Frequency spreiding",
+     xlab = "Allele Frequency", ylab = "Aantal varianten")
+```
+Ik zie vooral pieken bij rond de 50/60% dit betekent dat het heterozygote varianten. 
+
+De tweede visualisatie is varianten per gen visualiseren:
+```{r}
+variant_counts <- table(hits_df$subjectHits)
+
+variant_df <- as.data.frame(variant_counts)
+colnames(variant_df) <- c("gene_index", "variant_count")
+
+variant_df$gene <- names(exons_grl)[as.integer(variant_df$gene_index)]
+
+barplot(variant_df$variant_count,
+        names.arg = variant_df$gene,
+        las = 2,
+        col = "pink",
+        main = "Aantal varianten per gen",
+        xlab = "Gen",
+        ylab = "Aantal varianten",
+        cex.names = 0.7)
+```
+
+De volgende stap is in galaxy het bestand wat we net gefiltreerd hebben (vcf), te vergelijken met een aantal data bases. Deze data bases bevatten annotatiesgegevens voor bekende varianten. 
+
+Met SnpEff gaan wij de varianten annoteren, met behulp van de GRCh38.105- database. Ook word er extra informatie toegevoegd met betrekking van het gen, dit geeft dus extra resultaten en dit word gedocumonteerd in het na_filtering.vcf.
+
+Stap 2 is SnpSift, daarvoor ben je de dnSnp database nodig die gebruik ik als in de opdracht bij week 4. 
+
+
