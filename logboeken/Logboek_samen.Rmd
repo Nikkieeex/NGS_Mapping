@@ -398,7 +398,7 @@ body <- vcf_lines[18:length(vcf_lines)]
 
 vcf_filtered <- c(header, body[final_rows+18])
 
-writeLines(vcf_filtered, "../data/na_filtering.vcf")
+#writeLines(vcf_filtered, "../data/na_filtering.vcf")
 ```
 
 Dit is als het goed is opgeslagen nu dus de volgende stap is dit bestand uploaden in galaxy. 
