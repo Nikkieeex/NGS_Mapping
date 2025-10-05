@@ -290,4 +290,153 @@ gene_metrics <- gene_metrics[order(-gene_metrics$low_cover_pct, gene_metrics$gen
 ```
 
 
+##3-10-2025
+
+Mijn doel voor vandaag is om met week 4 te starten, nicole en ik zijn allebei ermee bezig omdat het bij nicole niet helemaal goed gaat met downloaden. 
+
+Met de BAM file en waar mark duplicates op is toegepast, ga ik de call variants tool van LoFreq gebruiken, met het GRCh38 referentie genoom. Ik laat de Call variants across setting aan met het gehele genoom referentie. 
+
+Het resultaat van deze tool zou uiteindelijk een nieuwe file worden (vcf), elke lijn beschrijft een single variant. In galaxy kan je makkelijk zien hoeveel varianten er zijn. Noteer de 17 comment lines aan het begin van de file.
+_Opdracht 8:_
+Omdat we met patienten data werken gaan we ook volgends de richtlijnen werken van UMCG. Dit houdt in dat sequenties met een minimale waarde van 30% behouden word. Alles wat hier niet aan voldoet word eruit gefiltered.
+
+Voor het filteren zijn er 1306 varianten. 
+
+Inlezen van de data frame met read.delim functie, moeten we zeker zijn dat het bestand een goede header heeft met 18 comments, dit klopt. Ook moeten we de stringsAsFactors = FALSE argument toepassen, anders werkt het simpelweg niet omdat we geen R factor kunnen splitten. 
+```{r}
+
+# lees data vanaf lijn 18
+variant_data <- read.delim("../data/voor_filtering.vcf",
+                           header = TRUE,
+                           skip = 17, # zorgt dat line 18 header is
+                           stringsAsFactors = FALSE )
+
+str(variant_data)
+head(variant_data)
+```
+
+splitten van de kolom met strsplit functie, de output van deze functie is een lijst waar elk item een vector is, met gescheiden items. We gaan blijkbaar R magie gebruiken om dit te veranderen in een matrix:D.
+```{r}
+bed_splitted <- strsplit(variant_data$INFO,";")
+
+bed_matrix <- do.call(rbind, bed_splitted)
+head(bed_matrix, n = 20)
+
+```
+De eerste stap om nu te nemen is om het AF te verwijderen van de 2e rij. Daarna wil je het numeric maken, na het numeric maken wil je als een gescheiden variabel bewaren. 
+```{r}
+AF_clean <- gsub("^AF=", "", bed_matrix[, 2]) # verwijderd AF van de rij
+AF_numeric <- as.numeric(AF_clean) # maakt de kolom numeric
+no_AF <- AF_numeric # sla op als eigen variabel
+```
+
+De volgende stap is weer een GRanges maken waarbij de start en eind parameters een pos kolom krijgen. 
+```{r}
+nrow(bed_matrix)         # moet 1306 zijn
+length(variant_data$X.CHROM)       # moet 1306 zijn
+length(variant_data$POS) # moet 1306 zijn
+```
+
+```{r}
+gr2 <- GRanges(
+  seqnames = variant_data$X.CHROM,
+  ranges = IRanges(start = variant_data$POS, end = variant_data$POS),
+  strand = "*"
+)
+
+mcols(gr2) <- DataFrame(frequency = AF_numeric)
+
+print(gr2)
+```
+De volgende stap is om alle varianten te krijgen van een exon. Dit moet met de findOverlap functie:
+https://www.rdocumentation.org/packages/GenomicAlignments/versions/1.8.4/topics/findOverlaps-methods
+
+```{r}
+exons_gr <- GRanges(
+  seqnames = BED_file$chromosome,
+  ranges = IRanges(start = BED_file$begin, end = BED_file$end),
+  strand = "*",
+  gene = BED_file$gene
+)
+```
+
+
+```{r}
+# hits is een object (container) 
+hits <- findOverlaps( query = gr2, subject = exons_gr)
+hits_df <- DataFrame(hits)
+
+```
+
+```{r}
+hits
+hits_df
+```
+Je zou twee kolommen moeten krijgen waarvan 1 queryHits en de andere subjectHits, dit klopt. De volgende stap is het filteren op die 30%, dit kunnen we doen met het creeeren van nog een subset. 
+
+```{r}
+# de hits wie we willen houden omdat ze binnen het exon vallen
+
+
+# freq voor frequency
+freqs <- gr2$frequency
+
+# filter voor 30%
+freq_filter <- which(freqs >= 0.30)
+
+# combineren van de filters
+final_rows <- intersect(hits_df$queryHits, freq_filter)
+variants_in_exons <- gr2[final_rows]
+final_rows
+```
+Het vcf bestand overschrijven:
+```{r}
+vcf_lines <- readLines("../data/voor_filtering.vcf")
+
+header <- vcf_lines[1:18]
+body <- vcf_lines[18:length(vcf_lines)]
+
+vcf_filtered <- c(header, body[final_rows+18])
+
+#writeLines(vcf_filtered, "../data/na_filtering.vcf")
+```
+
+Dit is als het goed is opgeslagen nu dus de volgende stap is dit bestand uploaden in galaxy. 
+
+_opdracht 9_
+Voor deze opdracht 2 simpele visualizaties:
+
+de visualisatie van de allelen frequency for alle overgebleven varianten:
+```{r}
+hist(variants_in_exons$frequency, breaks = 20,
+     col = "skyblue", main = "Allele Frequency spreiding",
+     xlab = "Allele Frequency", ylab = "Aantal varianten")
+```
+Ik zie vooral pieken bij rond de 50/60% dit betekent dat het heterozygote varianten. 
+
+De tweede visualisatie is varianten per gen visualiseren:
+```{r}
+variant_counts <- table(hits_df$subjectHits)
+
+variant_df <- as.data.frame(variant_counts)
+colnames(variant_df) <- c("gene_index", "variant_count")
+
+variant_df$gene <- names(exons_grl)[as.integer(variant_df$gene_index)]
+
+barplot(variant_df$variant_count,
+        names.arg = variant_df$gene,
+        las = 2,
+        col = "pink",
+        main = "Aantal varianten per gen",
+        xlab = "Gen",
+        ylab = "Aantal varianten",
+        cex.names = 0.7)
+```
+
+De volgende stap is in galaxy het bestand wat we net gefiltreerd hebben (vcf), te vergelijken met een aantal data bases. Deze data bases bevatten annotatiesgegevens voor bekende varianten. 
+
+Met SnpEff gaan wij de varianten annoteren, met behulp van de GRCh38.105- database. Ook word er extra informatie toegevoegd met betrekking van het gen, dit geeft dus extra resultaten en dit word gedocumonteerd in het na_filtering.vcf.
+
+Stap 2 is SnpSift, daarvoor ben je de dnSnp database nodig die gebruik ik als in de opdracht bij week 4. 
+
 
