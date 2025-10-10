@@ -195,22 +195,8 @@ dat ziet er beter uit. Nu kan ik de data mergen met elkaar.
 ```{r}
 merged <- merge(ann, dbnsfp, by = c("CHROM", "POS", "REF", "ALT"))
 ```
-De volgende stap is het filteren van de cardiomyopathy hits. 
-```{r}
-cardio_hits <- subset(merged, grepl("cardiomyopathy", merged$CLNDN, ignore.case = TRUE))
 
-```
-Kijken wat er precies in deze kolommen staan. 
 ```{r}
-names(cardio_hits)
-
-```
-```{r}
-priority <- subset(cardio_hits,
-                   ANN.IMPACT.x %in% c("HIGH", "MODERATE") &
-                   dbNSFP_SIFT_pred == "D" &
-                   dbNSFP_Polyphen2_HDIV_pred %in% c("D", "P") &
-                   dbNSFP_MutationAssessor_score >= 2)
 
 ```
 
