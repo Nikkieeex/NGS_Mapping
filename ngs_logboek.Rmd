@@ -119,3 +119,42 @@ Use logical OR instead of AND to combine filters: No
 Input: gefilterde VCF van vorige stap 
 
 Bij genoom dowload on demand gekozen en GRCh38.86 ingevult 
+
+##10-10-2025
+Vandaag ga ik verder met de bovenstaande stap annotie met SNpEff
+
+```{bash}
+java -jar /data/datasets/dbNSFP/snpEff/SnpSift.jar DbNsfp -db /data/datasets/dbNSFP/snpEff/data/dbNSFP4.3c.txt.gz ~/Desktop/variant_step2.vcf > ~/Desktop/variants_step3.vcf
+```
+
+| Field ID                  | Source Database     | Value Type / Description                                      |
+|---------------------------|---------------------|---------------------------------------------------------------|
+| DP                        | LoFreq              | Integer: Raw read depth                                       |
+| AF                        | LoFreq              | Float: Allele frequency                                       |
+| SB                        | LoFreq              | Integer: Strand bias (Phred-scaled)                           |
+| DP4                       | LoFreq              | Integer[4]: Ref/alt forward/reverse base counts               |
+| INDEL                     | LoFreq              | Flag: Indicates INDEL variant                                 |
+| CONSVAR                   | LoFreq              | Flag: Consensus variant indicator                             |
+| HRUN                      | LoFreq              | Integer: Homopolymer run length                               |
+| ANN                       | SnpEff              | String: Functional annotation (gene, impact, consequence, etc.) |
+| LOF                       | SnpEff              | String: Predicted loss-of-function annotation                 |
+| NMD                       | SnpEff              | String: Nonsense-mediated decay prediction                    |
+| DBVARID                   | dbVar               | String: Structural variant accession ID                       |
+| MC                        | dbSNP / ClinVar     | String: Molecular consequence (SO terms)                      |
+| CLNDN                     | ClinVar             | String: Disease name                                          |
+| ALLELEID                  | ClinVar             | Integer: Allele ID                                            |
+| CLNVC                     | ClinVar             | String: Variant type                                          |
+| CLNSIG                    | ClinVar             | String: Clinical significance                                 |
+| CLNVCSO                   | ClinVar             | String: Sequence Ontology ID                                  |
+| CLNVI                     | ClinVar             | String: Source database and variant ID                        |
+| CLNREVSTAT               | ClinVar             | String: Review status                                         |
+| CLNSIGINCL                | ClinVar             | String: Clinical significance for haplotype/genotype          |
+| RS                        | dbSNP               | String: rsID (SNP identifier)                                 |
+| CLNDISDB                  | ClinVar             | String: Disease database and identifier                       |
+| GENEINFO                  | ClinVar             | String: Gene symbol and ID                                    |
+| AF_EXAC / AF_ESP / AF_TGP | ExAC / ESP / TGP    | Float: Population allele frequencies                          |
+| ORIGIN                    | ClinVar             | String: Allele origin codes                                   |
+| CLNSIGCONF                | ClinVar             | String: Conflicting clinical significance                     |
+| CLNHGVS                   | ClinVar             | String: HGVS expression                                       |
+| dbNSFP_*                  | dbNSFP              | Various: Predictive scores, allele counts, conservation, etc. |
+
