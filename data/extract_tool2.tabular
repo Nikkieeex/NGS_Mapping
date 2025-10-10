@@ -1,0 +1,851 @@
+CHROM	POS	REF	ALT	ANN[*].EFFECT	ANN[*].IMPACT	ANN[*].GENE	ANN[*].FEATURE	ANN[*].FEATUREID	ANN[*].BIOTYPE	ANN[*].ERRORS	CLNDN	CLNSIG
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000367322.6	protein_coding			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000367320.6	protein_coding			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000412633.3	protein_coding			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000476888.5	processed_transcript			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000460780.5	processed_transcript			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000491504.5	retained_intron			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000236918.11	protein_coding			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000360372.8	protein_coding			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000367317.8	protein_coding			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000367318.10	protein_coding			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000422165.6	protein_coding			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000509001.5	protein_coding			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000438742.6	protein_coding			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000455702.6	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE		
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000515042.5	retained_intron			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000658476.1	protein_coding			
+chr1	201362920	G	A	intron_variant	MODIFIER	ENSG00000286600	transcript	ENST00000671234.1	pseudogene			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000662159.1	nonsense_mediated_decay			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000660295.1	protein_coding			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000663843.1	nonsense_mediated_decay			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000656932.1	protein_coding			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000666449.1	nonsense_mediated_decay			
+chr1	201362920	G	A	intron_variant	MODIFIER	TNNT2	transcript	ENST00000651504.1	retained_intron			
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000367322.6	protein_coding		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000367320.6	protein_coding		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000412633.3	protein_coding		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000466570.5	processed_transcript		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000445079.2	retained_intron		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000472177.2	retained_intron		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000491504.5	retained_intron		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000236918.11	protein_coding		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000360372.8	protein_coding		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000367317.8	protein_coding		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000367318.10	protein_coding		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000422165.6	protein_coding		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000509001.5	protein_coding		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000438742.6	protein_coding		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000455702.6	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000475686.5	processed_transcript		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000494095.5	retained_intron		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000658476.1	protein_coding		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	ENSG00000286600	transcript	ENST00000671234.1	pseudogene		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000662159.1	nonsense_mediated_decay		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000660295.1	protein_coding		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000663843.1	nonsense_mediated_decay		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000656932.1	protein_coding		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	201368042	A	G	intron_variant	MODIFIER	TNNT2	transcript	ENST00000666449.1	nonsense_mediated_decay		not_provided|Cardiomyopathy,_familial_restrictive,_3|Hypertrophic_cardiomyopathy_2|Dilated_cardiomyopathy_1D	Benign
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000366782.6	protein_coding			
+chr1	226883975	T	G	intron_variant	MODIFIER	ENSG00000288674	transcript	ENST00000366779.6	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000422240.6	protein_coding			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000495488.5	protein_coding	WARNING_TRANSCRIPT_NO_STOP_CODON		
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000460775.5	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE		
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000524196.6	protein_coding			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000366783.8	protein_coding			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000626989.3	protein_coding			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000676945.1	protein_coding			
+chr1	226883975	T	G	intron_variant	MODIFIER	ENSG00000288674	transcript	ENST00000676884.1	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000676888.1	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000678835.1	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000676907.1	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000677529.1	retained_intron			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000677748.1	retained_intron			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000678320.1	protein_coding			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000678706.1	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000678655.1	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000679098.1	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000678820.1	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000678233.1	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000677599.1	protein_coding			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000677414.1	protein_coding			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000676840.1	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000678784.1	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000679088.1	protein_coding			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000676747.1	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000678021.1	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000677880.1	protein_coding			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000677596.1	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000676467.1	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000678776.1	nonsense_mediated_decay			
+chr1	226883975	T	G	intron_variant	MODIFIER	PSEN2	transcript	ENST00000677065.1	retained_intron			
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	PSEN2	transcript	ENST00000366782.6	protein_coding		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	ENSG00000288674	transcript	ENST00000366779.6	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	PSEN2	transcript	ENST00000524196.6	protein_coding		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	PSEN2	transcript	ENST00000366783.8	protein_coding		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	PSEN2	transcript	ENST00000626989.3	protein_coding		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	ENSG00000288674	transcript	ENST00000676884.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	PSEN2	transcript	ENST00000676888.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	PSEN2	transcript	ENST00000676907.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	PSEN2	transcript	ENST00000678320.1	protein_coding		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	PSEN2	transcript	ENST00000678706.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	PSEN2	transcript	ENST00000677414.1	protein_coding		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	PSEN2	transcript	ENST00000679088.1	protein_coding		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	PSEN2	transcript	ENST00000678021.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	PSEN2	transcript	ENST00000677880.1	protein_coding		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	PSEN2	transcript	ENST00000677596.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	PSEN2	transcript	ENST00000676467.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	3_prime_UTR_variant	MODIFIER	PSEN2	transcript	ENST00000678776.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	intron_variant	MODIFIER	PSEN2	transcript	ENST00000676945.1	protein_coding		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	intron_variant	MODIFIER	PSEN2	transcript	ENST00000678835.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	intron_variant	MODIFIER	PSEN2	transcript	ENST00000678655.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	intron_variant	MODIFIER	PSEN2	transcript	ENST00000679098.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	intron_variant	MODIFIER	PSEN2	transcript	ENST00000678820.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	intron_variant	MODIFIER	PSEN2	transcript	ENST00000678233.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	intron_variant	MODIFIER	PSEN2	transcript	ENST00000677599.1	protein_coding		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	intron_variant	MODIFIER	PSEN2	transcript	ENST00000678784.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	intron_variant	MODIFIER	PSEN2	transcript	ENST00000676747.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	non_coding_transcript_exon_variant	MODIFIER	ENSG00000288674	transcript	ENST00000366779.6	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	non_coding_transcript_exon_variant	MODIFIER	PSEN2	transcript	ENST00000471728.2	retained_intron		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	non_coding_transcript_exon_variant	MODIFIER	ENSG00000288674	transcript	ENST00000676884.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	non_coding_transcript_exon_variant	MODIFIER	PSEN2	transcript	ENST00000676888.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	non_coding_transcript_exon_variant	MODIFIER	PSEN2	transcript	ENST00000676907.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	non_coding_transcript_exon_variant	MODIFIER	PSEN2	transcript	ENST00000677529.1	retained_intron		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	non_coding_transcript_exon_variant	MODIFIER	PSEN2	transcript	ENST00000677748.1	retained_intron		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	non_coding_transcript_exon_variant	MODIFIER	PSEN2	transcript	ENST00000678706.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	non_coding_transcript_exon_variant	MODIFIER	PSEN2	transcript	ENST00000678021.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	non_coding_transcript_exon_variant	MODIFIER	PSEN2	transcript	ENST00000677596.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	non_coding_transcript_exon_variant	MODIFIER	PSEN2	transcript	ENST00000676467.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	non_coding_transcript_exon_variant	MODIFIER	PSEN2	transcript	ENST00000678776.1	nonsense_mediated_decay		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	226895849	C	T	non_coding_transcript_exon_variant	MODIFIER	PSEN2	transcript	ENST00000677065.1	retained_intron		not_provided|Dilated_cardiomyopathy_1V|Alzheimer_disease_4	Benign
+chr1	230633897	C	T	intron_variant	MODIFIER	ENSG00000282564	transcript	ENST00000685406.1	pseudogene			
+chr1	230633897	C	T	intron_variant	MODIFIER	ENSG00000282564	transcript	ENST00000689608.1	pseudogene			
+chr1	230633897	C	T	intron_variant	MODIFIER	ENSG00000282564	transcript	ENST00000692577.1	pseudogene			
+chr1	236718810	G	A	intron_variant	MODIFIER	ACTN2	transcript	ENST00000366578.6	protein_coding		Myopathy,_congenital,_with_structured_cores_and_z-line_abnormalities|not_provided	Benign
+chr1	236718810	G	A	intron_variant	MODIFIER	ACTN2	transcript	ENST00000542672.6	protein_coding		Myopathy,_congenital,_with_structured_cores_and_z-line_abnormalities|not_provided	Benign
+chr1	236718810	G	A	intron_variant	MODIFIER	ACTN2	transcript	ENST00000492634.7	processed_transcript		Myopathy,_congenital,_with_structured_cores_and_z-line_abnormalities|not_provided	Benign
+chr1	236718810	G	A	intron_variant	MODIFIER	ACTN2	transcript	ENST00000651187.1	protein_coding	WARNING_TRANSCRIPT_NO_STOP_CODON	Myopathy,_congenital,_with_structured_cores_and_z-line_abnormalities|not_provided	Benign
+chr1	236718810	G	A	intron_variant	MODIFIER	ACTN2	transcript	ENST00000652096.1	nonsense_mediated_decay		Myopathy,_congenital,_with_structured_cores_and_z-line_abnormalities|not_provided	Benign
+chr1	236718810	G	A	intron_variant	MODIFIER	ACTN2	transcript	ENST00000684286.1	retained_intron		Myopathy,_congenital,_with_structured_cores_and_z-line_abnormalities|not_provided	Benign
+chr1	236718810	G	A	intron_variant	MODIFIER	ACTN2	transcript	ENST00000682015.1	protein_coding		Myopathy,_congenital,_with_structured_cores_and_z-line_abnormalities|not_provided	Benign
+chr1	236718810	G	A	intron_variant	MODIFIER	ACTN2	transcript	ENST00000684050.1	retained_intron		Myopathy,_congenital,_with_structured_cores_and_z-line_abnormalities|not_provided	Benign
+chr1	236718810	G	A	intron_variant	MODIFIER	ACTN2	transcript	ENST00000684502.1	retained_intron		Myopathy,_congenital,_with_structured_cores_and_z-line_abnormalities|not_provided	Benign
+chr1	236718810	G	A	intron_variant	MODIFIER	ACTN2	transcript	ENST00000651786.1	nonsense_mediated_decay		Myopathy,_congenital,_with_structured_cores_and_z-line_abnormalities|not_provided	Benign
+chr1	236718810	G	A	intron_variant	MODIFIER	ACTN2	transcript	ENST00000682692.1	retained_intron		Myopathy,_congenital,_with_structured_cores_and_z-line_abnormalities|not_provided	Benign
+chr1	236718810	G	A	intron_variant	MODIFIER	ACTN2	transcript	ENST00000682966.1	retained_intron		Myopathy,_congenital,_with_structured_cores_and_z-line_abnormalities|not_provided	Benign
+chr1	236718810	G	A	intron_variant	MODIFIER	ACTN2	transcript	ENST00000683111.1	nonsense_mediated_decay		Myopathy,_congenital,_with_structured_cores_and_z-line_abnormalities|not_provided	Benign
+chr1	236718810	G	A	intron_variant	MODIFIER	ACTN2	transcript	ENST00000651275.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	Myopathy,_congenital,_with_structured_cores_and_z-line_abnormalities|not_provided	Benign
+chr1	236718810	G	A	intron_variant	MODIFIER	ACTN2	transcript	ENST00000651091.1	nonsense_mediated_decay		Myopathy,_congenital,_with_structured_cores_and_z-line_abnormalities|not_provided	Benign
+chr1	236718810	G	A	intron_variant	MODIFIER	ACTN2	transcript	ENST00000683075.1	retained_intron		Myopathy,_congenital,_with_structured_cores_and_z-line_abnormalities|not_provided	Benign
+chr1	236739655	T	C	intron_variant	MODIFIER	ACTN2	transcript	ENST00000366578.6	protein_coding		not_provided	Benign
+chr1	236739655	T	C	intron_variant	MODIFIER	ACTN2	transcript	ENST00000542672.6	protein_coding		not_provided	Benign
+chr1	236739655	T	C	intron_variant	MODIFIER	ACTN2	transcript	ENST00000492634.7	processed_transcript		not_provided	Benign
+chr1	236739655	T	C	intron_variant	MODIFIER	ACTN2	transcript	ENST00000652096.1	nonsense_mediated_decay		not_provided	Benign
+chr1	236739655	T	C	intron_variant	MODIFIER	ACTN2	transcript	ENST00000684286.1	retained_intron		not_provided	Benign
+chr1	236739655	T	C	intron_variant	MODIFIER	ACTN2	transcript	ENST00000682015.1	protein_coding		not_provided	Benign
+chr1	236739655	T	C	intron_variant	MODIFIER	ACTN2	transcript	ENST00000684050.1	retained_intron		not_provided	Benign
+chr1	236739655	T	C	intron_variant	MODIFIER	ACTN2	transcript	ENST00000684502.1	retained_intron		not_provided	Benign
+chr1	236739655	T	C	intron_variant	MODIFIER	ACTN2	transcript	ENST00000651786.1	nonsense_mediated_decay		not_provided	Benign
+chr1	236739655	T	C	intron_variant	MODIFIER	ACTN2	transcript	ENST00000682692.1	retained_intron		not_provided	Benign
+chr1	236739655	T	C	intron_variant	MODIFIER	ACTN2	transcript	ENST00000682966.1	retained_intron		not_provided	Benign
+chr1	236739655	T	C	intron_variant	MODIFIER	ACTN2	transcript	ENST00000683111.1	nonsense_mediated_decay		not_provided	Benign
+chr1	236739655	T	C	intron_variant	MODIFIER	ACTN2	transcript	ENST00000651275.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	not_provided	Benign
+chr1	236739655	T	C	intron_variant	MODIFIER	ACTN2	transcript	ENST00000651091.1	nonsense_mediated_decay		not_provided	Benign
+chr1	236739655	T	C	intron_variant	MODIFIER	ACTN2	transcript	ENST00000683322.1	retained_intron		not_provided	Benign
+chr1	236739655	T	C	intron_variant	MODIFIER	ACTN2	transcript	ENST00000651781.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	not_provided	Benign
+chr1	236748043	C	T	intron_variant	MODIFIER	ACTN2	transcript	ENST00000366578.6	protein_coding		not_provided	Benign
+chr1	236748043	C	T	intron_variant	MODIFIER	ACTN2	transcript	ENST00000542672.6	protein_coding		not_provided	Benign
+chr1	236748043	C	T	intron_variant	MODIFIER	ACTN2	transcript	ENST00000492634.7	processed_transcript		not_provided	Benign
+chr1	236748043	C	T	intron_variant	MODIFIER	ACTN2	transcript	ENST00000652096.1	nonsense_mediated_decay		not_provided	Benign
+chr1	236748043	C	T	intron_variant	MODIFIER	ACTN2	transcript	ENST00000684286.1	retained_intron		not_provided	Benign
+chr1	236748043	C	T	intron_variant	MODIFIER	ACTN2	transcript	ENST00000682015.1	protein_coding		not_provided	Benign
+chr1	236748043	C	T	intron_variant	MODIFIER	ACTN2	transcript	ENST00000684050.1	retained_intron		not_provided	Benign
+chr1	236748043	C	T	intron_variant	MODIFIER	ACTN2	transcript	ENST00000651786.1	nonsense_mediated_decay		not_provided	Benign
+chr1	236748043	C	T	intron_variant	MODIFIER	ACTN2	transcript	ENST00000682966.1	retained_intron		not_provided	Benign
+chr1	236748043	C	T	intron_variant	MODIFIER	ACTN2	transcript	ENST00000683111.1	nonsense_mediated_decay		not_provided	Benign
+chr1	236748043	C	T	intron_variant	MODIFIER	ACTN2	transcript	ENST00000651275.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	not_provided	Benign
+chr1	236748043	C	T	intron_variant	MODIFIER	ACTN2	transcript	ENST00000651091.1	nonsense_mediated_decay		not_provided	Benign
+chr1	236748043	C	T	intron_variant	MODIFIER	ACTN2	transcript	ENST00000683322.1	retained_intron		not_provided	Benign
+chr1	236748043	C	T	intron_variant	MODIFIER	ACTN2	transcript	ENST00000651781.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	not_provided	Benign
+chr1	236748043	C	T	non_coding_transcript_exon_variant	MODIFIER	ACTN2	transcript	ENST00000492101.1	retained_intron		not_provided	Benign
+chr1	236748043	C	T	non_coding_transcript_exon_variant	MODIFIER	ACTN2	transcript	ENST00000684502.1	retained_intron		not_provided	Benign
+chr1	236748043	C	T	non_coding_transcript_exon_variant	MODIFIER	ACTN2	transcript	ENST00000682692.1	retained_intron		not_provided	Benign
+chr1	237364557	G	A	intron_variant	MODIFIER	RYR2	transcript	ENST00000366574.7	protein_coding		not_provided	Benign
+chr1	237456749	T	C	intron_variant	MODIFIER	RYR2	transcript	ENST00000366574.7	protein_coding		Cardiac_arrhythmia|Cardiovascular_phenotype|not_specified|not_provided|Catecholaminergic_polymorphic_ventricular_tachycardia_1|Arrhythmogenic_right_ventricular_dysplasia_2	Benign
+chr1	237491531	G	T	intron_variant	MODIFIER	RYR2	transcript	ENST00000366574.7	protein_coding		not_provided	Benign
+chr1	237511863	G	A	intron_variant	MODIFIER	RYR2	transcript	ENST00000366574.7	protein_coding		not_provided	Benign
+chr1	237530621	A	G	intron_variant	MODIFIER	RYR2	transcript	ENST00000366574.7	protein_coding		not_provided	Benign
+chr1	237548497	A	G	synonymous_variant	LOW	RYR2	transcript	ENST00000366574.7	protein_coding		Cardiac_arrhythmia|Cardiovascular_phenotype|not_specified|not_provided|Cardiomyopathy|Catecholaminergic_polymorphic_ventricular_tachycardia_1|Arrhythmogenic_right_ventricular_dysplasia_2	Benign
+chr1	237649730	C	T	intron_variant	MODIFIER	RYR2	transcript	ENST00000366574.7	protein_coding		not_provided	Benign
+chr1	237718470	C	T	synonymous_variant	LOW	RYR2	transcript	ENST00000366574.7	protein_coding		Cardiac_arrhythmia|Cardiovascular_phenotype|not_specified|not_provided|Cardiomyopathy|Catecholaminergic_polymorphic_ventricular_tachycardia_1|Arrhythmogenic_right_ventricular_dysplasia_2	Benign
+chr1	237718470	C	T	synonymous_variant	LOW	RYR2	transcript	ENST00000659194.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	Cardiac_arrhythmia|Cardiovascular_phenotype|not_specified|not_provided|Cardiomyopathy|Catecholaminergic_polymorphic_ventricular_tachycardia_1|Arrhythmogenic_right_ventricular_dysplasia_2	Benign
+chr1	237718470	C	T	synonymous_variant	LOW	RYR2	transcript	ENST00000660292.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	Cardiac_arrhythmia|Cardiovascular_phenotype|not_specified|not_provided|Cardiomyopathy|Catecholaminergic_polymorphic_ventricular_tachycardia_1|Arrhythmogenic_right_ventricular_dysplasia_2	Benign
+chr1	237718470	C	T	synonymous_variant	LOW	RYR2	transcript	ENST00000661330.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	Cardiac_arrhythmia|Cardiovascular_phenotype|not_specified|not_provided|Cardiomyopathy|Catecholaminergic_polymorphic_ventricular_tachycardia_1|Arrhythmogenic_right_ventricular_dysplasia_2	Benign
+chr1	237718470	C	T	3_prime_UTR_variant	MODIFIER	RYR2	transcript	ENST00000609119.1	nonsense_mediated_decay		Cardiac_arrhythmia|Cardiovascular_phenotype|not_specified|not_provided|Cardiomyopathy|Catecholaminergic_polymorphic_ventricular_tachycardia_1|Arrhythmogenic_right_ventricular_dysplasia_2	Benign
+chr1	237718470	C	T	non_coding_transcript_exon_variant	MODIFIER	RYR2	transcript	ENST00000609119.1	nonsense_mediated_decay		Cardiac_arrhythmia|Cardiovascular_phenotype|not_specified|not_provided|Cardiomyopathy|Catecholaminergic_polymorphic_ventricular_tachycardia_1|Arrhythmogenic_right_ventricular_dysplasia_2	Benign
+chr1	237759753	C	T	intron_variant	MODIFIER	RYR2	transcript	ENST00000366574.7	protein_coding		not_specified|Cardiac_arrhythmia|Arrhythmogenic_right_ventricular_dysplasia_2|not_provided|Catecholaminergic_polymorphic_ventricular_tachycardia_1	Benign
+chr1	237759753	C	T	intron_variant	MODIFIER	RYR2	transcript	ENST00000609119.1	nonsense_mediated_decay		not_specified|Cardiac_arrhythmia|Arrhythmogenic_right_ventricular_dysplasia_2|not_provided|Catecholaminergic_polymorphic_ventricular_tachycardia_1	Benign
+chr1	237759753	C	T	intron_variant	MODIFIER	RYR2	transcript	ENST00000659194.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	not_specified|Cardiac_arrhythmia|Arrhythmogenic_right_ventricular_dysplasia_2|not_provided|Catecholaminergic_polymorphic_ventricular_tachycardia_1	Benign
+chr1	237759753	C	T	intron_variant	MODIFIER	RYR2	transcript	ENST00000660292.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	not_specified|Cardiac_arrhythmia|Arrhythmogenic_right_ventricular_dysplasia_2|not_provided|Catecholaminergic_polymorphic_ventricular_tachycardia_1	Benign
+chr1	237795463	A	T	intron_variant	MODIFIER	RYR2	transcript	ENST00000366574.7	protein_coding			
+chr1	237795463	A	T	intron_variant	MODIFIER	RYR2	transcript	ENST00000608590.5	processed_transcript			
+chr1	237801743	A	G	intron_variant	MODIFIER	RYR2	transcript	ENST00000366574.7	protein_coding		not_provided	Benign
+chr1	237801743	A	G	intron_variant	MODIFIER	RYR2	transcript	ENST00000608590.5	processed_transcript		not_provided	Benign
+chr1	237801743	A	G	intron_variant	MODIFIER	RYR2	transcript	ENST00000466626.1	processed_transcript		not_provided	Benign
+chr1	237801831	G	A	intron_variant	MODIFIER	RYR2	transcript	ENST00000366574.7	protein_coding		Cardiac_arrhythmia|Catecholaminergic_polymorphic_ventricular_tachycardia_1|Arrhythmogenic_right_ventricular_dysplasia_2|not_specified|not_provided	Benign
+chr1	237801831	G	A	intron_variant	MODIFIER	RYR2	transcript	ENST00000608590.5	processed_transcript		Cardiac_arrhythmia|Catecholaminergic_polymorphic_ventricular_tachycardia_1|Arrhythmogenic_right_ventricular_dysplasia_2|not_specified|not_provided	Benign
+chr1	237801831	G	A	intron_variant	MODIFIER	RYR2	transcript	ENST00000466626.1	processed_transcript		Cardiac_arrhythmia|Catecholaminergic_polymorphic_ventricular_tachycardia_1|Arrhythmogenic_right_ventricular_dysplasia_2|not_specified|not_provided	Benign
+chr1	237806338	A	G	intron_variant	MODIFIER	RYR2	transcript	ENST00000366574.7	protein_coding		not_provided	Benign
+chr1	237806338	A	G	intron_variant	MODIFIER	RYR2	transcript	ENST00000608590.5	processed_transcript		not_provided	Benign
+chr10	9501149	C	T	intergenic_region	MODIFIER	ENSG00000287120-HSP90AB7P	intergenic_region	ENSG00000287120-ENSG00000235838				
+chr10	13743382	C	T	intron_variant	MODIFIER	FRMD4A	transcript	ENST00000357447.7	protein_coding			
+chr10	13743382	C	T	intron_variant	MODIFIER	FRMD4A	transcript	ENST00000264546.10	protein_coding	WARNING_TRANSCRIPT_NO_STOP_CODON		
+chr10	13743382	C	T	intron_variant	MODIFIER	FRMD4A	transcript	ENST00000342409.3	retained_intron			
+chr10	13743382	C	T	intron_variant	MODIFIER	ENSG00000234091	transcript	ENST00000449462.1	pseudogene			
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000540630.6	protein_coding		not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000354393.7	protein_coding		not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000613327.5	protein_coding		not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000358913.10	protein_coding		not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000373675.4	protein_coding		not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000685154.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000689484.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000689797.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000692979.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000686289.1	retained_intron		not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000685006.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000687705.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000685627.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000692953.1	processed_transcript		not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000687572.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000685060.1	processed_transcript		not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000689218.1	retained_intron		not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000690544.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000688812.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68142792	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000686268.1	processed_transcript		not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000540630.6	protein_coding		not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000354393.7	protein_coding		not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000613327.5	protein_coding		not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000358913.10	protein_coding		not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000373675.4	protein_coding		not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000685154.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000689484.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000689797.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000692979.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000686289.1	retained_intron		not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000685006.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000687705.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000685627.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000692953.1	processed_transcript		not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000687572.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000685060.1	processed_transcript		not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000689218.1	retained_intron		not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000690544.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000688812.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68143162	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000693699.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68194172	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000540630.6	protein_coding		not_provided	Benign
+chr10	68194172	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000354393.7	protein_coding		not_provided	Benign
+chr10	68194172	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000613327.5	protein_coding		not_provided	Benign
+chr10	68194172	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000358913.10	protein_coding		not_provided	Benign
+chr10	68194172	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000690544.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68194172	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000688812.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68194185	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000540630.6	protein_coding		not_provided	Benign
+chr10	68194185	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000354393.7	protein_coding		not_provided	Benign
+chr10	68194185	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000613327.5	protein_coding		not_provided	Benign
+chr10	68194185	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000358913.10	protein_coding		not_provided	Benign
+chr10	68194185	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000690544.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68194185	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000688812.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68197091	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000540630.6	protein_coding		not_provided	Benign
+chr10	68197091	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000354393.7	protein_coding		not_provided	Benign
+chr10	68197091	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000613327.5	protein_coding		not_provided	Benign
+chr10	68197091	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000358913.10	protein_coding		not_provided	Benign
+chr10	68197091	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000690544.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68197091	T	C	intron_variant	MODIFIER	MYPN	transcript	ENST00000688812.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68197155	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000540630.6	protein_coding		not_provided	Benign
+chr10	68197155	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000354393.7	protein_coding		not_provided	Benign
+chr10	68197155	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000613327.5	protein_coding		not_provided	Benign
+chr10	68197155	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000358913.10	protein_coding		not_provided	Benign
+chr10	68197155	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000690544.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68197155	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000688812.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68197583	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000540630.6	protein_coding		not_provided	Benign
+chr10	68197583	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000354393.7	protein_coding		not_provided	Benign
+chr10	68197583	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000613327.5	protein_coding		not_provided	Benign
+chr10	68197583	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000358913.10	protein_coding		not_provided	Benign
+chr10	68197583	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000690544.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68197583	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000688812.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68197593	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000540630.6	protein_coding		not_provided	Benign
+chr10	68197593	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000354393.7	protein_coding		not_provided	Benign
+chr10	68197593	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000613327.5	protein_coding		not_provided	Benign
+chr10	68197593	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000358913.10	protein_coding		not_provided	Benign
+chr10	68197593	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000690544.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68197593	G	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000688812.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68199810	C	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000540630.6	protein_coding		not_provided	Benign
+chr10	68199810	C	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000354393.7	protein_coding		not_provided	Benign
+chr10	68199810	C	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000613327.5	protein_coding		not_provided	Benign
+chr10	68199810	C	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000358913.10	protein_coding		not_provided	Benign
+chr10	68199810	C	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000690544.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68199810	C	A	intron_variant	MODIFIER	MYPN	transcript	ENST00000688812.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68201713	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000540630.6	protein_coding		not_provided	Benign
+chr10	68201713	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000354393.7	protein_coding		not_provided	Benign
+chr10	68201713	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000613327.5	protein_coding		not_provided	Benign
+chr10	68201713	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000358913.10	protein_coding		not_provided	Benign
+chr10	68201713	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000690544.1	nonsense_mediated_decay		not_provided	Benign
+chr10	68201713	A	G	intron_variant	MODIFIER	MYPN	transcript	ENST00000688812.1	nonsense_mediated_decay		not_provided	Benign
+chr10	70130874	T	C	intron_variant	MODIFIER	AIFM2	transcript	ENST00000307864.3	protein_coding			
+chr10	70130874	T	C	intron_variant	MODIFIER	AIFM2	transcript	ENST00000613322.4	protein_coding			
+chr10	86687286	T	C	intron_variant	MODIFIER	ENSG00000289258	transcript	ENST00000443292.2	protein_coding			
+chr10	86687286	T	C	intron_variant	MODIFIER	LDB3	transcript	ENST00000263066.11	protein_coding			
+chr10	86687286	T	C	intron_variant	MODIFIER	LDB3	transcript	ENST00000361373.9	protein_coding			
+chr10	86687286	T	C	intron_variant	MODIFIER	LDB3	transcript	ENST00000372066.8	protein_coding			
+chr10	86687286	T	C	intron_variant	MODIFIER	LDB3	transcript	ENST00000372056.8	protein_coding			
+chr10	86687286	T	C	intron_variant	MODIFIER	LDB3	transcript	ENST00000623007.3	protein_coding			
+chr10	86687286	T	C	intron_variant	MODIFIER	LDB3	transcript	ENST00000429277.7	protein_coding			
+chr10	86687286	T	C	intron_variant	MODIFIER	LDB3	transcript	ENST00000542786.2	nonsense_mediated_decay			
+chr10	86687286	T	C	intron_variant	MODIFIER	LDB3	transcript	ENST00000623056.4	protein_coding			
+chr10	86687286	T	C	intron_variant	MODIFIER	ENSG00000289258	transcript	ENST00000685347.1	processed_transcript			
+chr10	86687286	T	C	intron_variant	MODIFIER	ENSG00000289258	transcript	ENST00000692941.1	retained_intron			
+chr10	86687286	T	C	intron_variant	MODIFIER	LDB3	transcript	ENST00000687856.1	nonsense_mediated_decay			
+chr10	86687286	T	C	intron_variant	MODIFIER	LDB3	transcript	ENST00000688785.1	protein_coding			
+chr10	86687286	T	C	intron_variant	MODIFIER	LDB3	transcript	ENST00000691462.1	protein_coding			
+chr10	86687286	T	C	intron_variant	MODIFIER	LDB3	transcript	ENST00000688001.1	protein_coding			
+chr10	86687286	T	C	intron_variant	MODIFIER	LDB3	transcript	ENST00000688678.1	protein_coding			
+chr10	86687286	T	C	intron_variant	MODIFIER	LDB3	transcript	ENST00000689740.1	protein_coding			
+chr10	86687286	T	C	intron_variant	MODIFIER	LDB3	transcript	ENST00000693680.1	protein_coding			
+chr10	86687286	T	C	intron_variant	MODIFIER	LDB3	transcript	ENST00000689296.1	protein_coding			
+chr10	86719022	G	A	intron_variant	MODIFIER	LDB3	transcript	ENST00000361373.9	protein_coding		not_provided	Benign
+chr10	86719022	G	A	intron_variant	MODIFIER	LDB3	transcript	ENST00000477489.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	not_provided	Benign
+chr10	86719022	G	A	intron_variant	MODIFIER	LDB3	transcript	ENST00000429277.7	protein_coding		not_provided	Benign
+chr10	86719022	G	A	intron_variant	MODIFIER	LDB3	transcript	ENST00000623056.4	protein_coding		not_provided	Benign
+chr10	86719022	G	A	intron_variant	MODIFIER	LDB3	transcript	ENST00000688001.1	protein_coding		not_provided	Benign
+chr10	86719022	G	A	intron_variant	MODIFIER	LDB3	transcript	ENST00000689740.1	protein_coding		not_provided	Benign
+chr10	86719022	G	A	intron_variant	MODIFIER	LDB3	transcript	ENST00000693680.1	protein_coding		not_provided	Benign
+chr10	86719022	G	A	intron_variant	MODIFIER	LDB3	transcript	ENST00000689296.1	protein_coding		not_provided	Benign
+chr10	110784305	A	C	intron_variant	MODIFIER	RBM20	transcript	ENST00000369519.4	protein_coding		not_provided|Dilated_cardiomyopathy_1DD	Benign
+chr10	119676850	A	G	synonymous_variant	LOW	BAG3	transcript	ENST00000369085.8	protein_coding		Cardiovascular_phenotype|Dilated_cardiomyopathy_1HH|Myofibrillar_myopathy_6|not_specified|not_provided	Benign
+chr11	1802886	T	C	intergenic_region	MODIFIER	RPL36AP39-ENSG00000230080	intergenic_region	ENSG00000230980-ENSG00000230080				
+chr11	19191996	C	G	intron_variant	MODIFIER	CSRP3	transcript	ENST00000265968.9	protein_coding		not_provided	Benign
+chr11	19191996	C	G	intron_variant	MODIFIER	CSRP3	transcript	ENST00000533783.2	protein_coding		not_provided	Benign
+chr11	19191996	C	G	intron_variant	MODIFIER	CSRP3	transcript	ENST00000647990.1	protein_coding		not_provided	Benign
+chr11	19191996	C	G	intron_variant	MODIFIER	CSRP3	transcript	ENST00000648719.1	protein_coding		not_provided	Benign
+chr11	19191996	C	G	intron_variant	MODIFIER	CSRP3	transcript	ENST00000649235.1	protein_coding		not_provided	Benign
+chr11	19191996	C	G	intron_variant	MODIFIER	CSRP3	transcript	ENST00000649842.1	protein_coding		not_provided	Benign
+chr11	19192059	A	G	intron_variant	MODIFIER	CSRP3	transcript	ENST00000265968.9	protein_coding		not_provided	Benign
+chr11	19192059	A	G	intron_variant	MODIFIER	CSRP3	transcript	ENST00000533783.2	protein_coding		not_provided	Benign
+chr11	19192059	A	G	intron_variant	MODIFIER	CSRP3	transcript	ENST00000647990.1	protein_coding		not_provided	Benign
+chr11	19192059	A	G	intron_variant	MODIFIER	CSRP3	transcript	ENST00000648719.1	protein_coding		not_provided	Benign
+chr11	19192059	A	G	intron_variant	MODIFIER	CSRP3	transcript	ENST00000649235.1	protein_coding		not_provided	Benign
+chr11	19192059	A	G	intron_variant	MODIFIER	CSRP3	transcript	ENST00000649842.1	protein_coding		not_provided	Benign
+chr11	26428749	G	C	intron_variant	MODIFIER	ANO3	transcript	ENST00000256737.8	protein_coding			
+chr11	26428749	G	C	intron_variant	MODIFIER	ANO3	transcript	ENST00000531646.1	protein_coding			
+chr11	26428749	G	C	intron_variant	MODIFIER	ANO3	transcript	ENST00000525139.5	protein_coding			
+chr11	26428749	G	C	intron_variant	MODIFIER	ANO3	transcript	ENST00000672621.1	protein_coding			
+chr11	74653148	G	A	intron_variant	MODIFIER	POLD3	transcript	ENST00000524752.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON		
+chr12	6480005	C	T	non_coding_transcript_exon_variant	MODIFIER	ENSG00000256913	transcript	ENST00000541242.1	processed_pseudogene			
+chr12	21862834	G	A	intron_variant	MODIFIER	ENSG00000257022	transcript	ENST00000539874.1	pseudogene		not_provided	Benign
+chr12	21862834	G	A	intron_variant	MODIFIER	ABCC9	transcript	ENST00000261200.9	protein_coding		not_provided	Benign
+chr12	21862834	G	A	intron_variant	MODIFIER	ABCC9	transcript	ENST00000261201.10	protein_coding		not_provided	Benign
+chr12	21862834	G	A	intron_variant	MODIFIER	ABCC9	transcript	ENST00000544039.5	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	not_provided	Benign
+chr12	21862834	G	A	intron_variant	MODIFIER	ABCC9	transcript	ENST00000683676.1	protein_coding		not_provided	Benign
+chr12	21862834	G	A	intron_variant	MODIFIER	ABCC9	transcript	ENST00000683105.1	nonsense_mediated_decay		not_provided	Benign
+chr12	21862834	G	A	intron_variant	MODIFIER	ABCC9	transcript	ENST00000684084.1	protein_coding		not_provided	Benign
+chr12	21862834	G	A	intron_variant	MODIFIER	ABCC9	transcript	ENST00000682879.1	nonsense_mediated_decay		not_provided	Benign
+chr12	21862834	G	A	intron_variant	MODIFIER	ABCC9	transcript	ENST00000682068.1	protein_coding		not_provided	Benign
+chr12	21862834	G	A	intron_variant	MODIFIER	ABCC9	transcript	ENST00000684543.1	processed_transcript		not_provided	Benign
+chr12	51790487	T	C	synonymous_variant	LOW	SCN8A	transcript	ENST00000354534.11	protein_coding		Myoclonus,_familial,_2|Seizures,_benign_familial_infantile,_5|Inborn_genetic_diseases|Early_infantile_epileptic_encephalopathy_with_suppression_bursts|not_specified|not_provided|Developmental_and_epileptic_encephalopathy,_13|Cognitive_impairment_with_or_without_cerebellar_ataxia	Benign
+chr12	51790487	T	C	synonymous_variant	LOW	SCN8A	transcript	ENST00000355133.7	protein_coding		Myoclonus,_familial,_2|Seizures,_benign_familial_infantile,_5|Inborn_genetic_diseases|Early_infantile_epileptic_encephalopathy_with_suppression_bursts|not_specified|not_provided|Developmental_and_epileptic_encephalopathy,_13|Cognitive_impairment_with_or_without_cerebellar_ataxia	Benign
+chr12	51790487	T	C	synonymous_variant	LOW	SCN8A	transcript	ENST00000599343.5	protein_coding		Myoclonus,_familial,_2|Seizures,_benign_familial_infantile,_5|Inborn_genetic_diseases|Early_infantile_epileptic_encephalopathy_with_suppression_bursts|not_specified|not_provided|Developmental_and_epileptic_encephalopathy,_13|Cognitive_impairment_with_or_without_cerebellar_ataxia	Benign
+chr12	51790487	T	C	synonymous_variant	LOW	SCN8A	transcript	ENST00000627620.5	protein_coding		Myoclonus,_familial,_2|Seizures,_benign_familial_infantile,_5|Inborn_genetic_diseases|Early_infantile_epileptic_encephalopathy_with_suppression_bursts|not_specified|not_provided|Developmental_and_epileptic_encephalopathy,_13|Cognitive_impairment_with_or_without_cerebellar_ataxia	Benign
+chr12	51790487	T	C	synonymous_variant	LOW	SCN8A	transcript	ENST00000545061.5	protein_coding		Myoclonus,_familial,_2|Seizures,_benign_familial_infantile,_5|Inborn_genetic_diseases|Early_infantile_epileptic_encephalopathy_with_suppression_bursts|not_specified|not_provided|Developmental_and_epileptic_encephalopathy,_13|Cognitive_impairment_with_or_without_cerebellar_ataxia	Benign
+chr12	51790487	T	C	synonymous_variant	LOW	SCN8A	transcript	ENST00000662684.1	protein_coding		Myoclonus,_familial,_2|Seizures,_benign_familial_infantile,_5|Inborn_genetic_diseases|Early_infantile_epileptic_encephalopathy_with_suppression_bursts|not_specified|not_provided|Developmental_and_epileptic_encephalopathy,_13|Cognitive_impairment_with_or_without_cerebellar_ataxia	Benign
+chr12	51790487	T	C	synonymous_variant	LOW	SCN8A	transcript	ENST00000668547.1	protein_coding		Myoclonus,_familial,_2|Seizures,_benign_familial_infantile,_5|Inborn_genetic_diseases|Early_infantile_epileptic_encephalopathy_with_suppression_bursts|not_specified|not_provided|Developmental_and_epileptic_encephalopathy,_13|Cognitive_impairment_with_or_without_cerebellar_ataxia	Benign
+chr12	51790487	T	C	3_prime_UTR_variant	MODIFIER	SCN8A	transcript	ENST00000636945.2	nonsense_mediated_decay		Myoclonus,_familial,_2|Seizures,_benign_familial_infantile,_5|Inborn_genetic_diseases|Early_infantile_epileptic_encephalopathy_with_suppression_bursts|not_specified|not_provided|Developmental_and_epileptic_encephalopathy,_13|Cognitive_impairment_with_or_without_cerebellar_ataxia	Benign
+chr12	51790487	T	C	non_coding_transcript_exon_variant	MODIFIER	SCN8A	transcript	ENST00000636945.2	nonsense_mediated_decay		Myoclonus,_familial,_2|Seizures,_benign_familial_infantile,_5|Inborn_genetic_diseases|Early_infantile_epileptic_encephalopathy_with_suppression_bursts|not_specified|not_provided|Developmental_and_epileptic_encephalopathy,_13|Cognitive_impairment_with_or_without_cerebellar_ataxia	Benign
+chr14	23405314	C	T	synonymous_variant	LOW	MYH6	transcript	ENST00000405093.9	protein_coding		Cardiovascular_phenotype|not_specified|not_provided|Hypertrophic_cardiomyopathy_14	Benign
+chr14	23405314	C	T	non_coding_transcript_exon_variant	MODIFIER	MYH6	transcript	ENST00000557461.2	retained_intron		Cardiovascular_phenotype|not_specified|not_provided|Hypertrophic_cardiomyopathy_14	Benign
+chr14	23412935	T	C	intron_variant	MODIFIER	MYH7	transcript	ENST00000355349.4	protein_coding		not_provided	Benign
+chr14	23412977	T	G	intron_variant	MODIFIER	MYH7	transcript	ENST00000355349.4	protein_coding		not_provided	Benign
+chr14	23413646	A	G	intron_variant	MODIFIER	MYH7	transcript	ENST00000355349.4	protein_coding		not_provided	Benign
+chr14	23414390	G	A	intron_variant	MODIFIER	MYH7	transcript	ENST00000355349.4	protein_coding		not_provided	Benign
+chr14	23419456	A	T	intron_variant	MODIFIER	MYH7	transcript	ENST00000355349.4	protein_coding		not_provided|not_specified	Benign
+chr14	23428298	T	C	intron_variant	MODIFIER	MYH7	transcript	ENST00000355349.4	protein_coding		not_provided	Benign
+chr14	73198145	G	T	intron_variant	MODIFIER	PSEN1	transcript	ENST00000324501.10	protein_coding		Frontotemporal_dementia|Pick_disease|Acne_inversa,_familial,_3|Alzheimer_disease_3|not_specified|not_provided|Dilated_cardiomyopathy_1U	Benign
+chr14	73198145	G	T	intron_variant	MODIFIER	PSEN1	transcript	ENST00000357710.8	protein_coding		Frontotemporal_dementia|Pick_disease|Acne_inversa,_familial,_3|Alzheimer_disease_3|not_specified|not_provided|Dilated_cardiomyopathy_1U	Benign
+chr14	73198145	G	T	intron_variant	MODIFIER	PSEN1	transcript	ENST00000394164.5	protein_coding		Frontotemporal_dementia|Pick_disease|Acne_inversa,_familial,_3|Alzheimer_disease_3|not_specified|not_provided|Dilated_cardiomyopathy_1U	Benign
+chr14	73198145	G	T	intron_variant	MODIFIER	PSEN1	transcript	ENST00000553855.5	nonsense_mediated_decay		Frontotemporal_dementia|Pick_disease|Acne_inversa,_familial,_3|Alzheimer_disease_3|not_specified|not_provided|Dilated_cardiomyopathy_1U	Benign
+chr14	73198145	G	T	intron_variant	MODIFIER	PSEN1	transcript	ENST00000555386.5	nonsense_mediated_decay		Frontotemporal_dementia|Pick_disease|Acne_inversa,_familial,_3|Alzheimer_disease_3|not_specified|not_provided|Dilated_cardiomyopathy_1U	Benign
+chr14	73198145	G	T	intron_variant	MODIFIER	PSEN1	transcript	ENST00000406768.1	protein_coding		Frontotemporal_dementia|Pick_disease|Acne_inversa,_familial,_3|Alzheimer_disease_3|not_specified|not_provided|Dilated_cardiomyopathy_1U	Benign
+chr14	73198145	G	T	intron_variant	MODIFIER	PSEN1	transcript	ENST00000554995.1	retained_intron		Frontotemporal_dementia|Pick_disease|Acne_inversa,_familial,_3|Alzheimer_disease_3|not_specified|not_provided|Dilated_cardiomyopathy_1U	Benign
+chr14	73198145	G	T	intron_variant	MODIFIER	PSEN1	transcript	ENST00000557511.5	protein_coding		Frontotemporal_dementia|Pick_disease|Acne_inversa,_familial,_3|Alzheimer_disease_3|not_specified|not_provided|Dilated_cardiomyopathy_1U	Benign
+chr14	73212167	A	G	intron_variant	MODIFIER	PSEN1	transcript	ENST00000324501.10	protein_coding		not_provided	Benign
+chr14	73212167	A	G	intron_variant	MODIFIER	PSEN1	transcript	ENST00000357710.8	protein_coding		not_provided	Benign
+chr14	73212167	A	G	intron_variant	MODIFIER	PSEN1	transcript	ENST00000394164.5	protein_coding		not_provided	Benign
+chr14	73212167	A	G	intron_variant	MODIFIER	PSEN1	transcript	ENST00000553855.5	nonsense_mediated_decay		not_provided	Benign
+chr14	73212167	A	G	intron_variant	MODIFIER	PSEN1	transcript	ENST00000555386.5	nonsense_mediated_decay		not_provided	Benign
+chr14	73212167	A	G	intron_variant	MODIFIER	PSEN1	transcript	ENST00000406768.1	protein_coding		not_provided	Benign
+chr14	73212167	A	G	intron_variant	MODIFIER	PSEN1	transcript	ENST00000555867.1	retained_intron		not_provided	Benign
+chr14	73212167	A	G	intron_variant	MODIFIER	PSEN1	transcript	ENST00000557511.5	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000288398.10	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000358278.7	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000403994.9	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000558314.5	retained_intron		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000267996.11	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000560970.6	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000334895.10	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000404484.9	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000317516.12	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000357980.9	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000559556.5	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000559397.6	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000558910.3	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000558868.5	retained_intron		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000560959.5	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000561266.6	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000560615.5	protein_coding	WARNING_TRANSCRIPT_NO_STOP_CODON	not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000560679.1	processed_transcript		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000560975.5	retained_intron		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000561425.5	nonsense_mediated_decay		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000558347.5	nonsense_mediated_decay		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000559831.5	nonsense_mediated_decay		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000558544.5	nonsense_mediated_decay		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000559281.6	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000651344.1	retained_intron		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000644204.1	retained_intron		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000651704.1	protein_coding		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000651590.1	nonsense_mediated_decay		not_provided	Benign
+chr15	63056897	G	A	intron_variant	MODIFIER	TPM1	transcript	ENST00000651577.1	protein_coding		not_provided	Benign
+chr15	63056897	G	A	non_coding_transcript_exon_variant	MODIFIER	TPM1	transcript	ENST00000558264.5	retained_intron		not_provided	Benign
+chr15	63056897	G	A	non_coding_transcript_exon_variant	MODIFIER	TPM1	transcript	ENST00000558400.1	retained_intron		not_provided	Benign
+chr16	17342259	G	A	intron_variant	MODIFIER	XYLT1	transcript	ENST00000261381.7	protein_coding			
+chr18	31079758	T	C	intron_variant	MODIFIER	DSC2	transcript	ENST00000280904.11	protein_coding		not_provided	Benign
+chr18	31079758	T	C	intron_variant	MODIFIER	DSC2	transcript	ENST00000251081.8	protein_coding		not_provided	Benign
+chr18	31079758	T	C	intron_variant	MODIFIER	DSC2	transcript	ENST00000682357.1	protein_coding		not_provided	Benign
+chr18	31079758	T	C	intron_variant	MODIFIER	DSC2	transcript	ENST00000648081.1	protein_coding		not_provided	Benign
+chr18	31080534	A	G	intron_variant	MODIFIER	DSC2	transcript	ENST00000280904.11	protein_coding		not_provided	Benign
+chr18	31080534	A	G	intron_variant	MODIFIER	DSC2	transcript	ENST00000251081.8	protein_coding		not_provided	Benign
+chr18	31080534	A	G	intron_variant	MODIFIER	DSC2	transcript	ENST00000682357.1	protein_coding		not_provided	Benign
+chr18	31080534	A	G	intron_variant	MODIFIER	DSC2	transcript	ENST00000648081.1	protein_coding		not_provided	Benign
+chr18	31093797	C	T	intron_variant	MODIFIER	DSC2	transcript	ENST00000280904.11	protein_coding		not_provided	Benign
+chr18	31093797	C	T	intron_variant	MODIFIER	DSC2	transcript	ENST00000251081.8	protein_coding		not_provided	Benign
+chr18	31093797	C	T	intron_variant	MODIFIER	DSC2	transcript	ENST00000682357.1	protein_coding		not_provided	Benign
+chr18	31093797	C	T	intron_variant	MODIFIER	DSC2	transcript	ENST00000648081.1	protein_coding		not_provided	Benign
+chr18	31518360	G	A	intron_variant	MODIFIER	DSG2	transcript	ENST00000261590.13	protein_coding		not_provided	Benign
+chr18	31518360	G	A	intron_variant	MODIFIER	DSG2	transcript	ENST00000585206.1	protein_coding		not_provided	Benign
+chr18	31518360	G	A	intron_variant	MODIFIER	DSG2	transcript	ENST00000683654.1	protein_coding		not_provided	Benign
+chr19	4483488	A	G	intron_variant	MODIFIER	HDGFL2	transcript	ENST00000616600.5	protein_coding			
+chr19	4483488	A	G	intron_variant	MODIFIER	HDGFL2	transcript	ENST00000621835.4	protein_coding			
+chr19	4483488	A	G	intron_variant	MODIFIER	HDGFL2	transcript	ENST00000592691.1	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE		
+chr19	4483488	A	G	intron_variant	MODIFIER	HDGFL2	transcript	ENST00000601353.5	nonsense_mediated_decay			
+chr19	4483488	A	G	intron_variant	MODIFIER	HDGFL2	transcript	ENST00000589486.5	protein_coding	WARNING_TRANSCRIPT_NO_STOP_CODON		
+chr19	4483488	A	G	intron_variant	MODIFIER	HDGFL2	transcript	ENST00000615225.1	nonsense_mediated_decay			
+chr19	16480884	G	A	intron_variant	MODIFIER	CALR3	transcript	ENST00000269881.8	protein_coding		not_provided	Benign
+chr19	16480884	G	A	intron_variant	MODIFIER	ENSG00000141979	transcript	ENST00000409035.1	nonsense_mediated_decay		not_provided	Benign
+chr19	16480889	T	C	intron_variant	MODIFIER	CALR3	transcript	ENST00000269881.8	protein_coding		not_provided	Benign
+chr19	16480889	T	C	intron_variant	MODIFIER	ENSG00000141979	transcript	ENST00000409035.1	nonsense_mediated_decay		not_provided	Benign
+chr19	38442480	G	A	intron_variant	MODIFIER	RYR1	transcript	ENST00000355481.8	protein_coding		not_specified|not_provided	Benign
+chr19	38442480	G	A	intron_variant	MODIFIER	RYR1	transcript	ENST00000599547.6	nonsense_mediated_decay		not_specified|not_provided	Benign
+chr19	38442480	G	A	intron_variant	MODIFIER	RYR1	transcript	ENST00000359596.8	protein_coding		not_specified|not_provided	Benign
+chr19	43777326	G	T	intron_variant	MODIFIER	KCNN4	transcript	ENST00000599720.5	nonsense_mediated_decay			
+chr19	43777326	G	T	intron_variant	MODIFIER	KCNN4	transcript	ENST00000648319.1	protein_coding			
+chr2	73908670	T	C	splice_region_variant&intron_variant	LOW	ACTG2	transcript	ENST00000345517.8	protein_coding		Megacystis-microcolon-intestinal_hypoperistalsis_syndrome_5|Visceral_myopathy_1	Benign
+chr2	73908670	T	C	splice_region_variant&intron_variant	LOW	ACTG2	transcript	ENST00000409731.7	protein_coding		Megacystis-microcolon-intestinal_hypoperistalsis_syndrome_5|Visceral_myopathy_1	Benign
+chr2	73908670	T	C	splice_region_variant&intron_variant	LOW	ACTG2	transcript	ENST00000442912.5	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE	Megacystis-microcolon-intestinal_hypoperistalsis_syndrome_5|Visceral_myopathy_1	Benign
+chr2	73908670	T	C	splice_region_variant&intron_variant	LOW	ACTG2	transcript	ENST00000409624.1	protein_coding		Megacystis-microcolon-intestinal_hypoperistalsis_syndrome_5|Visceral_myopathy_1	Benign
+chr2	73908670	T	C	splice_region_variant&intron_variant	LOW	ACTG2	transcript	ENST00000429756.5	nonsense_mediated_decay		Megacystis-microcolon-intestinal_hypoperistalsis_syndrome_5|Visceral_myopathy_1	Benign
+chr2	73908670	T	C	3_prime_UTR_variant	MODIFIER	ACTG2	transcript	ENST00000438902.6	nonsense_mediated_decay		Megacystis-microcolon-intestinal_hypoperistalsis_syndrome_5|Visceral_myopathy_1	Benign
+chr2	73908670	T	C	non_coding_transcript_exon_variant	MODIFIER	ACTG2	transcript	ENST00000438902.6	nonsense_mediated_decay		Megacystis-microcolon-intestinal_hypoperistalsis_syndrome_5|Visceral_myopathy_1	Benign
+chr2	73913761	A	C	intron_variant	MODIFIER	ACTG2	transcript	ENST00000345517.8	protein_coding			
+chr2	73913761	A	C	intron_variant	MODIFIER	ACTG2	transcript	ENST00000409731.7	protein_coding			
+chr2	73913761	A	C	intron_variant	MODIFIER	ACTG2	transcript	ENST00000409624.1	protein_coding			
+chr2	73913761	A	C	intron_variant	MODIFIER	ACTG2	transcript	ENST00000438902.6	nonsense_mediated_decay			
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000578746.1	pseudogene		not_provided	Benign
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN	transcript	ENST00000589042.5	protein_coding		not_provided	Benign
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000590773.6	pseudogene		not_provided	Benign
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000585451.5	pseudogene		not_provided	Benign
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN	transcript	ENST00000342992.11	protein_coding		not_provided	Benign
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN	transcript	ENST00000460472.6	protein_coding		not_provided	Benign
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN	transcript	ENST00000591111.5	protein_coding		not_provided	Benign
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN	transcript	ENST00000342175.11	protein_coding		not_provided	Benign
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN	transcript	ENST00000359218.10	protein_coding		not_provided	Benign
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000582847.6	pseudogene		not_provided	Benign
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000627661.2	pseudogene		not_provided	Benign
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN	transcript	ENST00000360870.10	protein_coding		not_provided	Benign
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN	transcript	ENST00000634225.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	not_provided	Benign
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000610005.1	pseudogene		not_provided	Benign
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000659121.1	pseudogene		not_provided	Benign
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000653807.1	pseudogene		not_provided	Benign
+chr2	178759212	T	C	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000657023.1	pseudogene		not_provided	Benign
+chr2	178764636	T	C	synonymous_variant	LOW	TTN	transcript	ENST00000589042.5	protein_coding		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764636	T	C	synonymous_variant	LOW	TTN	transcript	ENST00000342992.11	protein_coding		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764636	T	C	synonymous_variant	LOW	TTN	transcript	ENST00000460472.6	protein_coding		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764636	T	C	synonymous_variant	LOW	TTN	transcript	ENST00000591111.5	protein_coding		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764636	T	C	synonymous_variant	LOW	TTN	transcript	ENST00000342175.11	protein_coding		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764636	T	C	synonymous_variant	LOW	TTN	transcript	ENST00000359218.10	protein_coding		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764636	T	C	synonymous_variant	LOW	TTN	transcript	ENST00000360870.10	protein_coding		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764636	T	C	synonymous_variant	LOW	TTN	transcript	ENST00000634225.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764636	T	C	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000590773.6	pseudogene		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764636	T	C	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000585451.5	pseudogene		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764636	T	C	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000610005.1	pseudogene		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764636	T	C	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000659121.1	pseudogene		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764636	T	C	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000653807.1	pseudogene		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764636	T	C	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000657023.1	pseudogene		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764734	C	T	missense_variant	MODERATE	TTN	transcript	ENST00000589042.5	protein_coding		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764734	C	T	missense_variant	MODERATE	TTN	transcript	ENST00000342992.11	protein_coding		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764734	C	T	missense_variant	MODERATE	TTN	transcript	ENST00000460472.6	protein_coding		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764734	C	T	missense_variant	MODERATE	TTN	transcript	ENST00000591111.5	protein_coding		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764734	C	T	missense_variant	MODERATE	TTN	transcript	ENST00000342175.11	protein_coding		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764734	C	T	missense_variant	MODERATE	TTN	transcript	ENST00000359218.10	protein_coding		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764734	C	T	missense_variant	MODERATE	TTN	transcript	ENST00000360870.10	protein_coding		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764734	C	T	missense_variant	MODERATE	TTN	transcript	ENST00000634225.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764734	C	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000590773.6	pseudogene		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764734	C	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000585451.5	pseudogene		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764734	C	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000610005.1	pseudogene		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764734	C	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000659121.1	pseudogene		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764734	C	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000653807.1	pseudogene		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178764734	C	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000657023.1	pseudogene		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178771062	A	T	intron_variant	MODIFIER	TTN	transcript	ENST00000589042.5	protein_coding		not_provided	Benign
+chr2	178771062	A	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000590773.6	pseudogene		not_provided	Benign
+chr2	178771062	A	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000585451.5	pseudogene		not_provided	Benign
+chr2	178771062	A	T	intron_variant	MODIFIER	TTN	transcript	ENST00000342992.11	protein_coding		not_provided	Benign
+chr2	178771062	A	T	intron_variant	MODIFIER	TTN	transcript	ENST00000460472.6	protein_coding		not_provided	Benign
+chr2	178771062	A	T	intron_variant	MODIFIER	TTN	transcript	ENST00000591111.5	protein_coding		not_provided	Benign
+chr2	178771062	A	T	intron_variant	MODIFIER	TTN	transcript	ENST00000342175.11	protein_coding		not_provided	Benign
+chr2	178771062	A	T	intron_variant	MODIFIER	TTN	transcript	ENST00000359218.10	protein_coding		not_provided	Benign
+chr2	178771062	A	T	intron_variant	MODIFIER	TTN	transcript	ENST00000360870.10	protein_coding		not_provided	Benign
+chr2	178771062	A	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000610005.1	pseudogene		not_provided	Benign
+chr2	178771062	A	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000659121.1	pseudogene		not_provided	Benign
+chr2	178771062	A	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000653807.1	pseudogene		not_provided	Benign
+chr2	178771062	A	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000657023.1	pseudogene		not_provided	Benign
+chr2	178771155	C	T	intron_variant	MODIFIER	TTN	transcript	ENST00000589042.5	protein_coding		not_provided	Benign
+chr2	178771155	C	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000590773.6	pseudogene		not_provided	Benign
+chr2	178771155	C	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000585451.5	pseudogene		not_provided	Benign
+chr2	178771155	C	T	intron_variant	MODIFIER	TTN	transcript	ENST00000342992.11	protein_coding		not_provided	Benign
+chr2	178771155	C	T	intron_variant	MODIFIER	TTN	transcript	ENST00000460472.6	protein_coding		not_provided	Benign
+chr2	178771155	C	T	intron_variant	MODIFIER	TTN	transcript	ENST00000591111.5	protein_coding		not_provided	Benign
+chr2	178771155	C	T	intron_variant	MODIFIER	TTN	transcript	ENST00000342175.11	protein_coding		not_provided	Benign
+chr2	178771155	C	T	intron_variant	MODIFIER	TTN	transcript	ENST00000359218.10	protein_coding		not_provided	Benign
+chr2	178771155	C	T	intron_variant	MODIFIER	TTN	transcript	ENST00000360870.10	protein_coding		not_provided	Benign
+chr2	178771155	C	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000610005.1	pseudogene		not_provided	Benign
+chr2	178771155	C	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000659121.1	pseudogene		not_provided	Benign
+chr2	178771155	C	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000653807.1	pseudogene		not_provided	Benign
+chr2	178771155	C	T	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000657023.1	pseudogene		not_provided	Benign
+chr2	178773511	G	A	synonymous_variant	LOW	TTN	transcript	ENST00000589042.5	protein_coding		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178773511	G	A	synonymous_variant	LOW	TTN	transcript	ENST00000342992.11	protein_coding		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178773511	G	A	synonymous_variant	LOW	TTN	transcript	ENST00000460472.6	protein_coding		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178773511	G	A	synonymous_variant	LOW	TTN	transcript	ENST00000591111.5	protein_coding		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178773511	G	A	synonymous_variant	LOW	TTN	transcript	ENST00000342175.11	protein_coding		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178773511	G	A	synonymous_variant	LOW	TTN	transcript	ENST00000359218.10	protein_coding		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178773511	G	A	synonymous_variant	LOW	TTN	transcript	ENST00000360870.10	protein_coding		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178773511	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000584485.1	pseudogene		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178773511	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000590773.6	pseudogene		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178773511	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000585451.5	pseudogene		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178773511	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000610005.1	pseudogene		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178773511	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000659121.1	pseudogene		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178773511	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000653807.1	pseudogene		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178773511	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000657023.1	pseudogene		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178773511	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000664776.1	pseudogene		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178773511	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000657818.1	pseudogene		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178773511	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000663178.1	pseudogene		Cardiovascular_phenotype|Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign/Likely_benign
+chr2	178774771	C	G	intron_variant	MODIFIER	TTN	transcript	ENST00000589042.5	protein_coding		not_provided	Benign
+chr2	178774771	C	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000590773.6	pseudogene		not_provided	Benign
+chr2	178774771	C	G	intron_variant	MODIFIER	TTN	transcript	ENST00000342992.11	protein_coding		not_provided	Benign
+chr2	178774771	C	G	intron_variant	MODIFIER	TTN	transcript	ENST00000460472.6	protein_coding		not_provided	Benign
+chr2	178774771	C	G	intron_variant	MODIFIER	TTN	transcript	ENST00000591111.5	protein_coding		not_provided	Benign
+chr2	178774771	C	G	intron_variant	MODIFIER	TTN	transcript	ENST00000342175.11	protein_coding		not_provided	Benign
+chr2	178774771	C	G	intron_variant	MODIFIER	TTN	transcript	ENST00000359218.10	protein_coding		not_provided	Benign
+chr2	178774771	C	G	intron_variant	MODIFIER	TTN	transcript	ENST00000360870.10	protein_coding		not_provided	Benign
+chr2	178774771	C	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000629094.2	pseudogene		not_provided	Benign
+chr2	178774771	C	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000657023.1	pseudogene		not_provided	Benign
+chr2	178774771	C	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000664776.1	pseudogene		not_provided	Benign
+chr2	178774771	C	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000663178.1	pseudogene		not_provided	Benign
+chr2	178774771	C	G	non_coding_transcript_exon_variant	MODIFIER	TTN-AS1	transcript	ENST00000659121.1	pseudogene		not_provided	Benign
+chr2	178774771	C	G	non_coding_transcript_exon_variant	MODIFIER	TTN-AS1	transcript	ENST00000653807.1	pseudogene		not_provided	Benign
+chr2	178774771	C	G	non_coding_transcript_exon_variant	MODIFIER	TTN-AS1	transcript	ENST00000657818.1	pseudogene		not_provided	Benign
+chr2	178777698	G	A	splice_region_variant&intron_variant	LOW	TTN	transcript	ENST00000589042.5	protein_coding		Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178777698	G	A	splice_region_variant&intron_variant	LOW	TTN	transcript	ENST00000342992.11	protein_coding		Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178777698	G	A	splice_region_variant&intron_variant	LOW	TTN	transcript	ENST00000460472.6	protein_coding		Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178777698	G	A	splice_region_variant&intron_variant	LOW	TTN	transcript	ENST00000591111.5	protein_coding		Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178777698	G	A	splice_region_variant&intron_variant	LOW	TTN	transcript	ENST00000342175.11	protein_coding		Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178777698	G	A	splice_region_variant&intron_variant	LOW	TTN	transcript	ENST00000359218.10	protein_coding		Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178777698	G	A	splice_region_variant&intron_variant	LOW	TTN	transcript	ENST00000360870.10	protein_coding		Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178777698	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000590773.6	pseudogene		Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178777698	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000629094.2	pseudogene		Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178777698	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000657023.1	pseudogene		Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178777698	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000664776.1	pseudogene		Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178777698	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000663178.1	pseudogene		Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178777698	G	A	non_coding_transcript_exon_variant	MODIFIER	TTN-AS1	transcript	ENST00000582038.2	pseudogene		Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178777698	G	A	non_coding_transcript_exon_variant	MODIFIER	TTN-AS1	transcript	ENST00000659121.1	pseudogene		Dilated_cardiomyopathy_1G|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178779159	A	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000582038.2	pseudogene		not_provided	Benign
+chr2	178779159	A	G	intron_variant	MODIFIER	TTN	transcript	ENST00000589042.5	protein_coding		not_provided	Benign
+chr2	178779159	A	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000590773.6	pseudogene		not_provided	Benign
+chr2	178779159	A	G	intron_variant	MODIFIER	TTN	transcript	ENST00000342992.11	protein_coding		not_provided	Benign
+chr2	178779159	A	G	intron_variant	MODIFIER	TTN	transcript	ENST00000460472.6	protein_coding		not_provided	Benign
+chr2	178779159	A	G	intron_variant	MODIFIER	TTN	transcript	ENST00000591111.5	protein_coding		not_provided	Benign
+chr2	178779159	A	G	intron_variant	MODIFIER	TTN	transcript	ENST00000342175.11	protein_coding		not_provided	Benign
+chr2	178779159	A	G	intron_variant	MODIFIER	TTN	transcript	ENST00000359218.10	protein_coding		not_provided	Benign
+chr2	178779159	A	G	intron_variant	MODIFIER	TTN	transcript	ENST00000360870.10	protein_coding		not_provided	Benign
+chr2	178779159	A	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000629094.2	pseudogene		not_provided	Benign
+chr2	178779159	A	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000659121.1	pseudogene		not_provided	Benign
+chr2	178779159	A	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000657023.1	pseudogene		not_provided	Benign
+chr2	178779159	A	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000664776.1	pseudogene		not_provided	Benign
+chr2	178779159	A	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000663178.1	pseudogene		not_provided	Benign
+chr2	178779207	A	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000582038.2	pseudogene		not_provided|not_specified	Benign
+chr2	178779207	A	G	intron_variant	MODIFIER	TTN	transcript	ENST00000589042.5	protein_coding		not_provided|not_specified	Benign
+chr2	178779207	A	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000590773.6	pseudogene		not_provided|not_specified	Benign
+chr2	178779207	A	G	intron_variant	MODIFIER	TTN	transcript	ENST00000342992.11	protein_coding		not_provided|not_specified	Benign
+chr2	178779207	A	G	intron_variant	MODIFIER	TTN	transcript	ENST00000460472.6	protein_coding		not_provided|not_specified	Benign
+chr2	178779207	A	G	intron_variant	MODIFIER	TTN	transcript	ENST00000591111.5	protein_coding		not_provided|not_specified	Benign
+chr2	178779207	A	G	intron_variant	MODIFIER	TTN	transcript	ENST00000342175.11	protein_coding		not_provided|not_specified	Benign
+chr2	178779207	A	G	intron_variant	MODIFIER	TTN	transcript	ENST00000359218.10	protein_coding		not_provided|not_specified	Benign
+chr2	178779207	A	G	intron_variant	MODIFIER	TTN	transcript	ENST00000360870.10	protein_coding		not_provided|not_specified	Benign
+chr2	178779207	A	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000629094.2	pseudogene		not_provided|not_specified	Benign
+chr2	178779207	A	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000659121.1	pseudogene		not_provided|not_specified	Benign
+chr2	178779207	A	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000657023.1	pseudogene		not_provided|not_specified	Benign
+chr2	178779207	A	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000664776.1	pseudogene		not_provided|not_specified	Benign
+chr2	178779207	A	G	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000663178.1	pseudogene		not_provided|not_specified	Benign
+chr2	178779308	G	A	missense_variant	MODERATE	TTN	transcript	ENST00000589042.5	protein_coding		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178779308	G	A	missense_variant	MODERATE	TTN	transcript	ENST00000342992.11	protein_coding		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178779308	G	A	missense_variant	MODERATE	TTN	transcript	ENST00000460472.6	protein_coding		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178779308	G	A	missense_variant	MODERATE	TTN	transcript	ENST00000591111.5	protein_coding		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178779308	G	A	missense_variant	MODERATE	TTN	transcript	ENST00000342175.11	protein_coding		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178779308	G	A	missense_variant	MODERATE	TTN	transcript	ENST00000359218.10	protein_coding		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178779308	G	A	missense_variant	MODERATE	TTN	transcript	ENST00000360870.10	protein_coding		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178779308	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000582038.2	pseudogene		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178779308	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000590773.6	pseudogene		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178779308	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000629094.2	pseudogene		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178779308	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000659121.1	pseudogene		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178779308	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000657023.1	pseudogene		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178779308	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000664776.1	pseudogene		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178779308	G	A	intron_variant	MODIFIER	TTN-AS1	transcript	ENST00000663178.1	pseudogene		Cardiovascular_phenotype|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_specified|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure|Tibial_muscular_dystrophy	Benign
+chr2	178780128	T	C	missense_variant	MODERATE	TTN	transcript	ENST00000589042.5	protein_coding		Cardiovascular_phenotype|not_specified|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Tibial_muscular_dystrophy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure	Benign
+chr2	178780128	T	C	missense_variant	MODERATE	TTN	transcript	ENST00000342992.11	protein_coding		Cardiovascular_phenotype|not_specified|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Tibial_muscular_dystrophy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure	Benign
+chr2	178780128	T	C	missense_variant	MODERATE	TTN	transcript	ENST00000460472.6	protein_coding		Cardiovascular_phenotype|not_specified|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Tibial_muscular_dystrophy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure	Benign
+chr2	178780128	T	C	missense_variant	MODERATE	TTN	transcript	ENST00000591111.5	protein_coding		Cardiovascular_phenotype|not_specified|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Tibial_muscular_dystrophy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure	Benign
+chr2	178780128	T	C	missense_variant	MODERATE	TTN	transcript	ENST00000342175.11	protein_coding		Cardiovascular_phenotype|not_specified|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Tibial_muscular_dystrophy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure	Benign
+chr2	178780128	T	C	missense_variant	MODERATE	TTN	transcript	ENST00000359218.10	protein_coding		Cardiovascular_phenotype|not_specified|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Tibial_muscular_dystrophy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure	Benign
+chr2	178780128	T	C	missense_variant	MODERATE	TTN	transcript	ENST00000360870.10	protein_coding		Cardiovascular_phenotype|not_specified|Autosomal_recessive_limb-girdle_muscular_dystrophy_type_2J|Dilated_cardiomyopathy_1G|not_provided|Early-onset_myopathy_with_fatal_cardiomyopathy|Tibial_muscular_dystrophy|Myopathy,_myofibrillar,_9,_with_early_respiratory_failure	Benign
+chr2	178780850	C	T	intron_variant	MODIFIER	TTN	transcript	ENST00000589042.5	protein_coding		not_provided	Benign
+chr2	178780850	C	T	intron_variant	MODIFIER	TTN	transcript	ENST00000342992.11	protein_coding		not_provided	Benign
+chr2	178780850	C	T	intron_variant	MODIFIER	TTN	transcript	ENST00000460472.6	protein_coding		not_provided	Benign
+chr2	178780850	C	T	intron_variant	MODIFIER	TTN	transcript	ENST00000591111.5	protein_coding		not_provided	Benign
+chr2	178780850	C	T	intron_variant	MODIFIER	TTN	transcript	ENST00000342175.11	protein_coding		not_provided	Benign
+chr2	178780850	C	T	intron_variant	MODIFIER	TTN	transcript	ENST00000359218.10	protein_coding		not_provided	Benign
+chr2	178780850	C	T	intron_variant	MODIFIER	TTN	transcript	ENST00000360870.10	protein_coding		not_provided	Benign
+chr2	178800113	T	C	intron_variant	MODIFIER	TTN	transcript	ENST00000470257.1	retained_intron		not_provided	Benign
+chr2	178800113	T	C	intron_variant	MODIFIER	TTN	transcript	ENST00000589042.5	protein_coding		not_provided	Benign
+chr2	178800113	T	C	intron_variant	MODIFIER	TTN	transcript	ENST00000342992.11	protein_coding		not_provided	Benign
+chr2	178800113	T	C	intron_variant	MODIFIER	TTN	transcript	ENST00000460472.6	protein_coding		not_provided	Benign
+chr2	178800113	T	C	intron_variant	MODIFIER	TTN	transcript	ENST00000591111.5	protein_coding		not_provided	Benign
+chr2	178800113	T	C	intron_variant	MODIFIER	TTN	transcript	ENST00000342175.11	protein_coding		not_provided	Benign
+chr2	178800113	T	C	intron_variant	MODIFIER	TTN	transcript	ENST00000359218.10	protein_coding		not_provided	Benign
+chr2	178800113	T	C	intron_variant	MODIFIER	TTN	transcript	ENST00000360870.10	protein_coding		not_provided	Benign
+chr2	183422727	C	G	intron_variant	MODIFIER	ENSG00000287621	transcript	ENST00000653710.1	pseudogene			
+chr2	219418555	T	C	synonymous_variant	LOW	DES	transcript	ENST00000373960.4	protein_coding		Cardiovascular_phenotype|Myofibrillar_Myopathy,_Dominant|Desmin-related_myofibrillar_myopathy|not_specified|not_provided|Cardiomyopathy|Neurogenic_scapuloperoneal_syndrome,_Kaeser_type|Dilated_cardiomyopathy_1I	Benign
+chr2	219420057	C	T	intron_variant	MODIFIER	DES	transcript	ENST00000373960.4	protein_coding		Desmin-related_myofibrillar_myopathy|not_provided|Dilated_cardiomyopathy_1I|Neurogenic_scapuloperoneal_syndrome,_Kaeser_type|not_specified	Benign
+chr2	219420057	C	T	non_coding_transcript_exon_variant	MODIFIER	DES	transcript	ENST00000477226.6	retained_intron		Desmin-related_myofibrillar_myopathy|not_provided|Dilated_cardiomyopathy_1I|Neurogenic_scapuloperoneal_syndrome,_Kaeser_type|not_specified	Benign
+chr2	219421420	G	A	synonymous_variant	LOW	DES	transcript	ENST00000373960.4	protein_coding		Myofibrillar_Myopathy,_Dominant|Cardiovascular_phenotype|Desmin-related_myofibrillar_myopathy|not_specified|not_provided|Neurogenic_scapuloperoneal_syndrome,_Kaeser_type|Dilated_cardiomyopathy_1I	Benign
+chr2	219421420	G	A	non_coding_transcript_exon_variant	MODIFIER	DES	transcript	ENST00000477226.6	retained_intron		Myofibrillar_Myopathy,_Dominant|Cardiovascular_phenotype|Desmin-related_myofibrillar_myopathy|not_specified|not_provided|Neurogenic_scapuloperoneal_syndrome,_Kaeser_type|Dilated_cardiomyopathy_1I	Benign
+chr2	219421420	G	A	non_coding_transcript_exon_variant	MODIFIER	DES	transcript	ENST00000492726.1	retained_intron		Myofibrillar_Myopathy,_Dominant|Cardiovascular_phenotype|Desmin-related_myofibrillar_myopathy|not_specified|not_provided|Neurogenic_scapuloperoneal_syndrome,_Kaeser_type|Dilated_cardiomyopathy_1I	Benign
+chr2	219421420	G	A	non_coding_transcript_exon_variant	MODIFIER	DES	transcript	ENST00000683013.1	retained_intron		Myofibrillar_Myopathy,_Dominant|Cardiovascular_phenotype|Desmin-related_myofibrillar_myopathy|not_specified|not_provided|Neurogenic_scapuloperoneal_syndrome,_Kaeser_type|Dilated_cardiomyopathy_1I	Benign
+chr2	230323107	A	T	intergenic_region	MODIFIER	SP140-SP140L	intergenic_region	ENSG00000079263-ENSG00000185404				
+chr2	230323268	T	C	intergenic_region	MODIFIER	SP140-SP140L	intergenic_region	ENSG00000079263-ENSG00000185404				
+chr2	235785072	A	G	intron_variant	MODIFIER	AGAP1	transcript	ENST00000409457.5	protein_coding			
+chr2	235785072	A	G	intron_variant	MODIFIER	AGAP1	transcript	ENST00000336665.9	protein_coding			
+chr2	235785072	A	G	intron_variant	MODIFIER	AGAP1	transcript	ENST00000409538.5	protein_coding			
+chr2	235785072	A	G	intron_variant	MODIFIER	AGAP1	transcript	ENST00000304032.13	protein_coding			
+chr2	235785072	A	G	intron_variant	MODIFIER	AGAP1	transcript	ENST00000635100.1	nonsense_mediated_decay			
+chr2	235785072	A	G	intron_variant	MODIFIER	AGAP1	transcript	ENST00000619456.4	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON		
+chr2	235785072	A	G	intron_variant	MODIFIER	AGAP1	transcript	ENST00000614409.4	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON		
+chr2	235785072	A	G	intron_variant	MODIFIER	AGAP1	transcript	ENST00000428334.6	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON		
+chr20	1683962	A	T	intron_variant	MODIFIER	SIRPB3P	transcript	ENST00000340424.4	unprocessed_pseudogene			
+chr20	23019372	A	T	intron_variant	MODIFIER	ENSG00000230492	transcript	ENST00000440798.1	pseudogene			
+chr20	23019372	A	T	intron_variant	MODIFIER	ENSG00000230492	transcript	ENST00000688034.1	pseudogene			
+chr20	23019372	A	T	intron_variant	MODIFIER	ENSG00000230492	transcript	ENST00000692319.1	pseudogene			
+chr20	23019372	A	T	intron_variant	MODIFIER	ENSG00000230492	transcript	ENST00000685368.1	pseudogene			
+chr20	23019372	A	T	intron_variant	MODIFIER	ENSG00000230492	transcript	ENST00000691033.1	pseudogene			
+chr20	23019372	A	T	intron_variant	MODIFIER	ENSG00000230492	transcript	ENST00000691000.1	pseudogene			
+chr20	23019372	A	T	intron_variant	MODIFIER	ENSG00000230492	transcript	ENST00000692081.1	pseudogene			
+chr20	23195118	A	G	intergenic_region	MODIFIER	ENSG00000230387-ENSG00000277901	intergenic_region	ENSG00000230387-ENSG00000277901				
+chr20	24106424	C	G	intron_variant	MODIFIER	LINC01721	transcript	ENST00000669143.1	pseudogene			
+chr20	24106424	C	G	intron_variant	MODIFIER	LINC01721	transcript	ENST00000664459.1	pseudogene			
+chr21	9823706	A	C	intron_variant	MODIFIER	LINC01667	transcript	ENST00000651050.1	processed_transcript			
+chr21	9837649	T	C	intron_variant	MODIFIER	LINC01667	transcript	ENST00000651050.1	processed_transcript			
+chr21	31670616	A	G	intergenic_region	MODIFIER	SOD1-SCAF4	intergenic_region	ENSG00000142168-ENSG00000156304				
+chr21	42161198	A	G	intergenic_region	MODIFIER	UMODL1-ABCG1	intergenic_region	ENSG00000177398-ENSG00000160179				
+chr22	36314011	A	G	intron_variant	MODIFIER	MYH9	transcript	ENST00000216181.11	protein_coding		not_provided	Benign
+chr22	36314011	A	G	intron_variant	MODIFIER	MYH9	transcript	ENST00000685801.1	protein_coding		not_provided	Benign
+chr22	36314011	A	G	intron_variant	MODIFIER	MYH9	transcript	ENST00000691109.1	retained_intron		not_provided	Benign
+chr22	36314011	A	G	intron_variant	MODIFIER	MYH9	transcript	ENST00000692930.1	retained_intron		not_provided	Benign
+chr22	36314011	A	G	intron_variant	MODIFIER	MYH9	transcript	ENST00000685187.1	retained_intron		not_provided	Benign
+chr22	36314011	A	G	intron_variant	MODIFIER	MYH9	transcript	ENST00000691687.1	retained_intron		not_provided	Benign
+chr22	36314138	T	C	splice_region_variant&intron_variant	LOW	MYH9	transcript	ENST00000216181.11	protein_coding		MYH9-related_disorder|not_provided|not_specified|Autosomal_dominant_nonsyndromic_hearing_loss_17|Macrothrombocytopenia_and_granulocyte_inclusions_with_or_without_nephritis_or_sensorineural_hearing_loss	Benign
+chr22	36314138	T	C	splice_region_variant&intron_variant	LOW	MYH9	transcript	ENST00000685801.1	protein_coding		MYH9-related_disorder|not_provided|not_specified|Autosomal_dominant_nonsyndromic_hearing_loss_17|Macrothrombocytopenia_and_granulocyte_inclusions_with_or_without_nephritis_or_sensorineural_hearing_loss	Benign
+chr22	36314138	T	C	splice_region_variant&intron_variant	LOW	MYH9	transcript	ENST00000691109.1	retained_intron		MYH9-related_disorder|not_provided|not_specified|Autosomal_dominant_nonsyndromic_hearing_loss_17|Macrothrombocytopenia_and_granulocyte_inclusions_with_or_without_nephritis_or_sensorineural_hearing_loss	Benign
+chr22	36314138	T	C	splice_region_variant&intron_variant	LOW	MYH9	transcript	ENST00000692930.1	retained_intron		MYH9-related_disorder|not_provided|not_specified|Autosomal_dominant_nonsyndromic_hearing_loss_17|Macrothrombocytopenia_and_granulocyte_inclusions_with_or_without_nephritis_or_sensorineural_hearing_loss	Benign
+chr22	36314138	T	C	splice_region_variant&intron_variant	LOW	MYH9	transcript	ENST00000685187.1	retained_intron		MYH9-related_disorder|not_provided|not_specified|Autosomal_dominant_nonsyndromic_hearing_loss_17|Macrothrombocytopenia_and_granulocyte_inclusions_with_or_without_nephritis_or_sensorineural_hearing_loss	Benign
+chr22	36314138	T	C	splice_region_variant&intron_variant	LOW	MYH9	transcript	ENST00000691687.1	retained_intron		MYH9-related_disorder|not_provided|not_specified|Autosomal_dominant_nonsyndromic_hearing_loss_17|Macrothrombocytopenia_and_granulocyte_inclusions_with_or_without_nephritis_or_sensorineural_hearing_loss	Benign
+chr22_KI270733v1_random	173072	G	A		MODIFIER					ERROR_CHROMOSOME_NOT_FOUND		
+chr22_KI270733v1_random	173174	A	G		MODIFIER					ERROR_CHROMOSOME_NOT_FOUND		
+chr3	14584524	T	G	intergenic_region	MODIFIER	RHBDF1P1-ENSG00000283392	intergenic_region	ENSG00000234123-ENSG00000283392				
+chr3	38551637	T	G	intron_variant	MODIFIER	SCN5A	transcript	ENST00000333535.9	protein_coding			
+chr3	38551637	T	G	intron_variant	MODIFIER	SCN5A	transcript	ENST00000414099.6	protein_coding			
+chr3	38551637	T	G	intron_variant	MODIFIER	SCN5A	transcript	ENST00000423572.7	protein_coding			
+chr3	38551637	T	G	intron_variant	MODIFIER	SCN5A	transcript	ENST00000455624.6	protein_coding			
+chr3	38551637	T	G	intron_variant	MODIFIER	SCN5A	transcript	ENST00000450102.6	protein_coding			
+chr3	38551637	T	G	intron_variant	MODIFIER	SCN5A	transcript	ENST00000413689.6	protein_coding			
+chr3	38551637	T	G	intron_variant	MODIFIER	SCN5A	transcript	ENST00000449557.6	protein_coding			
+chr3	54758657	A	G	intron_variant	MODIFIER	CACNA2D3	transcript	ENST00000288197.9	protein_coding			
+chr3	54758657	A	G	intron_variant	MODIFIER	CACNA2D3	transcript	ENST00000415676.6	protein_coding			
+chr3	54758657	A	G	intron_variant	MODIFIER	CACNA2D3	transcript	ENST00000474759.6	protein_coding			
+chr3	54758657	A	G	intron_variant	MODIFIER	CACNA2D3	transcript	ENST00000620722.4	protein_coding			
+chr3	54758657	A	G	intron_variant	MODIFIER	CACNA2D3	transcript	ENST00000471363.5	nonsense_mediated_decay			
+chr3	54758657	A	G	intron_variant	MODIFIER	CACNA2D3	transcript	ENST00000490478.5	protein_coding			
+chr3	54758657	A	G	intron_variant	MODIFIER	CACNA2D3	transcript	ENST00000468658.1	nonsense_mediated_decay			
+chr3	54758657	A	G	intron_variant	MODIFIER	CACNA2D3	transcript	ENST00000477024.5	nonsense_mediated_decay			
+chr3	135166862	C	A	intron_variant	MODIFIER	EPHB1	transcript	ENST00000398015.8	protein_coding			
+chr3	135166862	C	A	intron_variant	MODIFIER	EPHB1	transcript	ENST00000493838.1	protein_coding			
+chr3	135166862	C	A	intron_variant	MODIFIER	EPHB1	transcript	ENST00000647596.1	protein_coding			
+chr3	135166862	C	A	intron_variant	MODIFIER	ENSG00000240086	transcript	ENST00000649588.1	pseudogene			
+chr3	171499772	C	T	intergenic_region	MODIFIER	ENSG00000240497-RNU6-348P	intergenic_region	ENSG00000240497-ENSG00000207114				
+chr4	183292267	T	C	intron_variant	MODIFIER	WWC2	transcript	ENST00000508747.1	protein_coding			
+chr4	183292267	T	C	intron_variant	MODIFIER	WWC2	transcript	ENST00000427431.5	nonsense_mediated_decay			
+chr4	183292267	T	C	intron_variant	MODIFIER	WWC2	transcript	ENST00000438543.5	nonsense_mediated_decay			
+chr4	183292267	T	C	intron_variant	MODIFIER	WWC2	transcript	ENST00000504005.5	protein_coding			
+chr4	183292267	T	C	intron_variant	MODIFIER	WWC2	transcript	ENST00000448232.6	protein_coding			
+chr4	183292267	T	C	intron_variant	MODIFIER	WWC2	transcript	ENST00000403733.8	protein_coding			
+chr4	183292267	T	C	intron_variant	MODIFIER	WWC2	transcript	ENST00000513834.5	protein_coding			
+chr6	5014360	A	G	intron_variant	MODIFIER	LYRM4-AS1	transcript	ENST00000661080.2	pseudogene			
+chr6	5014360	A	G	intron_variant	MODIFIER	LYRM4-AS1	transcript	ENST00000653195.1	pseudogene			
+chr6	5014360	A	G	intron_variant	MODIFIER	LYRM4-AS1	transcript	ENST00000663198.1	pseudogene			
+chr6	5014360	A	G	intron_variant	MODIFIER	LYRM4-AS1	transcript	ENST00000671039.1	pseudogene			
+chr6	5014360	A	G	intron_variant	MODIFIER	LYRM4-AS1	transcript	ENST00000655306.1	pseudogene			
+chr6	7579179	A	G	intron_variant	MODIFIER	DSP	transcript	ENST00000379802.8	protein_coding		not_provided	Benign
+chr6	7579179	A	G	intron_variant	MODIFIER	DSP	transcript	ENST00000418664.2	protein_coding		not_provided	Benign
+chr6	7586075	C	T	3_prime_UTR_variant	MODIFIER	DSP	transcript	ENST00000379802.8	protein_coding		not_provided|Skin_fragility-woolly_hair-palmoplantar_keratoderma_syndrome|Lethal_acantholytic_epidermolysis_bullosa|Arrhythmogenic_right_ventricular_dysplasia_8	Benign
+chr6	7586075	C	T	3_prime_UTR_variant	MODIFIER	DSP	transcript	ENST00000418664.2	protein_coding		not_provided|Skin_fragility-woolly_hair-palmoplantar_keratoderma_syndrome|Lethal_acantholytic_epidermolysis_bullosa|Arrhythmogenic_right_ventricular_dysplasia_8	Benign
+chr6	17119412	T	G	intron_variant	MODIFIER	STMND1	transcript	ENST00000536551.6	protein_coding			
+chr6	17119412	T	G	intron_variant	MODIFIER	STMND1	transcript	ENST00000354384.5	protein_coding	WARNING_TRANSCRIPT_INCOMPLETE		
+chr6	112109683	T	C	intron_variant	MODIFIER	LAMA4	transcript	ENST00000230538.12	protein_coding		not_provided	Benign
+chr6	112109683	T	C	intron_variant	MODIFIER	LAMA4	transcript	ENST00000389463.9	protein_coding		not_provided	Benign
+chr6	112109683	T	C	intron_variant	MODIFIER	LAMA4	transcript	ENST00000522006.5	protein_coding		not_provided	Benign
+chr6	112109683	T	C	intron_variant	MODIFIER	LAMA4	transcript	ENST00000424408.6	protein_coding		not_provided	Benign
+chr6	112109683	T	C	intron_variant	MODIFIER	LAMA4	transcript	ENST00000651860.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	not_provided	Benign
+chr6	112109683	T	C	intron_variant	MODIFIER	LAMA4	transcript	ENST00000651529.1	nonsense_mediated_decay		not_provided	Benign
+chr6	112114061	T	G	intron_variant	MODIFIER	LAMA4	transcript	ENST00000230538.12	protein_coding		Dilated_cardiomyopathy_1JJ|not_specified	Benign
+chr6	112114061	T	G	intron_variant	MODIFIER	LAMA4	transcript	ENST00000389463.9	protein_coding		Dilated_cardiomyopathy_1JJ|not_specified	Benign
+chr6	112114061	T	G	intron_variant	MODIFIER	LAMA4	transcript	ENST00000522006.5	protein_coding		Dilated_cardiomyopathy_1JJ|not_specified	Benign
+chr6	112114061	T	G	intron_variant	MODIFIER	LAMA4	transcript	ENST00000424408.6	protein_coding		Dilated_cardiomyopathy_1JJ|not_specified	Benign
+chr6	112114061	T	G	intron_variant	MODIFIER	LAMA4	transcript	ENST00000651860.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	Dilated_cardiomyopathy_1JJ|not_specified	Benign
+chr6	112114061	T	G	intron_variant	MODIFIER	LAMA4	transcript	ENST00000651529.1	nonsense_mediated_decay		Dilated_cardiomyopathy_1JJ|not_specified	Benign
+chr6	112139339	G	A	intron_variant	MODIFIER	LAMA4	transcript	ENST00000230538.12	protein_coding		not_provided	Benign
+chr6	112139339	G	A	intron_variant	MODIFIER	LAMA4	transcript	ENST00000389463.9	protein_coding		not_provided	Benign
+chr6	112139339	G	A	intron_variant	MODIFIER	LAMA4	transcript	ENST00000522006.5	protein_coding		not_provided	Benign
+chr6	112139339	G	A	intron_variant	MODIFIER	LAMA4	transcript	ENST00000424408.6	protein_coding		not_provided	Benign
+chr6	112139339	G	A	intron_variant	MODIFIER	LAMA4	transcript	ENST00000651860.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	not_provided	Benign
+chr6	112141680	G	A	intron_variant	MODIFIER	LAMA4	transcript	ENST00000230538.12	protein_coding		not_provided	Benign
+chr6	112141680	G	A	intron_variant	MODIFIER	LAMA4	transcript	ENST00000389463.9	protein_coding		not_provided	Benign
+chr6	112141680	G	A	intron_variant	MODIFIER	LAMA4	transcript	ENST00000522006.5	protein_coding		not_provided	Benign
+chr6	112141680	G	A	intron_variant	MODIFIER	LAMA4	transcript	ENST00000424408.6	protein_coding		not_provided	Benign
+chr6	112141680	G	A	intron_variant	MODIFIER	LAMA4	transcript	ENST00000651860.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	not_provided	Benign
+chr6	112150486	G	C	intron_variant	MODIFIER	LAMA4	transcript	ENST00000230538.12	protein_coding		Dilated_cardiomyopathy_1JJ|not_provided	Benign
+chr6	112150486	G	C	intron_variant	MODIFIER	LAMA4	transcript	ENST00000389463.9	protein_coding		Dilated_cardiomyopathy_1JJ|not_provided	Benign
+chr6	112150486	G	C	intron_variant	MODIFIER	LAMA4	transcript	ENST00000522006.5	protein_coding		Dilated_cardiomyopathy_1JJ|not_provided	Benign
+chr6	112150486	G	C	intron_variant	MODIFIER	LAMA4	transcript	ENST00000424408.6	protein_coding		Dilated_cardiomyopathy_1JJ|not_provided	Benign
+chr6	112150486	G	C	intron_variant	MODIFIER	LAMA4	transcript	ENST00000651860.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	Dilated_cardiomyopathy_1JJ|not_provided	Benign
+chr6	112150486	G	C	non_coding_transcript_exon_variant	MODIFIER	LAMA4	transcript	ENST00000523765.1	nonsense_mediated_decay		Dilated_cardiomyopathy_1JJ|not_provided	Benign
+chr6	119417583	G	A	intron_variant	MODIFIER	ENSG00000287100	transcript	ENST00000692359.1	pseudogene			
+chr6	119417583	G	A	intron_variant	MODIFIER	ENSG00000287100	transcript	ENST00000690557.1	pseudogene			
+chr6	133506010	T	C	intron_variant	MODIFIER	EYA4	transcript	ENST00000355286.12	protein_coding		not_provided	Benign
+chr6	133506010	T	C	intron_variant	MODIFIER	TARID	transcript	ENST00000607033.5	pseudogene		not_provided	Benign
+chr6	133506010	T	C	intron_variant	MODIFIER	EYA4	transcript	ENST00000531901.5	protein_coding		not_provided	Benign
+chr6	133506010	T	C	intron_variant	MODIFIER	EYA4	transcript	ENST00000452339.6	protein_coding		not_provided	Benign
+chr6	133506010	T	C	intron_variant	MODIFIER	EYA4	transcript	ENST00000430974.6	protein_coding		not_provided	Benign
+chr6	133506010	T	C	intron_variant	MODIFIER	EYA4	transcript	ENST00000355167.8	protein_coding		not_provided	Benign
+chr6	133506010	T	C	intron_variant	MODIFIER	EYA4	transcript	ENST00000431403.3	protein_coding		not_provided	Benign
+chr6	133506010	T	C	intron_variant	MODIFIER	EYA4	transcript	ENST00000525849.6	protein_coding		not_provided	Benign
+chr6	133506010	T	C	intron_variant	MODIFIER	EYA4	transcript	ENST00000531861.5	processed_transcript		not_provided	Benign
+chr6	133506010	T	C	intron_variant	MODIFIER	EYA4	transcript	ENST00000532518.1	processed_transcript		not_provided	Benign
+chr6	133506010	T	C	intron_variant	MODIFIER	TARID	transcript	ENST00000451017.5	pseudogene		not_provided	Benign
+chr6	133506010	T	C	intron_variant	MODIFIER	EYA4	transcript	ENST00000684773.1	protein_coding	WARNING_TRANSCRIPT_NO_STOP_CODON	not_provided	Benign
+chr6	133506010	T	C	intron_variant	MODIFIER	EYA4	transcript	ENST00000683325.1	nonsense_mediated_decay		not_provided	Benign
+chr6	133506010	T	C	intron_variant	MODIFIER	EYA4	transcript	ENST00000683674.1	processed_transcript		not_provided	Benign
+chr6	133506010	T	C	intron_variant	MODIFIER	TARID	transcript	ENST00000666537.1	pseudogene		not_provided	Benign
+chr6	133506216	A	G	intron_variant	MODIFIER	EYA4	transcript	ENST00000355286.12	protein_coding		Dilated_cardiomyopathy_1J|not_provided	Benign
+chr6	133506216	A	G	intron_variant	MODIFIER	EYA4	transcript	ENST00000531901.5	protein_coding		Dilated_cardiomyopathy_1J|not_provided	Benign
+chr6	133506216	A	G	intron_variant	MODIFIER	EYA4	transcript	ENST00000452339.6	protein_coding		Dilated_cardiomyopathy_1J|not_provided	Benign
+chr6	133506216	A	G	intron_variant	MODIFIER	EYA4	transcript	ENST00000430974.6	protein_coding		Dilated_cardiomyopathy_1J|not_provided	Benign
+chr6	133506216	A	G	intron_variant	MODIFIER	EYA4	transcript	ENST00000355167.8	protein_coding		Dilated_cardiomyopathy_1J|not_provided	Benign
+chr6	133506216	A	G	intron_variant	MODIFIER	EYA4	transcript	ENST00000431403.3	protein_coding		Dilated_cardiomyopathy_1J|not_provided	Benign
+chr6	133506216	A	G	intron_variant	MODIFIER	EYA4	transcript	ENST00000525849.6	protein_coding		Dilated_cardiomyopathy_1J|not_provided	Benign
+chr6	133506216	A	G	intron_variant	MODIFIER	EYA4	transcript	ENST00000531861.5	processed_transcript		Dilated_cardiomyopathy_1J|not_provided	Benign
+chr6	133506216	A	G	intron_variant	MODIFIER	EYA4	transcript	ENST00000532518.1	processed_transcript		Dilated_cardiomyopathy_1J|not_provided	Benign
+chr6	133506216	A	G	intron_variant	MODIFIER	EYA4	transcript	ENST00000684773.1	protein_coding	WARNING_TRANSCRIPT_NO_STOP_CODON	Dilated_cardiomyopathy_1J|not_provided	Benign
+chr6	133506216	A	G	intron_variant	MODIFIER	EYA4	transcript	ENST00000683325.1	nonsense_mediated_decay		Dilated_cardiomyopathy_1J|not_provided	Benign
+chr6	133506216	A	G	intron_variant	MODIFIER	EYA4	transcript	ENST00000683674.1	processed_transcript		Dilated_cardiomyopathy_1J|not_provided	Benign
+chr6	133506216	A	G	non_coding_transcript_exon_variant	MODIFIER	TARID	transcript	ENST00000607033.5	pseudogene		Dilated_cardiomyopathy_1J|not_provided	Benign
+chr6	133506216	A	G	non_coding_transcript_exon_variant	MODIFIER	TARID	transcript	ENST00000451017.5	pseudogene		Dilated_cardiomyopathy_1J|not_provided	Benign
+chr6	133506216	A	G	non_coding_transcript_exon_variant	MODIFIER	TARID	transcript	ENST00000666537.1	pseudogene		Dilated_cardiomyopathy_1J|not_provided	Benign
+chr6	169564396	C	T	intron_variant	MODIFIER	WDR27	transcript	ENST00000448612.6	protein_coding			
+chr6	169564396	C	T	intron_variant	MODIFIER	WDR27	transcript	ENST00000423258.5	protein_coding			
+chr6	169564396	C	T	intron_variant	MODIFIER	WDR27	transcript	ENST00000546525.5	processed_transcript			
+chr6	169564396	C	T	intron_variant	MODIFIER	WDR27	transcript	ENST00000479310.5	processed_transcript			
+chr6	169564396	C	T	intron_variant	MODIFIER	ENSG00000285733	transcript	ENST00000648086.1	protein_coding			
+chr6	169564396	C	T	intron_variant	MODIFIER	ENSG00000285733	transcript	ENST00000650382.1	processed_transcript			
+chr6	169564396	C	T	intron_variant	MODIFIER	ENSG00000285733	transcript	ENST00000649579.1	nonsense_mediated_decay			
+chr6	169564396	C	T	intron_variant	MODIFIER	WDR27	transcript	ENST00000648472.1	nonsense_mediated_decay			
+chr6	169564396	C	T	intron_variant	MODIFIER	WDR27	transcript	ENST00000647790.1	nonsense_mediated_decay			
+chr7	35231376	G	A	intron_variant	MODIFIER	TBX20	transcript	ENST00000408931.4	protein_coding		not_provided	Benign
+chr7	35241335	C	T	intron_variant	MODIFIER	TBX20	transcript	ENST00000408931.4	protein_coding		not_provided	Benign
+chr7	35241335	C	T	intron_variant	MODIFIER	TBX20	transcript	ENST00000492961.1	retained_intron		not_provided	Benign
+chr7	106853037	C	T	intergenic_region	MODIFIER	LINC02577-PIK3CG	intergenic_region	ENSG00000228742-ENSG00000105851				
+chr7	136482110	G	A	intergenic_region	MODIFIER	ENSG00000232053-ZP3P2	intergenic_region	ENSG00000232053-ENSG00000226066				
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000287878.9	protein_coding		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000418337.6	protein_coding		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000392801.6	protein_coding		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000488258.5	nonsense_mediated_decay		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000476632.2	protein_coding		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000478989.6	nonsense_mediated_decay		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000493872.5	nonsense_mediated_decay		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000492843.6	protein_coding		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000651303.1	nonsense_mediated_decay		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000652159.1	protein_coding		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000650851.1	retained_intron		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000650948.1	retained_intron		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000652136.1	retained_intron		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000651764.1	protein_coding		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000651836.1	nonsense_mediated_decay		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000651378.1	protein_coding		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000650858.1	protein_coding		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000651188.1	nonsense_mediated_decay		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000652397.1	nonsense_mediated_decay		not_provided|not_specified	Benign
+chr7	151570267	G	A	intron_variant	MODIFIER	PRKAG2	transcript	ENST00000652047.1	protein_coding		not_provided|not_specified	Benign
+chrX	32362879	C	T	missense_variant	MODERATE	DMD	transcript	ENST00000357033.9	protein_coding		Cardiovascular_phenotype|not_specified|not_provided|Duchenne_muscular_dystrophy|Becker_muscular_dystrophy|Dystrophin_deficiency|Cardiomyopathy|Dilated_cardiomyopathy_3B	Benign
+chrX	32362879	C	T	missense_variant	MODERATE	DMD	transcript	ENST00000619831.5	protein_coding		Cardiovascular_phenotype|not_specified|not_provided|Duchenne_muscular_dystrophy|Becker_muscular_dystrophy|Dystrophin_deficiency|Cardiomyopathy|Dilated_cardiomyopathy_3B	Benign
+chrX	32362879	C	T	missense_variant	MODERATE	DMD	transcript	ENST00000378677.6	protein_coding		Cardiovascular_phenotype|not_specified|not_provided|Duchenne_muscular_dystrophy|Becker_muscular_dystrophy|Dystrophin_deficiency|Cardiomyopathy|Dilated_cardiomyopathy_3B	Benign
+chrX	32362879	C	T	intron_variant	MODIFIER	DMD	transcript	ENST00000488902.5	processed_transcript		Cardiovascular_phenotype|not_specified|not_provided|Duchenne_muscular_dystrophy|Becker_muscular_dystrophy|Dystrophin_deficiency|Cardiomyopathy|Dilated_cardiomyopathy_3B	Benign
+chrX	32412386	A	T	intron_variant	MODIFIER	DMD	transcript	ENST00000357033.9	protein_coding		not_provided	Benign
+chrX	32412386	A	T	intron_variant	MODIFIER	DMD	transcript	ENST00000488902.5	processed_transcript		not_provided	Benign
+chrX	32412386	A	T	intron_variant	MODIFIER	DMD	transcript	ENST00000378677.6	protein_coding		not_provided	Benign
+chrX	32412386	A	T	intron_variant	MODIFIER	DMD	transcript	ENST00000420596.5	protein_coding	WARNING_TRANSCRIPT_NO_STOP_CODON	not_provided	Benign
+chrX	32412386	A	T	intron_variant	MODIFIER	DMD	transcript	ENST00000448370.5	protein_coding	WARNING_TRANSCRIPT_NO_STOP_CODON	not_provided	Benign
+chrX	32441052	G	A	intron_variant	MODIFIER	DMD	transcript	ENST00000357033.9	protein_coding		not_provided	Benign
+chrX	32441052	G	A	intron_variant	MODIFIER	DMD	transcript	ENST00000488902.5	processed_transcript		not_provided	Benign
+chrX	32441052	G	A	intron_variant	MODIFIER	DMD	transcript	ENST00000378677.6	protein_coding		not_provided	Benign
+chrX	32441052	G	A	intron_variant	MODIFIER	DMD	transcript	ENST00000420596.5	protein_coding	WARNING_TRANSCRIPT_NO_STOP_CODON	not_provided	Benign
+chrX	32441052	G	A	intron_variant	MODIFIER	DMD	transcript	ENST00000448370.5	protein_coding	WARNING_TRANSCRIPT_NO_STOP_CODON	not_provided	Benign
+chrX	32596130	A	G	intron_variant	MODIFIER	DMD	transcript	ENST00000357033.9	protein_coding		not_provided	Benign
+chrX	32596130	A	G	intron_variant	MODIFIER	DMD	transcript	ENST00000288447.9	protein_coding		not_provided	Benign
+chrX	32596130	A	G	intron_variant	MODIFIER	DMD	transcript	ENST00000480751.1	processed_transcript		not_provided	Benign
+chrX	32596130	A	G	intron_variant	MODIFIER	DMD	transcript	ENST00000447523.1	protein_coding	WARNING_TRANSCRIPT_NO_START_CODON	not_provided	Benign
+chrX	32596130	A	G	intron_variant	MODIFIER	DMD	transcript	ENST00000488902.5	processed_transcript		not_provided	Benign
+chrX	32596130	A	G	intron_variant	MODIFIER	DMD	transcript	ENST00000378677.6	protein_coding		not_provided	Benign
+chrX	32596130	A	G	intron_variant	MODIFIER	DMD	transcript	ENST00000420596.5	protein_coding	WARNING_TRANSCRIPT_NO_STOP_CODON	not_provided	Benign
+chrX	32596130	A	G	intron_variant	MODIFIER	DMD	transcript	ENST00000448370.5	protein_coding	WARNING_TRANSCRIPT_NO_STOP_CODON	not_provided	Benign
+chrX	32596130	A	G	intron_variant	MODIFIER	DMD	transcript	ENST00000682899.1	retained_intron		not_provided	Benign
+chrX	32596130	A	G	intron_variant	MODIFIER	DMD	transcript	ENST00000683985.1	retained_intron		not_provided	Benign
+chrX	32596130	A	G	intron_variant	MODIFIER	DMD	transcript	ENST00000684165.1	retained_intron		not_provided	Benign
+chrX	32596130	A	G	intron_variant	MODIFIER	DMD	transcript	ENST00000682071.1	protein_coding	WARNING_TRANSCRIPT_NO_STOP_CODON	not_provided	Benign
+chrX	32596130	A	G	intron_variant	MODIFIER	DMD	transcript	ENST00000682924.1	nonsense_mediated_decay		not_provided	Benign
+chrX	32596130	A	G	intron_variant	MODIFIER	DMD	transcript	ENST00000684292.1	retained_intron		not_provided	Benign
+chrX	32596130	A	G	intron_variant	MODIFIER	DMD	transcript	ENST00000684237.1	protein_coding	WARNING_TRANSCRIPT_NO_STOP_CODON	not_provided	Benign
+chrX	46883294	G	T	intergenic_region	MODIFIER	RP2-LINC01545	intergenic_region	ENSG00000102218-ENSG00000204904				
+chrX	120431118	G	A	3_prime_UTR_variant	MODIFIER	LAMP2	transcript	ENST00000200639.9	protein_coding		not_provided|Danon_disease|Hypertrophic_cardiomyopathy	Benign/Likely_benign
+chrX	120431118	G	A	intron_variant	MODIFIER	LAMP2	transcript	ENST00000434600.6	protein_coding		not_provided|Danon_disease|Hypertrophic_cardiomyopathy	Benign/Likely_benign

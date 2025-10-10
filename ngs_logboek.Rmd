@@ -158,3 +158,59 @@ java -jar /data/datasets/dbNSFP/snpEff/SnpSift.jar DbNsfp -db /data/datasets/dbN
 | CLNHGVS                   | ClinVar             | String: HGVS expression                                       |
 | dbNSFP_*                  | dbNSFP              | Various: Predictive scores, allele counts, conservation, etc. |
 
+
+De volgende stap is om de SnpEff tool te runnen met CHROM POS REF ALT ANN[*].EFFECT ANN[*].IMPACT ANN[*].GENE ANN[*].FEATURE ANN[*].FEATUREID ANN[*].BIOTYPE ANN[*].ERRORS CLNDN CLNSIG deze fields to extract. (extract_tool.tabular)
+
+Daarna de tool runnen met CHROM,POS,REF,ALT,dbNSFP_SIFT_pred,dbNSFP_SIFT_score,dbNSFP_Polyphen2_HDIV_pred,dbNSFP_Polyphen2_HDIV_score,dbNSFP_MutationAssessor_pred,dbNSFP_MutationAssessor_score,dbNSFP_MetaSVM_pred,dbNSFP_MetaSVM_score,dbNSFP_CADD_phred,dbNSFP_REVEL_score,dbNSFP_GERP___RS,dbNSFP_phastCons100way_vertebrate (extract_tool2.tabular)
+
+De volgende stap is het vinden van de varianten dat doe ik als volg en ga stap bi jstap aan langs. 
+
+natuurlijk eerst de data laden
+```{r}
+ann <- read.delim("data/extract_tool.tabular", header = TRUE, sep = "\t")
+dbnsfp <- read.delim("data/extract_tool2.tabular", header = TRUE, sep = "\t")
+
+```
+
+kijken naar de kolom namen
+```{r}
+colnames(ann)
+colnames(dbnsfp)
+```
+
+Clean up van de kolom namen
+```{r}
+names(ann) <- gsub("\\.+", ".", names(ann))
+names(dbnsfp) <- gsub("\\.+", ".", names(dbnsfp))
+```
+
+weer kijken naar de kolom namen
+```{r}
+colnames(ann)
+colnames(dbnsfp)
+```
+
+
+dat ziet er beter uit. Nu kan ik de data mergen met elkaar. 
+```{r}
+merged <- merge(ann, dbnsfp, by = c("CHROM", "POS", "REF", "ALT"))
+```
+De volgende stap is het filteren van de cardiomyopathy hits. 
+```{r}
+cardio_hits <- subset(merged, grepl("cardiomyopathy", merged$CLNDN, ignore.case = TRUE))
+
+```
+Kijken wat er precies in deze kolommen staan. 
+```{r}
+names(cardio_hits)
+
+```
+```{r}
+priority <- subset(cardio_hits,
+                   ANN.IMPACT.x %in% c("HIGH", "MODERATE") &
+                   dbNSFP_SIFT_pred == "D" &
+                   dbNSFP_Polyphen2_HDIV_pred %in% c("D", "P") &
+                   dbNSFP_MutationAssessor_score >= 2)
+
+```
+
