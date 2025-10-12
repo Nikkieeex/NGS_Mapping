@@ -494,8 +494,8 @@ De volgende stap is het vinden van de varianten dat doe ik als volg en ga stap b
 
 natuurlijk eerst de data laden
 ```{r}
-ann <- read.delim("data/extract_tool.tabular", header = TRUE, sep = "\t")
-dbnsfp <- read.delim("data/extract_tool2.tabular", header = TRUE, sep = "\t")
+ann <- read.delim("../data/extract_tool.tabular", header = TRUE, sep = "\t")
+dbnsfp <- read.delim("../data/extract_tool2.tabular", header = TRUE, sep = "\t")
 
 ```
 
