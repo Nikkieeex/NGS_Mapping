@@ -439,4 +439,11 @@ Met SnpEff gaan wij de varianten annoteren, met behulp van de GRCh38.105- databa
 
 Stap 2 is SnpSift, daarvoor ben je de dnSnp database nodig die gebruik ik als in de opdracht bij week 4. 
 
+## 6-10-2025
+
+Vandaag ga ik verder met de opdrachten. 
+ 
+Ik was gebleven bij de dnSnp stap, dit was simpelweg uploaden en het enigste wat ik veranderd heb kwa settings. Only annotate ID field (do not add INFO field) deze stap op NO selecteren. 
+
+Voor stap 3 gaan we annotaten met de dnSnp tool en de SnpSift, de stappen worden zoals bij de opdracht gevolgd. 
 
