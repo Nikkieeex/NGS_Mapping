@@ -494,8 +494,8 @@ De volgende stap is het vinden van de varianten dat doe ik als volg en ga stap b
 
 natuurlijk eerst de data laden
 ```{r}
-ann <- read.delim("data/extract_tool.tabular", header = TRUE, sep = "\t")
-dbnsfp <- read.delim("data/extract_tool2.tabular", header = TRUE, sep = "\t")
+ann <- read.delim("../data/extract_tool.tabular", header = TRUE, sep = "\t")
+dbnsfp <- read.delim("../data/extract_tool2.tabular", header = TRUE, sep = "\t")
 
 ```
 
@@ -523,9 +523,58 @@ dat ziet er beter uit. Nu kan ik de data mergen met elkaar.
 merged <- merge(ann, dbnsfp, by = c("CHROM", "POS", "REF", "ALT"))
 ```
 
+
+## 13-10-2025
+Vandaaag is mijn doel echt om af te ronden voor de presentatie,
+
+Ik wil graag filteren en hiervoor eerst kijken naar de data om te zien wat mij het handigst lijkt om op te filteren en wat interessant kan zijn.
 ```{r}
-
+head(merged)
 ```
-huh
 
+Het lijkt mij handig om te kijken naar de CLNDN data, dit is de ClinVar disease naam en geeft aan welke aandoening volgends deze database word geassioseerd met een bepaald genetische variant.
+```{r}
+filtered_cardio <- merged[
+  grepl("cardiomyopathy", merged$CLNDN.x, ignore.case = TRUE) |
+  grepl("cardiomyopathy", merged$CLNDN.y, ignore.case = TRUE),
+]
 
+head(filtered_cardio)
+```
+Nu wil ik graag de belangrijke "effect" eruit filteren en de belangrijkste hier zijn 
+
+- stop_gained
+- splice_site_variant
+- missense_variant
+
+Deze varianten worden meestal gebruikt als high of moderate impact, hieraan wil ik een impact score geven en vanuit daar kan ik gaan rekenen. UIt deze berekening voeg ik een extra kolom toe en vanuit daar maak ik een top 10. 
+
+https://grch37.ensembl.org/info/genome/variation/prediction/predicted_data.html
+```{r}
+belangrijke_effecten <- c("stop_gained", "splice_acceptor_variant", "missense_variant")
+
+# Filter op relevante effecten
+filtered_df <- filtered_cardio[
+  filtered_cardio$ANN.EFFECT.x %in% belangrijke_effecten |
+  filtered_cardio$ANN.EFFECT.y %in% belangrijke_effecten,
+]
+
+# Voeg impactscore toe: HIGH = 2, MODERATE = 1, anders 0
+filtered_df$impact_score <- ifelse(
+  filtered_df$ANN.IMPACT.x == "HIGH" | filtered_df$ANN.IMPACT.y == "HIGH", 2,
+  ifelse(filtered_df$ANN.IMPACT.x == "MODERATE" | filtered_df$ANN.IMPACT.y == "MODERATE", 1, 0)
+)
+
+# Sorteer op impact_score en kies top 10
+top10_df <- filtered_df[order(-filtered_df$impact_score), ][1:10, ]
+
+# Bekijk resultaat
+print(top10_df)
+```
+Nu heb ik een mooie top 10 en kan ik kijken naar de vraag van de opdracht:
+Can you find a link between cardiomyopathy and the variant?
+What is the effect of the variant?
+Is it validated?
+Are there scientific studies supporting the evidence?
+What does the score indicate?
+What else can you find about the variant?
