@@ -573,7 +573,14 @@ print(top10_df)
 ```
 Nu heb ik een mooie top 10 en kan ik kijken naar de vraag van de opdracht:
 Can you find a link between cardiomyopathy and the variant?
+Er is zeker een link hier, de variant ligt in het TTN-gen en codeert voor titin. Titin is een essentieel eiwit voor de structuur en elasticiteit van de hartspieren.  TTN-varianten zijn de meest voorkomende genetische oorzaak van dilated Cardiomyopathy (DCM), vooral truncating variants (TTNtv).
+
+https://www.abcheartfailure.org/wp-content/uploads/articles_xml/2764-3107-abchf-004-03-e20240056/2764-3107-abchf-004-03-e20240056.pdf
+
 What is the effect of the variant?
+Het is een missense_variant met MODERATE impact, een aminozuur word vervangen. Dit kan de eiwitfunctie beïnvloeden, dit is afhankelijk van locatie en biochemische eigenschappen. In TTN zijn missense varianten vaak goedaardig, tenzij op plekken zoals cysteïneresiduen.
+
+
 Is it validated?
 Are there scientific studies supporting the evidence?
 What does the score indicate?
