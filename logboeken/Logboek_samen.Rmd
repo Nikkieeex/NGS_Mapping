@@ -578,3 +578,307 @@ Is it validated?
 Are there scientific studies supporting the evidence?
 What does the score indicate?
 What else can you find about the variant?
+
+## 13-10-2025
+
+Info plot:
+X-as: genomische positie binnen TTN; blauwe blokjes onderin = exonen.
+Y-as: AF (allele frequency) uit jouw VCF in %.
+Punten: alle varianten die in ClinVar de term cardiomyopathy hebben en (in jouw code) op dezelfde positie voorkomen in jouw sample.
+TTN is enorm; daardoor krijg je heel veel punten (veel daarvan met AF≈100%). Dat oogt rommelig en is diagnostisch weinig informatief.
+```{r}
+library(GenomicRanges); library(trackViewer); library(grid)
+
+normchr <- function(x) sub("^chr","", x)
+
+# 1) cardiomyopathy-label uit ClinVar
+is_cardio <- grepl("cardiomyopathy", filtered_cardio$CLNDN.x, TRUE) |
+             grepl("cardiomyopathy", filtered_cardio$CLNDN.y, TRUE)
+
+# 2) pos-match VCF (CHROM:POS)
+pos_gr2 <- paste0(normchr(as.character(seqnames(gr2))), ":", start(gr2))
+pos_fc  <- paste0(normchr(filtered_cardio$CHROM), ":", as.integer(filtered_cardio$POS))
+has_pos <- pos_fc %in% pos_gr2
+
+stopifnot(any(is_cardio & has_pos))  # anders klopt je selectie niet met je VCF
+
+# 3) gen-symbool uit annotatie
+get_symbol <- function(df){
+  s <- if ("ANN.GENE.x" %in% names(df)) df$ANN.GENE.x else NA
+  if ("ANN.GENE.y" %in% names(df)) { i <- is.na(s)|s==""; s[i] <- df$ANN.GENE.y[i] }
+  gi <- df[, grep("^GENEINFO(\\.|$)", names(df), value=TRUE), drop=FALSE]
+  if (ncol(gi)) { i <- is.na(s)|s==""; tmp <- gi[[1]]
+    tmp <- sub("\\|.*$","", tmp); tmp <- sub(";.*$","", tmp); tmp <- sub(":.*$","", tmp)
+    s[i] <- tmp[i]
+  }
+  s
+}
+filtered_cardio$SYMBOL <- get_symbol(filtered_cardio)
+
+# 4) restrictie: gen moet in je panel zitten
+panel_genes <- unique(as.character(mcols(exons_gr)$gene))
+sel <- is_cardio & has_pos & filtered_cardio$SYMBOL %in% panel_genes
+
+# kies 1–3 genen met meeste hits (pas aan naar wens)
+gc <- sort(table(filtered_cardio$SYMBOL[sel]), decreasing=TRUE)
+plot_genes <- names(gc)[1:min(3, length(gc))]
+
+# 5) sample GRanges met AF
+vcf_gr <- gr2
+vcf_gr$AF <- as.numeric(mcols(vcf_gr)$frequency)
+vcf_gr$score <- vcf_gr$AF * 100
+
+# 6) plot per gen (exonen als features, variantkleur ~ AF)
+for (g in plot_genes) {
+  rows <- which(sel & filtered_cardio$SYMBOL == g)
+  idx  <- match(pos_fc[rows], pos_gr2)
+  samp <- vcf_gr[na.omit(idx)]
+  feats <- my_list[[g]]
+  if (length(samp)==0 || is.null(feats)) next
+  feats$height <- 0.03; feats$fill <- "lightblue"
+  cuts <- cut(samp$AF, c(-Inf,0.5,0.9,Inf), labels=c("low","mid","high"))
+  samp$color <- c(low="gray60", mid="blue", high="red")[as.character(cuts)]
+  grid.newpage(); lolliplot(samp, feats, ylab="Allele Frequency (%)")
+  grid.text(paste0("Lollipopplot ", g, " — ClinVar ‘cardiomyopathy’"),
+            x=0.5, y=0.98, just="centre", gp=gpar(fontface=2))
+}
+```
+
+
+
+```{r}
+# Plot ClinVar 'cardiomyopathy' varianten in/±2bp van exonen met VCF-positie-match, per gen ingezoomd.
+suppressPackageStartupMessages({
+  if (!requireNamespace("trackViewer", quietly=TRUE)) {
+    if (!requireNamespace("BiocManager", quietly=TRUE)) install.packages("BiocManager")
+    BiocManager::install("trackViewer")
+  }
+  if (!requireNamespace("GenomeInfoDb", quietly=TRUE)) {
+    if (!requireNamespace("BiocManager", quietly=TRUE)) install.packages("BiocManager")
+    BiocManager::install("GenomeInfoDb")
+  }
+  library(GenomicRanges); library(GenomeInfoDb); library(trackViewer); library(grid)
+})
+
+normchr <- function(x) sub("^chr","", x)
+
+# --- Exonen normaliseren naar stijl zonder 'chr'
+exons_norm <- exons_gr
+exons_norm <- renameSeqlevels(exons_norm, setNames(normchr(seqlevels(exons_norm)), seqlevels(exons_norm)))
+seqlevels(exons_norm, pruning.mode="coarse") <- seqlevelsInUse(exons_norm)
+
+# --- Sleutels (positie) voor VCF en ClinVar
+pos_gr2 <- paste0(normchr(as.character(seqnames(gr2))), ":", start(gr2))
+pos_fc  <- paste0(normchr(filtered_cardio$CHROM), ":", as.integer(filtered_cardio$POS))
+fc_gr   <- GRanges(seqnames = normchr(filtered_cardio$CHROM),
+                   ranges   = IRanges(as.integer(filtered_cardio$POS), width=1))
+
+# --- Filters: cardiomyopathy-term, exon±2bp, positie-match
+is_cardio <- grepl("cardiomyopathy", filtered_cardio$CLNDN.x, TRUE) |
+             grepl("cardiomyopathy", filtered_cardio$CLNDN.y, TRUE)
+
+exons_pad <- exons_norm
+ranges(exons_pad) <- IRanges(start(exons_norm)-2L, end(exons_norm)+2L)
+in_exon <- overlapsAny(fc_gr, exons_pad)
+
+has_pos <- pos_fc %in% pos_gr2
+
+# --- Gensymbool uit annotatie
+get_symbol <- function(df){
+  s <- rep(NA_character_, nrow(df))
+  if ("ANN.GENE.x" %in% names(df)) { i <- which(is.na(s) | s==""); s[i] <- df$ANN.GENE.x[i] }
+  if ("ANN.GENE.y" %in% names(df)) { i <- which(is.na(s) | s==""); s[i] <- df$ANN.GENE.y[i] }
+  gi_col <- grep("^GENEINFO(\\.|$)", names(df), value=TRUE)
+  if (length(gi_col)) {
+    i <- which(is.na(s) | s==""); gi <- df[[gi_col[1]]]
+    first <- function(x){ x <- sub("\\|.*$","", x); x <- sub(";.*$","", x); sub(":.*$","", x) }
+    s[i] <- vapply(gi[i], function(x) if (is.na(x) || x=="") NA_character_ else first(x), character(1))
+  }
+  s
+}
+filtered_cardio$SYMBOL <- get_symbol(filtered_cardio)
+
+panel_genes <- unique(as.character(mcols(exons_norm)$gene))
+sel <- is_cardio & in_exon & has_pos & filtered_cardio$SYMBOL %in% panel_genes
+stopifnot(any(sel))
+
+# Top N genen
+N_GENES <- 3
+gc <- sort(table(filtered_cardio$SYMBOL[sel]), decreasing=TRUE)
+genes_to_show <- names(gc)[1:min(N_GENES, length(gc))]
+
+# Sample met AF
+vcf_gr <- gr2
+vcf_gr$AF <- as.numeric(mcols(gr2)$frequency)
+vcf_gr$score <- vcf_gr$AF * 100
+# normaliseer seqlevels van sample ook
+vcf_gr <- renameSeqlevels(vcf_gr, setNames(normchr(seqlevels(vcf_gr)), seqlevels(vcf_gr)))
+seqlevels(vcf_gr, pruning.mode="coarse") <- seqlevelsInUse(vcf_gr)
+
+plot_gene <- function(g){
+  rows <- which(sel & filtered_cardio$SYMBOL == g)
+  if (!length(rows)) return(invisible(NULL))
+
+  idx <- unique(na.omit(match(pos_fc[rows], pos_gr2)))
+  if (!length(idx)) return(invisible(NULL))
+
+  samp <- vcf_gr[idx]
+
+  feats <- exons_norm[mcols(exons_norm)$gene == g]
+  if (!length(feats)) return(invisible(NULL))
+
+  # --- FIX: venster als GRanges met hetzelfde seqname als features
+  if (length(samp) == 1L) {
+    rng_ir <- IRanges(start(samp)-50, end(samp)+50)
+  } else {
+    rng_ir <- IRanges(min(start(samp))-100, max(start(samp))+100)
+  }
+  chr_feat <- as.character(unique(seqnames(feats)))[1]
+  rng_gr   <- GRanges(seqnames = chr_feat, ranges = rng_ir)
+
+  feats_sub <- feats[overlapsAny(feats, rng_gr)]
+  if (!length(feats_sub)) feats_sub <- feats
+
+  feats_sub$height <- 0.04
+  feats_sub$fill   <- "blue"
+  samp$color       <- "red"
+  samp$cex         <- 1
+
+  grid.newpage()
+  lolliplot(samp, feats_sub, ylab="Allele Frequency (%)")
+  grid.text(paste0("Lollipopplot ", g, " — ClinVar ‘cardiomyopathy’, exon±2bp"),
+            x=0.5, y=0.98, just="centre", gp=gpar(fontface=2))
+}
+
+invisible(lapply(genes_to_show, plot_gene))
+
+
+```
+
+Maar heeft de patient nou cardiomyopathie of niet!!
+
+Dit bewijst nog steeds niet of onze patient cardiomyopathie heeft dus gaan we filteren op de exacte genen.
+Veel voorkomende cardiomyopathie-genen: LMNA, MYH7, MYBPC3, TNNT2, TNNI3, DSP, PKP2, FLNC, DES, PLN, RBM20, BAG3, ACTN2, SCN5A, TMEM43, TTN
+
+```{r cardiomyopathie_beslisboom, message=FALSE, warning=FALSE}
+suppressPackageStartupMessages({
+  if (!requireNamespace("GenomicRanges", quietly=TRUE)) stop("GenomicRanges ontbreekt.")
+  if (!requireNamespace("GenomeInfoDb", quietly=TRUE)) stop("GenomeInfoDb ontbreekt.")
+  library(GenomicRanges); library(GenomeInfoDb)
+})
+
+# ---- Vereisten checken ----
+needed <- c("filtered_cardio","gr2","exons_gr")
+miss <- needed[!vapply(needed, exists, logical(1))]
+if (length(miss)) stop("Ontbrekende objecten: ", paste(miss, collapse=", "))
+
+# ---- Helpers ----
+normchr <- function(x) sub("^chr","", x)
+
+get_symbol <- function(df){
+  s <- rep(NA_character_, nrow(df))
+  if ("ANN.GENE.x" %in% names(df)) { i <- is.na(s)|s==""; s[i] <- df$ANN.GENE.x[i] }
+  if ("ANN.GENE.y" %in% names(df)) { i <- is.na(s)|s==""; s[i] <- df$ANN.GENE.y[i] }
+  gi_col <- grep("^GENEINFO(\\.|$)", names(df), value=TRUE)
+  if (length(gi_col)) {
+    i <- is.na(s)|s==""; gi <- df[[gi_col[1]]]
+    fix1 <- function(x){ x <- sub("\\|.*$","", x); x <- sub(";.*$","", x); sub(":.*$","", x) }
+    s[i] <- ifelse(i, vapply(gi[i], fix1, ""), s[i])
+  }
+  s
+}
+
+# ---- Normaliseer seqlevels (zonder 'chr') ----
+ex_norm <- exons_gr
+ex_norm <- renameSeqlevels(ex_norm, setNames(normchr(seqlevels(ex_norm)), seqlevels(ex_norm)))
+seqlevels(ex_norm, pruning.mode="coarse") <- seqlevelsInUse(ex_norm)
+
+vcf_norm <- gr2
+vcf_norm <- renameSeqlevels(vcf_norm, setNames(normchr(seqlevels(vcf_norm)), seqlevels(vcf_norm)))
+seqlevels(vcf_norm, pruning.mode="coarse") <- seqlevelsInUse(vcf_norm)
+
+# ---- Variants uit jouw annotatietabel -> GRanges ----
+filtered_cardio$SYMBOL <- get_symbol(filtered_cardio)
+fc_gr <- GRanges(seqnames = normchr(filtered_cardio$CHROM),
+                 ranges   = IRanges(as.integer(filtered_cardio$POS), width=1))
+
+# ---- Filters ----
+## (1) ClinVar cardiomyopathy label (informatief) en (2) (likely) pathogenic (beslissend)
+cln_label <- grepl("cardiomyopathy", paste0(filtered_cardio$CLNDN.x," ",filtered_cardio$CLNDN.y), ignore.case=TRUE)
+cln_path  <- grepl("pathogenic", tolower(paste(filtered_cardio$CLNSIG.x, filtered_cardio$CLNSIG.y)))
+
+## (3) in/±2bp exon
+ex_pad <- ex_norm; ranges(ex_pad) <- IRanges(start(ex_norm)-2L, end(ex_norm)+2L)
+in_exon <- overlapsAny(fc_gr, ex_pad)
+
+## (4) gen is onderdeel van panel (volgt uit exonenlijst)
+panel_genes <- unique(as.character(mcols(ex_norm)$gene))
+in_panel    <- filtered_cardio$SYMBOL %in% panel_genes
+
+## (5) positie-match met jouw VCF (bewijst dat variant echt in sample zit)
+pos_vcf <- paste0(as.character(seqnames(vcf_norm)), ":", start(vcf_norm))
+pos_fc  <- paste0(normchr(filtered_cardio$CHROM), ":", as.integer(filtered_cardio$POS))
+match_idx <- match(pos_fc, pos_vcf)
+has_pos   <- !is.na(match_idx)
+
+## (6) heterozygoot AF 30–70% in sample
+AF_sample <- as.numeric(mcols(vcf_norm)$frequency)[match_idx]
+is_het    <- !is.na(AF_sample) & AF_sample >= 0.30 & AF_sample <= 0.70
+
+## (7) zeldzaam in populaties (gebruik alleen aanwezige kolommen)
+pop_cols <- intersect(c("AF_EXAC","AF_ESP","AF_TGP","AF.gnomAD","AF_GNOMAD","AFgnomAD"), names(filtered_cardio))
+is_rare  <- rep(TRUE, nrow(filtered_cardio))
+if (length(pop_cols)) {
+  min_pop <- suppressWarnings(apply(filtered_cardio[, pop_cols, drop=FALSE], 1, function(r){
+    r <- suppressWarnings(as.numeric(r))
+    if (all(is.na(r))) NA_real_ else min(r, na.rm=TRUE)
+  }))
+  is_rare <- is.na(min_pop) | min_pop < 0.01
+}
+
+# ---- Eindselectie: strikte evidence voor genetische cardiomyopathie ----
+keep <- cln_path & in_panel & in_exon & has_pos & is_het & is_rare
+
+# ---- Resultaattabel ----
+if (any(keep)) {
+  candidates <- data.frame(
+    GENE   = filtered_cardio$SYMBOL[keep],
+    CHROM  = filtered_cardio$CHROM[keep],
+    POS    = filtered_cardio$POS[keep],
+    REF    = filtered_cardio$REF[keep],
+    ALT    = filtered_cardio$ALT[keep],
+    CLNSIG = paste(filtered_cardio$CLNSIG.x[keep], filtered_cardio$CLNSIG.y[keep]),
+    EFFECT = if ("ANN.EFFECT.x" %in% names(filtered_cardio)) filtered_cardio$ANN.EFFECT.x[keep] else NA,
+    AF_pct = round(100*AF_sample[keep],1),
+    stringsAsFactors = FALSE
+  )
+  candidates <- candidates[order(candidates$GENE, -candidates$AF_pct), ]
+  print(candidates, row.names=FALSE)
+} else {
+  candidates <- data.frame()
+  cat("Geen strikte kandidaten gevonden.\n")
+}
+
+# ---- Conclusie ----
+if (nrow(candidates) > 0) {
+  cat("\nCONCLUSIE: genetische aanwijzing voor cardiomyopathie aanwezig (kandidaat/ten).",
+      "Beoordeel in IGV en valideer.\n")
+} else {
+  # Check dekking als onderbouwing voor 'niet aangetoond' (optioneel: gene_metrics aanwezig?)
+  if (exists("gene_metrics")) {
+    core <- intersect(panel_genes, c("LMNA","MYH7","MYBPC3","TNNT2","TNNI3","DSP","FLNC","DES","PKP2","PLN","RBM20","BAG3","ACTN2","SCN5A","TMEM43","TTN"))
+    gm <- subset(gene_metrics, gene %in% core)
+    lowcov <- subset(gm, low_cover_pct > 0)
+    if (nrow(lowcov)) {
+      cat("\nCONCLUSIE: geen strikte kandidaten; interpretatie beperkt door lage dekking in:",
+          paste(lowcov$gene, collapse=", "), "\n")
+    } else {
+      cat("\nCONCLUSIE: geen strikte kandidaten; met dit panel niet aangetoond.\n")
+    }
+  } else {
+    cat("\nCONCLUSIE: geen strikte kandidaten; met dit panel niet aangetoond.\n")
+  }
+}
+
+```
+

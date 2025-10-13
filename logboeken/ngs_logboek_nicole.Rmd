@@ -1,0 +1,140 @@
+---
+title: "logboek_ngs"
+output: html_document
+date: "2025-09-12"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Sample4_0394321_L001_R1_001.fastq, 646,109 KB
+Sample4_0394321_L001_R2_001.fastq, 646,117 KB
+
+op galaxy de data sets in een collection gezet
+
+
+## FASTQC
+
+Deze test doen we op de ruwe data. Later gaan we deze opnieuw doen om te kijken wat voor invloed de andere testen hebben gehad.
+Uit de report kwam dan 1 test is gefaald en twee testen een warning hebben
+
+HTML-rapport:
+
+![PerBaseSequenceContent](/homes/nfbovenga/NGS_Mapping/Images/PerBaseSequenceContent.png)
+Per base sequence content faalde omdat:
+De basensamenstelling is niet stabiel en de lijnen voor A, T, G en C lopen niet parallel. Vooral bij de eerste ~10 basen en de laatste basen is er sterke afwijking tussen de nucleotiden. Dit kan komen door library-prep bias (bijvoorbeeld tagmentatie of primerbias), of door adapters/contaminatie. Bij RNA-Seq wordt dit vaak gezien en is het minder problematisch, bij DNA-Seq kan het duiden op adapters of bias die nog weggefilterd moet worden.
+
+
+![SequenceLegthDistribution](/homes/nfbovenga/NGS_Mapping/Images/SequenceLegthDistribution.png)
+Sequence Length Distribution kreeg een warning omdat:
+De grafiek laat zien dat bijna alle reads dezelfde lengte hebben (~150 bp). Dit is normaal voor Illumina paired-end sequencing (NextSeq/MiSeq), waar reads een vaste lengte hebben. De kleine variatie aan het einde zorgt voor een waarschuwing, maar dit is geen probleem voor downstream analyse.
+
+
+![SequenceDuplicationLevels](/homes/nfbovenga/NGS_Mapping/Images/SequenceDuplicationLevels.png)
+
+Sequence Duplication Levels kreeg een warning omdat:
+De curve laat zien dat de meerderheid van de reads uniek is (links hoog), en dat het aantal duplicaten snel afneemt. Toch blijft na deduplicatie maar ~60% unieke reads over (dus ~40% duplicaten). Dit verklaart de waarschuwing. Voor RNA-Seq-data is dit normaal, omdat sterk tot expressie komende genen vaker worden gesequenced en zo duplicaten veroorzaken. Voor DNA-Seq kan het wijzen op PCR-duplicatie of coverage bias.
+
+Beschreven met behulp van https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help
+
+
+## Trimmen (Trimmomatic)
+
+Instellingen:
+ILLUMINACLIP: standaard Illumina adapters (met adapterbestand geselecteerd)
+LEADING: 20
+TRAILING: 20
+SLIDINGWINDOW: 4:20
+MINLEN: 70
+Input: Paired-end FASTQ (R1 en R2)
+Output: Paired-end trimmed FASTQ’s en bijbehorende unpaired bestanden
+
+
+## MultiQC
+
+Ik heb nog een keer FASTQC uitgevoerd na het trimmen. Ik zag nogsteeds 1 fail en 2 warnings. MultiQC heb ik daarna uitgevoerd om de verschillen te zien. In de afbeelding hieronder in figuur 1 zie je de status.
+
+![figuur_1](/homes/nfbovenga/NGS_Mapping/Images/MultiQC1.png)
+![figuur_2](/homes/nfbovenga/NGS_Mapping/Images/PerSequenceQualityScores.png)
+
+Per Sequence Quality Scores (figuur 2):
+De meeste reads hebben een hoge gemiddelde kwaliteitsscore (>30), wat wijst op betrouwbare data. Er is nauwelijks een piek in de lage kwaliteitszones (<20), dus er zijn geen grote problemen met slechte reads. Dit bevestigt dat de dataset na trimming over het algemeen van goede kwaliteit is.
+Nu kan mapping beginnen!
+
+
+## Mapping with reference genonome
+
+Standaard mens genoom gebruikt (h38)
+
+
+## Sortsam tool
+
+Instellingen:
+Input is vorige SAM/BAM file
+Sort order: coordinate
+Validation stringency: LENIENT
+
+
+## MarkDuplicates
+
+Instellinegn:
+Input: gesorteerde BAM van vorige stap
+f true do not write duplicates to the output file instead of writing them with appropriate flags set, Yes
+Assume the input file is already sorted, Yes
+The scoring strategy op SUM_OF_BASE_QUALITIES
+The maximum offset: 100
+Select validation stringency: Lenient
+
+
+## Variant Calling
+
+Goed opletten met reference genoom kiezen, want hij staat standaard op h19.
+
+Instellingen:
+Input: MarkDuplicates output (BAM)
+Using reference genome: h38
+Limit variant calling to a set of regions: Do not limit
+Read coverage: Use defaults 
+Choose parameter selection level: Simple diploid calling
+Type of main output to produce: VCF (default)
+
+## VCFilter
+
+instellingen:
+Input: VCF bestand
+Specify filtering value: DP> 20
+Filter entire records, not just alleles: No
+Tag VCF records as positively filtered: No
+Tag VCF records as negatively filtered: No
+Append the existing filter tag: No
+Apply tag-pass on a per-allele basis: No
+Invert the filter: No
+Use logical OR instead of AND to combine filters: No
+
+
+## Annotatie met SnpEff
+
+Input: gefilterde VCF van vorige stap 
+
+Bij genoom dowload on demand gekozen en GRCh38.86 ingevult 
+
+
+# Week 4
+
+## Call variants with LoFreq
+
+Een VCF-bestand is het resultaat van je variantcaller en bevat per gevonden mutatie alle relevante informatie. Voor elke variant staat erin op welk chromosoom en welke positie hij voorkomt, wat de referentiebase is en welke afwijkende base gevonden is. Daarnaast wordt de betrouwbaarheid van die variant vastgelegd, bijvoorbeeld met een kwaliteitscore of een filterstatus. Verder bevat de INFO-kolom extra gegevens zoals hoe vaak de variant gezien is in de reads en welk percentage van de reads die verandering draagt. Kortom: het VCF beschrijft alle gevonden varianten inclusief hun locatie, kwaliteit en ondersteunende data.
+
+Instellingen:
+Reference genoom: GRCh38 (locally cashed)
+Call variants across: Whole reference
+Types of variants to call: Only SNVs
+
+
+## 10-10-2025
+
+Ik ga even in mijn eigen logboek week 4 zetten. 
+
+
