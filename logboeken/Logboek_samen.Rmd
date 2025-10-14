@@ -7,7 +7,6 @@ output: html_document
 
 Vandaag gaan we bezig met week 3 van de les stof en de eerste opdracht hierin is dat we de BED-data gaan lezen.
 
-
 *Opdracht 1:*
 
 ```{r}
@@ -22,7 +21,8 @@ names(BED_file)<- c("chromosome", "begin", "end","gene")
 head(BED_file)
 ```
 
-## 30-9-2025 
+## 30-9-2025
+
 Vandaag ga ik verder met wat ik gisteren gestart was, ik volg gewoon de stappen van week 3 nog.
 
 Het printen van de exons nummers per chromosoom, in elke rij zit 1 exon dus ik moet eigenlijk gewoon de hele tabel printen?
@@ -43,6 +43,7 @@ barplot(exons,
 *opdracht 2:*
 
 Het visualiseren van de nummers van genen per chromosoom, hiervoor moeten we een subset creeeren met elke unieke chromosoom-genen combinatie. Hiervoor kunnen we de table functie weer gebruiken.
+
 ```{r}
 # selecteren van de chromosoom en gene columns
 chrom_gene <- BED_file[, c("chromosome", "gene")]
@@ -59,9 +60,10 @@ barplot(gene_counts,
         las = 2)  # Draait de x-as labels verticaal voor betere leesbaarheid
 ```
 
-_opdracht 3:_
+*opdracht 3:*
 
 libraries wat we gaan gebruiken:
+
 ```{r}
 ## Only needed when the package is missing
 if (!require("BiocManager"))
@@ -69,6 +71,7 @@ if (!require("BiocManager"))
 
 BiocManager::install("GenomicRanges")
 ```
+
 ```{r}
 # This package contains the 'IRanges', 'GRanges' and 'GRangesList' classes we will use
 library(GenomicRanges)
@@ -86,7 +89,8 @@ ranges <- IRanges(start = sod2$begin,
                   names = sod2$gene)
 ranges
 ```
-IRanges word gebruikt om een soort van lijst te maken zodat R precies weet waar elk stukje begint, eindigt en hoe die heet. Dit is makkelijk om makkelijk te zien of er stukjes overlappen, of om te zoeken naar bepaalde regios. 
+
+IRanges word gebruikt om een soort van lijst te maken zodat R precies weet waar elk stukje begint, eindigt en hoe die heet. Dit is makkelijk om makkelijk te zien of er stukjes overlappen, of om te zoeken naar bepaalde regios.
 
 ```{r}
 # het berekenen van de lengte van een gene
@@ -94,21 +98,25 @@ cat("Lengte van SOD2:", sum( width( ranges) ), "bp")
 ```
 
 Hier zie je eigenlijk hetzelfde als dat met de IRanges maar er missen enkele gegevens, daarom gaan we het IRanges omzetten naar GRanges, dit doen we om eigenlijk extra biologische data toe te voegen.
+
 ```{r}
 granges <- GRanges(seqnames = sod2$chromosome,
                    ranges = ranges)
 granges
 ```
-Wat kunnen we nu eigenlijk met de granges? Met alleen de BED-data niet zo heel veel, maar we gaan de Pileup data ook in een vergelijkbare GRanges object plaatsen, hiermee kunnen we met onze data interessante vragen stellen met de pileup functie. Bijvoorbeeld specifiek iets vragen over exonen en de rest negeren. 
 
-Voor dat we dat kunnen doen moeten we eerst de BED-data in het goede formaat zetten. 
+Wat kunnen we nu eigenlijk met de granges? Met alleen de BED-data niet zo heel veel, maar we gaan de Pileup data ook in een vergelijkbare GRanges object plaatsen, hiermee kunnen we met onze data interessante vragen stellen met de pileup functie. Bijvoorbeeld specifiek iets vragen over exonen en de rest negeren.
+
+Voor dat we dat kunnen doen moeten we eerst de BED-data in het goede formaat zetten.
 
 De eerste stap hierbij een lege lijst creeeren:
+
 ```{r}
 my_list <- list()
 ```
 
 De tweede stap is om te itereren over alle genen in het BED-bestand:
+
 ```{r}
 # split het BED-bestand op gene
 gene_group <- split(BED_file, BED_file$gene)
@@ -130,28 +138,27 @@ my_list <- GRangesList(my_list)
 
 my_list
 ```
+
 ```{r}
 my_list["SOD2"]
 ```
 
 dit werkt dus mooi:D.
 
-_opdracht 4_
-In deze opdracht moeten we nog een visualisatie maken gebaseerd op de BED-data maar nu gebruiken we de GRange object.
+*opdracht 4* In deze opdracht moeten we nog een visualisatie maken gebaseerd op de BED-data maar nu gebruiken we de GRange object.
 
 ```{r}
 psen2_ranges <- ranges(BED_file[['PSEN2']])
 paste("Length of the 'PSEN2' gene:", sum(width(psen2_ranges)), "\n")
 ```
+
 Hier kom ik ff niet verder en ga hier morgen denk ik verder aan werken.
 
 ## 01-10-2025
 
-
 Vandaag ga ik verder met **opdracht 4 t/m 7**
 
-
-_opdracht 4_ 
+*opdracht 4*
 
 Genlengten (exonen) en visualisatie
 
@@ -173,13 +180,11 @@ barplot(gene_lengths,
         main = "Exon-gebaseerde genlengten (panel)")
 ```
 
-Je ziet dat sommige genen veel langer zijn, waardoor de rest moeilijk te vergelijken is. Als TTN er niet tussen stond kon je beter verschillen zien. 
+Je ziet dat sommige genen veel langer zijn, waardoor de rest moeilijk te vergelijken is. Als TTN er niet tussen stond kon je beter verschillen zien.
 
+*opdracht 5*
 
-_opdracht 5_ 
-
-BAM-bestand laden en pileup voor één gen en Rsamtools gebruiken
-En bam en bai files nog op logische plek zetten
+BAM-bestand laden en pileup voor één gen en Rsamtools gebruiken En bam en bai files nog op logische plek zetten
 
 ```{r}
 if (!requireNamespace("Rsamtools", quietly = TRUE)) BiocManager::install("Rsamtools")
@@ -206,10 +211,10 @@ test_pileup <- pileup(file = bam_file,
 
 head(test_pileup)
 ```
+
 beschrijf dit nog evne
 
-
-_opdracht 6_
+*opdracht 6*
 
 Pileup verwerken voor alle genen en in een lijst opslaan voor latere aggregatie
 
@@ -239,16 +244,11 @@ head(coverage_list[[test_gene]])
 
 coverage_list bevat nu per gen een data.frame met minimaal kolommen pos, count, gene. Lege data.frames duiden op 0 reads in de targetregio.
 
-
-_opdracht 7_
+*opdracht 7*
 
 Coverage berekenen en rapporteren
 
-per gen rapporteren:
-aantal basen
-gemiddelde dekking
-aantal posities met lange dekking en percentage
-
+per gen rapporteren: aantal basen gemiddelde dekking aantal posities met lange dekking en percentage
 
 ```{r}
 options(stringsAsFactors = FALSE)
@@ -289,20 +289,18 @@ gene_metrics <- gene_metrics[order(-gene_metrics$low_cover_pct, gene_metrics$gen
 
 ```
 
-
 ##3-10-2025
 
-Mijn doel voor vandaag is om met week 4 te starten, nicole en ik zijn allebei ermee bezig omdat het bij nicole niet helemaal goed gaat met downloaden. 
+Mijn doel voor vandaag is om met week 4 te starten, nicole en ik zijn allebei ermee bezig omdat het bij nicole niet helemaal goed gaat met downloaden.
 
-Met de BAM file en waar mark duplicates op is toegepast, ga ik de call variants tool van LoFreq gebruiken, met het GRCh38 referentie genoom. Ik laat de Call variants across setting aan met het gehele genoom referentie. 
+Met de BAM file en waar mark duplicates op is toegepast, ga ik de call variants tool van LoFreq gebruiken, met het GRCh38 referentie genoom. Ik laat de Call variants across setting aan met het gehele genoom referentie.
 
-Het resultaat van deze tool zou uiteindelijk een nieuwe file worden (vcf), elke lijn beschrijft een single variant. In galaxy kan je makkelijk zien hoeveel varianten er zijn. Noteer de 17 comment lines aan het begin van de file.
-_Opdracht 8:_
-Omdat we met patienten data werken gaan we ook volgends de richtlijnen werken van UMCG. Dit houdt in dat sequenties met een minimale waarde van 30% behouden word. Alles wat hier niet aan voldoet word eruit gefiltered.
+Het resultaat van deze tool zou uiteindelijk een nieuwe file worden (vcf), elke lijn beschrijft een single variant. In galaxy kan je makkelijk zien hoeveel varianten er zijn. Noteer de 17 comment lines aan het begin van de file. *Opdracht 8:* Omdat we met patienten data werken gaan we ook volgends de richtlijnen werken van UMCG. Dit houdt in dat sequenties met een minimale waarde van 30% behouden word. Alles wat hier niet aan voldoet word eruit gefiltered.
 
-Voor het filteren zijn er 1306 varianten. 
+Voor het filteren zijn er 1306 varianten.
 
-Inlezen van de data frame met read.delim functie, moeten we zeker zijn dat het bestand een goede header heeft met 18 comments, dit klopt. Ook moeten we de stringsAsFactors = FALSE argument toepassen, anders werkt het simpelweg niet omdat we geen R factor kunnen splitten. 
+Inlezen van de data frame met read.delim functie, moeten we zeker zijn dat het bestand een goede header heeft met 18 comments, dit klopt. Ook moeten we de stringsAsFactors = FALSE argument toepassen, anders werkt het simpelweg niet omdat we geen R factor kunnen splitten.
+
 ```{r}
 
 # lees data vanaf lijn 18
@@ -316,6 +314,7 @@ head(variant_data)
 ```
 
 splitten van de kolom met strsplit functie, de output van deze functie is een lijst waar elk item een vector is, met gescheiden items. We gaan blijkbaar R magie gebruiken om dit te veranderen in een matrix:D.
+
 ```{r}
 bed_splitted <- strsplit(variant_data$INFO,";")
 
@@ -323,14 +322,17 @@ bed_matrix <- do.call(rbind, bed_splitted)
 head(bed_matrix, n = 20)
 
 ```
-De eerste stap om nu te nemen is om het AF te verwijderen van de 2e rij. Daarna wil je het numeric maken, na het numeric maken wil je als een gescheiden variabel bewaren. 
+
+De eerste stap om nu te nemen is om het AF te verwijderen van de 2e rij. Daarna wil je het numeric maken, na het numeric maken wil je als een gescheiden variabel bewaren.
+
 ```{r}
 AF_clean <- gsub("^AF=", "", bed_matrix[, 2]) # verwijderd AF van de rij
 AF_numeric <- as.numeric(AF_clean) # maakt de kolom numeric
 no_AF <- AF_numeric # sla op als eigen variabel
 ```
 
-De volgende stap is weer een GRanges maken waarbij de start en eind parameters een pos kolom krijgen. 
+De volgende stap is weer een GRanges maken waarbij de start en eind parameters een pos kolom krijgen.
+
 ```{r}
 nrow(bed_matrix)         # moet 1306 zijn
 length(variant_data$X.CHROM)       # moet 1306 zijn
@@ -348,8 +350,8 @@ mcols(gr2) <- DataFrame(frequency = AF_numeric)
 
 print(gr2)
 ```
-De volgende stap is om alle varianten te krijgen van een exon. Dit moet met de findOverlap functie:
-https://www.rdocumentation.org/packages/GenomicAlignments/versions/1.8.4/topics/findOverlaps-methods
+
+De volgende stap is om alle varianten te krijgen van een exon. Dit moet met de findOverlap functie: <https://www.rdocumentation.org/packages/GenomicAlignments/versions/1.8.4/topics/findOverlaps-methods>
 
 ```{r}
 exons_gr <- GRanges(
@@ -359,7 +361,6 @@ exons_gr <- GRanges(
   gene = BED_file$gene
 )
 ```
-
 
 ```{r}
 # hits is een object (container) 
@@ -372,7 +373,8 @@ hits_df <- DataFrame(hits)
 hits
 hits_df
 ```
-Je zou twee kolommen moeten krijgen waarvan 1 queryHits en de andere subjectHits, dit klopt. De volgende stap is het filteren op die 30%, dit kunnen we doen met het creeeren van nog een subset. 
+
+Je zou twee kolommen moeten krijgen waarvan 1 queryHits en de andere subjectHits, dit klopt. De volgende stap is het filteren op die 30%, dit kunnen we doen met het creeeren van nog een subset.
 
 ```{r}
 # de hits wie we willen houden omdat ze binnen het exon vallen
@@ -389,7 +391,9 @@ final_rows <- intersect(hits_df$queryHits, freq_filter)
 variants_in_exons <- gr2[final_rows]
 final_rows
 ```
+
 Het vcf bestand overschrijven:
+
 ```{r}
 vcf_lines <- readLines("../data/voor_filtering.vcf")
 
@@ -401,20 +405,22 @@ vcf_filtered <- c(header, body[final_rows+18])
 #writeLines(vcf_filtered, "../data/na_filtering.vcf")
 ```
 
-Dit is als het goed is opgeslagen nu dus de volgende stap is dit bestand uploaden in galaxy. 
+Dit is als het goed is opgeslagen nu dus de volgende stap is dit bestand uploaden in galaxy.
 
-_opdracht 9_
-Voor deze opdracht 2 simpele visualizaties:
+*opdracht 9* Voor deze opdracht 2 simpele visualizaties:
 
 de visualisatie van de allelen frequency for alle overgebleven varianten:
+
 ```{r}
 hist(variants_in_exons$frequency, breaks = 20,
      col = "skyblue", main = "Allele Frequency spreiding",
      xlab = "Allele Frequency", ylab = "Aantal varianten")
 ```
-Ik zie vooral pieken bij rond de 50/60% dit betekent dat het heterozygote varianten. 
+
+Ik zie vooral pieken bij rond de 50/60% dit betekent dat het heterozygote varianten.
 
 De tweede visualisatie is varianten per gen visualiseren:
+
 ```{r}
 variant_counts <- table(hits_df$subjectHits)
 
@@ -433,66 +439,65 @@ barplot(variant_df$variant_count,
         cex.names = 0.7)
 ```
 
-De volgende stap is in galaxy het bestand wat we net gefiltreerd hebben (vcf), te vergelijken met een aantal data bases. Deze data bases bevatten annotatiesgegevens voor bekende varianten. 
+De volgende stap is in galaxy het bestand wat we net gefiltreerd hebben (vcf), te vergelijken met een aantal data bases. Deze data bases bevatten annotatiesgegevens voor bekende varianten.
 
 Met SnpEff gaan wij de varianten annoteren, met behulp van de GRCh38.105- database. Ook word er extra informatie toegevoegd met betrekking van het gen, dit geeft dus extra resultaten en dit word gedocumonteerd in het na_filtering.vcf.
 
-Stap 2 is SnpSift, daarvoor ben je de dnSnp database nodig die gebruik ik als in de opdracht bij week 4. 
+Stap 2 is SnpSift, daarvoor ben je de dnSnp database nodig die gebruik ik als in de opdracht bij week 4.
 
 ## 6-10-2025
 
-Vandaag ga ik verder met de opdrachten. 
- 
-Ik was gebleven bij de dnSnp stap, dit was simpelweg uploaden en het enigste wat ik veranderd heb kwa settings. Only annotate ID field (do not add INFO field) deze stap op NO selecteren. 
+Vandaag ga ik verder met de opdrachten.
+
+Ik was gebleven bij de dnSnp stap, dit was simpelweg uploaden en het enigste wat ik veranderd heb kwa settings. Only annotate ID field (do not add INFO field) deze stap op NO selecteren.
 
 Voor stap 3 gaan we annotaten met de dnSnp tool en de SnpSift, de stappen worden zoals bij de opdracht gevolgd.
 
-##10-10-2025
-Vandaag ga ik verder met de bovenstaande stap annotie met SNpEff
+##10-10-2025 Vandaag ga ik verder met de bovenstaande stap annotie met SNpEff
 
 ```{bash}
 java -jar /data/datasets/dbNSFP/snpEff/SnpSift.jar DbNsfp -db /data/datasets/dbNSFP/snpEff/data/dbNSFP4.3c.txt.gz ~/Desktop/variant_step2.vcf > ~/Desktop/variants_step3.vcf
 ```
 
-| Field ID                  | Source Database     | Value Type / Description                                      |
-|---------------------------|---------------------|---------------------------------------------------------------|
-| DP                        | LoFreq              | Integer: Raw read depth                                       |
-| AF                        | LoFreq              | Float: Allele frequency                                       |
-| SB                        | LoFreq              | Integer: Strand bias (Phred-scaled)                           |
-| DP4                       | LoFreq              | Integer[4]: Ref/alt forward/reverse base counts               |
-| INDEL                     | LoFreq              | Flag: Indicates INDEL variant                                 |
-| CONSVAR                   | LoFreq              | Flag: Consensus variant indicator                             |
-| HRUN                      | LoFreq              | Integer: Homopolymer run length                               |
-| ANN                       | SnpEff              | String: Functional annotation (gene, impact, consequence, etc.) |
-| LOF                       | SnpEff              | String: Predicted loss-of-function annotation                 |
-| NMD                       | SnpEff              | String: Nonsense-mediated decay prediction                    |
-| DBVARID                   | dbVar               | String: Structural variant accession ID                       |
-| MC                        | dbSNP / ClinVar     | String: Molecular consequence (SO terms)                      |
-| CLNDN                     | ClinVar             | String: Disease name                                          |
-| ALLELEID                  | ClinVar             | Integer: Allele ID                                            |
-| CLNVC                     | ClinVar             | String: Variant type                                          |
-| CLNSIG                    | ClinVar             | String: Clinical significance                                 |
-| CLNVCSO                   | ClinVar             | String: Sequence Ontology ID                                  |
-| CLNVI                     | ClinVar             | String: Source database and variant ID                        |
-| CLNREVSTAT               | ClinVar             | String: Review status                                         |
-| CLNSIGINCL                | ClinVar             | String: Clinical significance for haplotype/genotype          |
-| RS                        | dbSNP               | String: rsID (SNP identifier)                                 |
-| CLNDISDB                  | ClinVar             | String: Disease database and identifier                       |
-| GENEINFO                  | ClinVar             | String: Gene symbol and ID                                    |
-| AF_EXAC / AF_ESP / AF_TGP | ExAC / ESP / TGP    | Float: Population allele frequencies                          |
-| ORIGIN                    | ClinVar             | String: Allele origin codes                                   |
-| CLNSIGCONF                | ClinVar             | String: Conflicting clinical significance                     |
-| CLNHGVS                   | ClinVar             | String: HGVS expression                                       |
-| dbNSFP_*                  | dbNSFP              | Various: Predictive scores, allele counts, conservation, etc. |
+| Field ID | Source Database | Value Type / Description |
+|-----------------|-----------------|---------------------------------------|
+| DP | LoFreq | Integer: Raw read depth |
+| AF | LoFreq | Float: Allele frequency |
+| SB | LoFreq | Integer: Strand bias (Phred-scaled) |
+| DP4 | LoFreq | Integer[4]: Ref/alt forward/reverse base counts |
+| INDEL | LoFreq | Flag: Indicates INDEL variant |
+| CONSVAR | LoFreq | Flag: Consensus variant indicator |
+| HRUN | LoFreq | Integer: Homopolymer run length |
+| ANN | SnpEff | String: Functional annotation (gene, impact, consequence, etc.) |
+| LOF | SnpEff | String: Predicted loss-of-function annotation |
+| NMD | SnpEff | String: Nonsense-mediated decay prediction |
+| DBVARID | dbVar | String: Structural variant accession ID |
+| MC | dbSNP / ClinVar | String: Molecular consequence (SO terms) |
+| CLNDN | ClinVar | String: Disease name |
+| ALLELEID | ClinVar | Integer: Allele ID |
+| CLNVC | ClinVar | String: Variant type |
+| CLNSIG | ClinVar | String: Clinical significance |
+| CLNVCSO | ClinVar | String: Sequence Ontology ID |
+| CLNVI | ClinVar | String: Source database and variant ID |
+| CLNREVSTAT | ClinVar | String: Review status |
+| CLNSIGINCL | ClinVar | String: Clinical significance for haplotype/genotype |
+| RS | dbSNP | String: rsID (SNP identifier) |
+| CLNDISDB | ClinVar | String: Disease database and identifier |
+| GENEINFO | ClinVar | String: Gene symbol and ID |
+| AF_EXAC / AF_ESP / AF_TGP | ExAC / ESP / TGP | Float: Population allele frequencies |
+| ORIGIN | ClinVar | String: Allele origin codes |
+| CLNSIGCONF | ClinVar | String: Conflicting clinical significance |
+| CLNHGVS | ClinVar | String: HGVS expression |
+| dbNSFP\_\* | dbNSFP | Various: Predictive scores, allele counts, conservation, etc. |
 
+De volgende stap is om de SnpEff tool te runnen met CHROM POS REF ALT ANN[\*].EFFECT ANN[\*].IMPACT ANN[\*].GENE ANN[\*].FEATURE ANN[\*].FEATUREID ANN[\*].BIOTYPE ANN[\*].ERRORS CLNDN CLNSIG deze fields to extract. (extract_tool.tabular)
 
-De volgende stap is om de SnpEff tool te runnen met CHROM POS REF ALT ANN[*].EFFECT ANN[*].IMPACT ANN[*].GENE ANN[*].FEATURE ANN[*].FEATUREID ANN[*].BIOTYPE ANN[*].ERRORS CLNDN CLNSIG deze fields to extract. (extract_tool.tabular)
+Daarna de tool runnen met CHROM,POS,REF,ALT,dbNSFP_SIFT_pred,dbNSFP_SIFT_score,dbNSFP_Polyphen2_HDIV_pred,dbNSFP_Polyphen2_HDIV_score,dbNSFP_MutationAssessor_pred,dbNSFP_MutationAssessor_score,dbNSFP_MetaSVM_pred,dbNSFP_MetaSVM_score,dbNSFP_CADD_phred,dbNSFP_REVEL_score,dbNSFP_GERP\_\_\_RS,dbNSFP_phastCons100way_vertebrate (extract_tool2.tabular)
 
-Daarna de tool runnen met CHROM,POS,REF,ALT,dbNSFP_SIFT_pred,dbNSFP_SIFT_score,dbNSFP_Polyphen2_HDIV_pred,dbNSFP_Polyphen2_HDIV_score,dbNSFP_MutationAssessor_pred,dbNSFP_MutationAssessor_score,dbNSFP_MetaSVM_pred,dbNSFP_MetaSVM_score,dbNSFP_CADD_phred,dbNSFP_REVEL_score,dbNSFP_GERP___RS,dbNSFP_phastCons100way_vertebrate (extract_tool2.tabular)
-
-De volgende stap is het vinden van de varianten dat doe ik als volg en ga stap bi jstap aan langs. 
+De volgende stap is het vinden van de varianten dat doe ik als volg en ga stap bi jstap aan langs.
 
 natuurlijk eerst de data laden
+
 ```{r}
 ann <- read.delim("../data/extract_tool.tabular", header = TRUE, sep = "\t")
 dbnsfp <- read.delim("../data/extract_tool2.tabular", header = TRUE, sep = "\t")
@@ -500,39 +505,44 @@ dbnsfp <- read.delim("../data/extract_tool2.tabular", header = TRUE, sep = "\t")
 ```
 
 kijken naar de kolom namen
+
 ```{r}
 colnames(ann)
 colnames(dbnsfp)
 ```
 
 Clean up van de kolom namen
+
 ```{r}
 names(ann) <- gsub("\\.+", ".", names(ann))
 names(dbnsfp) <- gsub("\\.+", ".", names(dbnsfp))
 ```
 
 weer kijken naar de kolom namen
+
 ```{r}
 colnames(ann)
 colnames(dbnsfp)
 ```
 
+dat ziet er beter uit. Nu kan ik de data mergen met elkaar.
 
-dat ziet er beter uit. Nu kan ik de data mergen met elkaar. 
 ```{r}
 merged <- merge(ann, dbnsfp, by = c("CHROM", "POS", "REF", "ALT"))
 ```
 
-
 ## 13-10-2025
+
 Vandaaag is mijn doel echt om af te ronden voor de presentatie,
 
 Ik wil graag filteren en hiervoor eerst kijken naar de data om te zien wat mij het handigst lijkt om op te filteren en wat interessant kan zijn.
+
 ```{r}
 head(merged)
 ```
 
 Het lijkt mij handig om te kijken naar de CLNDN data, dit is de ClinVar disease naam en geeft aan welke aandoening volgends deze database word geassioseerd met een bepaald genetische variant.
+
 ```{r}
 filtered_cardio <- merged[
   grepl("cardiomyopathy", merged$CLNDN.x, ignore.case = TRUE) |
@@ -541,15 +551,17 @@ filtered_cardio <- merged[
 
 head(filtered_cardio)
 ```
-Nu wil ik graag de belangrijke "effect" eruit filteren en de belangrijkste hier zijn 
 
-- stop_gained
-- splice_site_variant
-- missense_variant
+Nu wil ik graag de belangrijke "effect" eruit filteren en de belangrijkste hier zijn
 
-Deze varianten worden meestal gebruikt als high of moderate impact, hieraan wil ik een impact score geven en vanuit daar kan ik gaan rekenen. UIt deze berekening voeg ik een extra kolom toe en vanuit daar maak ik een top 10. 
+-   stop_gained
+-   splice_site_variant
+-   missense_variant
 
-https://grch37.ensembl.org/info/genome/variation/prediction/predicted_data.html
+Deze varianten worden meestal gebruikt als high of moderate impact, hieraan wil ik een impact score geven en vanuit daar kan ik gaan rekenen. UIt deze berekening voeg ik een extra kolom toe en vanuit daar maak ik een top 10.
+
+<https://grch37.ensembl.org/info/genome/variation/prediction/predicted_data.html>
+
 ```{r}
 belangrijke_effecten <- c("stop_gained", "splice_acceptor_variant", "missense_variant")
 
@@ -564,24 +576,35 @@ filtered_df$impact_score <- ifelse(
   filtered_df$ANN.IMPACT.x == "HIGH" | filtered_df$ANN.IMPACT.y == "HIGH", 2,
   ifelse(filtered_df$ANN.IMPACT.x == "MODERATE" | filtered_df$ANN.IMPACT.y == "MODERATE", 1, 0)
 )
-
+filtered_df_unique <- filtered_df[!duplicated(filtered_df[, c("CHROM", "POS", "REF", "ALT")]), ]
 # Sorteer op impact_score en kies top 10
-top10_df <- filtered_df[order(-filtered_df$impact_score), ][1:10, ]
+top10_df <- filtered_df_unique[order(-filtered_df_unique$impact_score), ][1:10, ]
+
 
 # Bekijk resultaat
 print(top10_df)
 ```
-Nu heb ik een mooie top 10 en kan ik kijken naar de vraag van de opdracht:
-Can you find a link between cardiomyopathy and the variant?
-Er is zeker een link hier, de variant ligt in het TTN-gen en codeert voor titin. Titin is een essentieel eiwit voor de structuur en elasticiteit van de hartspieren.  TTN-varianten zijn de meest voorkomende genetische oorzaak van dilated Cardiomyopathy (DCM), vooral truncating variants (TTNtv).
 
-https://www.abcheartfailure.org/wp-content/uploads/articles_xml/2764-3107-abchf-004-03-e20240056/2764-3107-abchf-004-03-e20240056.pdf
+Nu hebben we maar een top 4, ik denk dat dit komt omdat er te streng gefilterd is.
 
-What is the effect of the variant?
-Het is een missense_variant met MODERATE impact, een aminozuur word vervangen. Dit kan de eiwitfunctie beïnvloeden, dit is afhankelijk van locatie en biochemische eigenschappen. In TTN zijn missense varianten vaak goedaardig, tenzij op plekken zoals cysteïneresiduen.
+## 14-10-2025
 
+Vandaag ga ik bezig met de vragen verder beantwoorden.
 
-Is it validated?
-Are there scientific studies supporting the evidence?
+What is the effect of the variant? Het effect van de variant is missense, dit houdt in dat de DNA-verandering resulteert in enkele aminozuurveranderingen in de eiwitsequentie. Dit kan het functie van de eiwit veranderen maar dit hoeft niet altijd schadelijk te zijn. De impact level is moderate en dit geeft mogelijk functionele veranderingen in het eiwit aan, dit hoeft niet schadelijk of erg ernstig te zijn. De CLNSIG (klinische betekenis) geeft aan dat dit benign (goedaardig) is, deze varianten zijn niet geasioceerd met ziekten in klinische bases. Hoewel deze varianten als goedaardig worden aangeduid, zijn ze geannoteerd met dilated cardiomyopathy.
+
+<https://www.medrxiv.org/content/10.1101/2025.07.17.25331109v1>
+
+Is it validated? Is het gevalideerd?​ Alle varianten in de top zijn goedaardig, beschoud als niet ziekteveroorzakend.​ De genen wat betrokken zijn​ TTN, vaak betrokken bij cardiomyopathieeën veel varianten zijn goedaardig vanwege de grootte envariab iliteit van het gen.​ DMD, vaak betrokken bij Duchenne en Becker spierdystrofie maar ook veel van deze varianten zijnpatho geen.​ Niet klinisch gevalideerd als pathogeen ondanks de assisocatie, vanwege goedaardig.
+
+https://www.cell.com/ajhg/abstract/S0002-9297(25)00324-6
+
+Are there scientific studies supporting the evidence?Zijn er wetenschappelijke studies die het bewijs ondersteunen? Er zijn een aantal studies A comprehensive framework for the interpretation of TTN missense variants | Sciety TTN is een groot variabel gen waardoor interpretatie van missense varianten lastig kunnen zijn. De missense varianten worden aangetroffen bij "gezonde mensen en worden als goedaardig geclassifiseerd. Studie stelt een kader voor om pathogene van niet pathogene TTN-varianten te onderscheiden met populatiefruquentie en context van proteïnedomeinen.
+
 What does the score indicate?
+De score is uitgerekend met punten, high 2 punten moderate 1 en de rest is 0 punten. 
+
 What else can you find about the variant?
+Grootste genoom van mensen.
+
+
